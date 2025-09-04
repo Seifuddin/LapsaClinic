@@ -7,11 +7,11 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const navLinks = [
-    { name: "Home", href: "#home" },
-    { name: "Services", href: "#services" },
+    { name: "Home", href: "home" },
+    { name: "Services", href: "services" },
     { name: "Clinics", href: "#clinics" },
-    { name: "About", href: "#about" },
-    { name: "Contact", href: "#contact" },
+    { name: "About", href: "about" },
+    { name: "Contact", href: "contact" },
   ];
 
   return (
@@ -19,7 +19,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <div className="flex-shrink-0 text-2xl font-bold text-blue-600">
+          <div className="flex-shrink-0 text-xl py-1.5 font-bold text-blue-600">
             Lapsa Family Hospital
           </div>
 

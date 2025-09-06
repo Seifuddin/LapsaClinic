@@ -5,7 +5,7 @@ import { Phone, Mail, MessageCircle } from "lucide-react";
 
 export default function Counters() {
   return (
-    <section className="relative py-16 bg-gradient-to-r from-blue-800 via-blue-700 to-cyan-600 text-white overflow-hidden">
+    <section className="relative py-16 bg-gradient-to-r from-blue-950 via-blue-900 to-cyan-800 text-white overflow-hidden">
       <div className="absolute inset-0 bg-black/40" />
 
       <div className="relative container mx-auto px-6 md:px-12 lg:px-20 text-center">
@@ -61,7 +61,7 @@ export default function Counters() {
           {/* Email Button */}
           <a
             href="mailto:info@lapsafamilyhospital.com"
-            className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-2xl shadow-lg transition transform hover:scale-105"
+            className="flex items-center gap-2 bg-blue-900 hover:bg-red-700 px-6 py-3 rounded-2xl shadow-lg transition transform hover:scale-105"
           >
             <Mail className="w-5 h-5" />
             <span className="font-medium">Email Us</span>

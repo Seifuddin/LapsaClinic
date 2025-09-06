@@ -38,10 +38,10 @@ const stats = [
 
 export default function AnimatedCounters() {
   return (
-    <section className="relative py-12 bg-blue-800 overflow-hidden">
+    <section className="relative py-12 bg-blue-950 overflow-hidden">
       {/* Decorative Waves */}
-      <div className="absolute -top-16 left-0 w-full h-36 bg-gradient-to-r from-blue-700 via-blue-900 to-blue-700 rounded-b-full opacity-30"></div>
-      <div className="absolute -bottom-16 right-0 w-56 h-56 bg-blue-600 rounded-full mix-blend-multiply filter blur-2xl opacity-25"></div>
+      <div className="absolute -top-16 left-0 w-full h-36 bg-gradient-to-r from-blue-800 via-blue-950 to-blue-800 rounded-b-full opacity-30"></div>
+      <div className="absolute -bottom-16 right-0 w-56 h-56 bg-blue-700 rounded-full mix-blend-multiply filter blur-2xl opacity-25"></div>
 
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-12 text-center z-10">
         {/* Heading */}

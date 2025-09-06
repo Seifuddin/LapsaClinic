@@ -6,6 +6,8 @@ import Services from "@/components/Sevices";
 import AnimatedCounters from "@/components/Animated";
 import ContactUs from "@/components/Contacts";
 import Footer from "@/components/Footer";
+import WhyUs from "@/components/Why";
+import Testimonials from "@/components/Testimonials";
 
 export default function Home() {
   return (
@@ -16,6 +18,8 @@ export default function Home() {
       <AnimatedCounters />
       <Services />
       <Counters />
+      <WhyUs />
+      <Testimonials />
       <ContactUs />
       <Footer />
     </ div>

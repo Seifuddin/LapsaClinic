@@ -52,7 +52,7 @@ export default function Services() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-3xl md:text-4xl font-bold text-blue-700 mb-6"
+          className="text-3xl md:text-4xl font-bold text-blue-900 mb-6"
         >
           Our Services
         </motion.h2>
@@ -94,7 +94,7 @@ export default function Services() {
 
               {/* Content */}
               <div className="flex-1 p-6 flex flex-col">
-                <h3 className="text-xl font-semibold text-blue-600 text-left mb-3">
+                <h3 className="text-xl font-semibold text-blue-900 text-left mb-3">
                   {service.title}
                 </h3>
                 <p className="text-gray-600 text-sm leading-relaxed text-left flex-1">
@@ -102,7 +102,7 @@ export default function Services() {
                 </p>
 
                 {/* Button */}
-                <button className="mt-6 w-full py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition self-start">
+                <button className="mt-6 w-full py-2 bg-blue-900 text-white rounded-lg hover:bg-red-700 transition self-start">
                   Learn More
                 </button>
               </div>

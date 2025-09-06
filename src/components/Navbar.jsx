@@ -16,11 +16,11 @@ export default function Navbar() {
 
   return (
     <nav className="fixed top-0 left-0 w-full z-50 bg-white shadow-md">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 py-2 md:py-3 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <div className="flex-shrink-0 text-xl py-1.5 font-bold text-blue-600">
-            Lapsa Family Hospital
+          <div className="flex-shrink-0 text-xl font-bold text-blue-900">
+            Lapsa <span className="text-white md:text-blue-900">Family Hospital</span>
           </div>
 
           {/* Desktop Menu */}
@@ -29,14 +29,14 @@ export default function Navbar() {
               <a
                 key={link.name}
                 href={link.href}
-                className="text-gray-700 hover:text-blue-600 transition-colors duration-200"
+                className="text-gray-700 hover:text-red-700 transition-colors duration-200"
               >
                 {link.name}
               </a>
             ))}
             <Link
               href="#appointment"
-              className="ml-4 px-4 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition"
+              className="ml-4 px-4 py-2 bg-blue-900 text-white rounded-full hover:bg-red-700 transition"
             >
               Book Appointment
             </Link>
@@ -46,7 +46,7 @@ export default function Navbar() {
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-700 hover:text-blue-600 focus:outline-none"
+              className="text-gray-700 hover:text-red-700 focus:outline-none"
             >
               {isOpen ? <X size={28} /> : <Menu size={28} />}
             </button>
@@ -63,7 +63,7 @@ export default function Navbar() {
                 key={link.name}
                 href={link.href}
                 onClick={() => setIsOpen(false)}
-                className="text-gray-700 hover:text-blue-600 transition-colors duration-200"
+                className="text-gray-700 hover:text-red-700 transition-colors duration-200"
               >
                 {link.name}
               </a>
@@ -71,7 +71,7 @@ export default function Navbar() {
             <Link
               href="#appointment"
               onClick={() => setIsOpen(false)}
-              className="px-4 py-2 bg-blue-600 text-white rounded-full text-center hover:bg-blue-700 transition"
+              className="px-4 py-2 bg-blue-900 text-white rounded-full text-center hover:bg-red-700 transition"
             >
               Book Appointment
             </Link>

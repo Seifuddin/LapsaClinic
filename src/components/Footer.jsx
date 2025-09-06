@@ -61,7 +61,7 @@ export default function Footer() {
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="px-3 py-2 w-full rounded-l-lg text-gray-800 focus:outline-none"
+                className="px-3 py-2 w-full rounded-l-lg border text-gray-300 focus:outline-none"
               />
               <button
                 type="submit"

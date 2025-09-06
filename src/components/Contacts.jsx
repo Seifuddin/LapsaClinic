@@ -16,7 +16,7 @@ export default function ContactUs() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-3xl md:text-4xl font-bold text-blue-700 mb-12 text-center"
+          className="text-3xl md:text-4xl font-bold text-blue-900 mb-12 text-center"
         >
           Contact Us
         </motion.h2>
@@ -58,12 +58,12 @@ export default function ContactUs() {
 
             {/* Contact Details */}
             <div className="flex items-center gap-4 mt-6">
-              <Mail className="w-6 h-6 text-blue-600" />
+              <Mail className="w-6 h-6 text-blue-900" />
               <span className="text-gray-700 font-medium">lapsatechnologies@gmail.com</span>
             </div>
 
             <div className="flex items-center gap-4">
-              <MapPin className="w-6 h-6 text-blue-600" />
+              <MapPin className="w-6 h-6 text-blue-900" />
               <span className="text-gray-700 font-medium">
                 Nairobi, Kenya
               </span>
@@ -91,27 +91,27 @@ export default function ContactUs() {
             <input
               type="text"
               placeholder="Full Name"
-              className="border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-700"
             />
             <input
               type="email"
               placeholder="Email Address"
-              className="border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-700"
             />
             <input
               type="tel"
               placeholder="Phone Number"
-              className="border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-700"
             />
             <textarea
               placeholder="Your Message"
               rows={5}
-              className="border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-700"
             ></textarea>
 
             <button
               type="submit"
-              className="mt-2 bg-blue-600 text-white font-semibold py-3 rounded-xl hover:bg-blue-700 transition transform hover:scale-105"
+              className="mt-2 bg-blue-900 text-white font-semibold py-3 rounded-xl hover:bg-red-700 transition transform hover:scale-105"
             >
               Send Message
             </button>

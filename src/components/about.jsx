@@ -32,7 +32,7 @@ export default function About() {
           className="flex-1"
         >
           <h2 className="text-3xl lg:text-4xl font-bold text-blue-900 mb-6">
-            About <span className="text-blue-600">Lapsa Family Hospital</span>
+            About <span className="text-blue-800">Lapsa Family Hospital</span>
           </h2>
           <p className="text-gray-600 text-lg mb-6">
             At Lapsa Family Hospital, we are committed to delivering exceptional
@@ -44,7 +44,7 @@ export default function About() {
           {/* Features */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             <div className="flex items-start gap-4">
-              <ShieldCheck className="text-blue-600 w-8 h-8" />
+              <ShieldCheck className="text-blue-800 w-8 h-8" />
               <div>
                 <h3 className="font-semibold text-blue-900">
                   Trusted Care
@@ -57,7 +57,7 @@ export default function About() {
             </div>
 
             <div className="flex items-start gap-4">
-              <Microscope className="text-blue-600 w-8 h-8" />
+              <Microscope className="text-blue-800 w-8 h-8" />
               <div>
                 <h3 className="font-semibold text-blue-900">
                   Modern Facilities
@@ -70,7 +70,7 @@ export default function About() {
             </div>
 
             <div className="flex items-start gap-4">
-              <HeartPulse className="text-blue-600 w-8 h-8" />
+              <HeartPulse className="text-blue-800 w-8 h-8" />
               <div>
                 <h3 className="font-semibold text-blue-900">
                   Compassionate Team

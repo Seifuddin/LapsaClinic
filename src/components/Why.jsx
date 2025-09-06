@@ -81,7 +81,7 @@ export default function WhyUs() {
                          hover:shadow-2xl hover:scale-105 transition-all duration-300"
             >
               <div className="flex justify-center mb-5">{item.icon}</div>
-              <h3 className="text-lg font-semibold text-gray-800 mb-3">{item.title}</h3>
+              <h3 className="text-lg font-semibold text-blue-950 mb-3">{item.title}</h3>
               <p className="text-gray-600 text-sm">{item.desc}</p>
             </motion.div>
           ))}

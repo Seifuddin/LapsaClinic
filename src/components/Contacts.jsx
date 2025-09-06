@@ -6,7 +6,7 @@ import { Phone, Mail, MapPin, MessageCircle } from "lucide-react";
 export default function ContactUs() {
   return (
     <section
-      id="contact"
+      id="contacts"
       className="relative py-20 bg-gradient-to-r from-blue-50 to-white text-gray-800"
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-12">

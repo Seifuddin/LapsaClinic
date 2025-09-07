@@ -15,7 +15,7 @@ const partners = [
 
 export default function TrustLogos() {
   return (
-    <section className="py-12 bg-blue-50">
+    <section className="py-12 bg-blue-100">
       <div className="max-w-6xl mx-auto px-6">
         <h2 className="text-2xl md:text-3xl font-bold text-center text-blue-900 mb-8">
           Trusted by Leading Health Organizations

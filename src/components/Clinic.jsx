@@ -32,7 +32,7 @@ const clinics = [
 
 export default function Clinics() {
   return (
-    <section id="clinics" className="py-20 bg-gray-100">
+    <section id="clinics" className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
@@ -54,7 +54,7 @@ export default function Clinics() {
                 key={index}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.98 }}
-                className="flex flex-col justify-between bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 p-8 text-center border border-gray-100"
+                className="flex flex-col justify-between bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 p-8 text-center border border-gray-300"
               >
                 <div>
                   {/* Icon */}
@@ -65,7 +65,7 @@ export default function Clinics() {
                   </div>
 
                   {/* Title + Description */}
-                  <h3 className="text-2xl font-semibold text-blue-950 mb-3">
+                  <h3 className="text-2xl font-semibold text-blue-900 mb-3">
                     {clinic.name}
                   </h3>
                   <p className="text-gray-600 text-sm leading-relaxed">
@@ -75,7 +75,7 @@ export default function Clinics() {
 
                 {/* Learn More Button */}
                 <div className="mt-6">
-                  <button className="px-5 py-2 rounded-full bg-blue-900 text-white text-sm font-medium hover:bg-red-700 transition">
+                  <button className="w-full py-2 rounded-md font-semibold bg-white border border-blue-900 text-blue-900 text-sm hover:bg-red-700 transition">
                     Learn More
                   </button>
                 </div>

@@ -7,7 +7,7 @@ export default function ContactUs() {
   return (
     <section
       id="contacts"
-      className="relative py-20 bg-blue-50 text-gray-800"
+      className="relative py-20 bg-gray-100 text-gray-800"
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         {/* Heading */}
@@ -31,7 +31,7 @@ export default function ContactUs() {
             className="space-y-6"
           >
             <p className="text-gray-600 text-lg">
-              Reach out to <span className="font-semibold text-blue-950">Lapsa Family Hospital</span> for appointments,
+              Reach out to <span className="font-semibold text-blue-900">Lapsa Family Hospital</span> for appointments,
               inquiries, or any health-related questions. Our team is here to assist you.
             </p>
 

@@ -5,22 +5,22 @@ import { HeartPulse, Stethoscope, Clock, Users } from "lucide-react";
 
 const reasons = [
   {
-    icon: <HeartPulse className="w-12 h-12 text-blue-900" />,
+    icon: <HeartPulse className="w-12 h-12 text-blue-800" />,
     title: "Expert Medical Team",
     desc: "Our doctors and nurses are highly trained with years of experience in multiple specialties.",
   },
   {
-    icon: <Stethoscope className="w-12 h-12 text-blue-900" />,
+    icon: <Stethoscope className="w-12 h-12 text-blue-800" />,
     title: "Advanced Technology",
     desc: "We use state-of-the-art medical equipment to ensure accurate diagnosis and effective treatment.",
   },
   {
-    icon: <Clock className="w-12 h-12 text-blue-900" />,
+    icon: <Clock className="w-12 h-12 text-blue-800" />,
     title: "24/7 Emergency Care",
     desc: "Round-the-clock emergency services with fast response to save lives when every second matters.",
   },
   {
-    icon: <Users className="w-12 h-12 text-blue-900" />,
+    icon: <Users className="w-12 h-12 text-blue-800" />,
     title: "Patient-Centered Approach",
     desc: "We prioritize your comfort, privacy, and well-being throughout your care journey.",
   },
@@ -30,7 +30,7 @@ export default function WhyUs() {
   return (
     <section className="relative py-20 overflow-hidden">
       {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-b from-blue-50 via-white to-blue-50"></div>
+      <div className="absolute inset-0 bg-gray-50"></div>
 
       {/* Decorative floating SVGs */}
       <svg
@@ -77,11 +77,11 @@ export default function WhyUs() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: i * 0.2 }}
-              className="bg-white/70 backdrop-blur-md shadow-md rounded-2xl p-8 text-center 
+              className="bg-white backdrop-blur-md border border-blue-200 shadow-md rounded-2xl p-8 text-center 
                          hover:shadow-2xl hover:scale-105 transition-all duration-300"
             >
               <div className="flex justify-center mb-5">{item.icon}</div>
-              <h3 className="text-lg font-semibold text-blue-950 mb-3">{item.title}</h3>
+              <h3 className="text-lg font-semibold text-blue-800 mb-3">{item.title}</h3>
               <p className="text-gray-600 text-sm">{item.desc}</p>
             </motion.div>
           ))}

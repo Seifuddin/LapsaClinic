@@ -32,7 +32,7 @@ const clinics = [
 
 export default function Clinics() {
   return (
-    <section id="clinics" className="py-20 bg-gray-50">
+    <section id="clinics" className="py-20 bg-gray-100">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
@@ -54,7 +54,7 @@ export default function Clinics() {
                 key={index}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.98 }}
-                className="flex flex-col justify-between bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 p-8 text-center border border-gray-300"
+                className="flex flex-col justify-between bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 p-8 text-center border border-blue-200"
               >
                 <div>
                   {/* Icon */}

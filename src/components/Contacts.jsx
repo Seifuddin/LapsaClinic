@@ -7,7 +7,7 @@ export default function ContactUs() {
   return (
     <section
       id="contacts"
-      className="relative py-20 bg-gray-100 text-gray-800"
+      className="relative py-20 bg-blue-50 text-gray-800"
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         {/* Heading */}
@@ -86,27 +86,27 @@ export default function ContactUs() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="bg-white border border-gray-300 p-8 rounded-2xl shadow-lg flex flex-col gap-4"
+            className="bg-white border border-blue-200 p-8 rounded-2xl shadow-lg flex flex-col gap-4"
           >
             <input
               type="text"
               placeholder="Full Name"
-              className="border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-700"
+              className="border border-blue-200 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-700"
             />
             <input
               type="email"
               placeholder="Email Address"
-              className="border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-700"
+              className="border border-blue-200 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-700"
             />
             <input
               type="tel"
               placeholder="Phone Number"
-              className="border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-700"
+              className="border border-blue-200 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-700"
             />
             <textarea
               placeholder="Your Message"
               rows={5}
-              className="border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-700"
+              className="border border-blue-200 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-700"
             ></textarea>
 
             <button

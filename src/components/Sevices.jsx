@@ -65,7 +65,7 @@ export default function Services() {
           transition={{ duration: 0.8 }}
           className="max-w-2xl mx-auto text-lg text-gray-600 mb-12"
         >
-          At <span className="font-semibold text-blue-950">Lapsa Family Hospital</span>, we
+          At <span className="font-semibold text-blue-900">Lapsa Family Hospital</span>, we
           provide a wide range of healthcare services tailored to meet the needs
           of every family member with excellence and compassion.
         </motion.p>

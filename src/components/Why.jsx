@@ -97,7 +97,7 @@ export default function WhyUs() {
           {/* Primary CTA */}
           <a
             href="/appointment" // Change this to your actual appointment page
-            className="px-8 py-4 bg-blue-900 text-white font-semibold rounded-full 
+            className="px-8 py-4 bg-blue-900 text-white font-semibold rounded-md 
                        shadow-md hover:bg-red-700 hover:shadow-lg transition-all duration-300"
           >
             Book an Appointment
@@ -106,7 +106,7 @@ export default function WhyUs() {
           {/* Secondary CTA */}
           <a
             href="/contact" // Change this to your actual contact page
-            className="px-8 py-4 border-2 border-blue-900 text-blue-900 font-semibold rounded-full 
+            className="px-8 py-4 border-2 border-blue-900 text-blue-900 font-semibold rounded-md 
                        hover:bg-blue-50 transition-all duration-300"
           >
             Contact Us

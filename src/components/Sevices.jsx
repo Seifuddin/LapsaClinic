@@ -79,7 +79,7 @@ export default function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="group flex flex-col bg-white rounded-xl shadow-md hover:shadow-2xl transition overflow-hidden"
+              className="group flex flex-col border border-blue-200 bg-white rounded-xl shadow-md hover:shadow-2xl transition overflow-hidden"
             >
               {/* Service Image */}
               <div className="relative w-full h-48 md:h-56 overflow-hidden">

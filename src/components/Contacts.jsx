@@ -7,7 +7,7 @@ export default function ContactUs() {
   return (
     <section
       id="contacts"
-      className="relative py-20 bg-blue-50 text-gray-800"
+      className="relative py-20 bg-gray-50 text-gray-800"
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         {/* Heading */}

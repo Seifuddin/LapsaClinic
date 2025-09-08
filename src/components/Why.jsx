@@ -1,40 +1,33 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { HeartPulse, Stethoscope, Clock, Users } from "lucide-react";
+import { CheckCircle } from "lucide-react";
 
 const reasons = [
   {
-    icon: <HeartPulse className="w-12 h-12 text-blue-800" />,
     title: "Expert Medical Team",
-    desc: "Our doctors and nurses are highly trained with years of experience in multiple specialties.",
+    desc: "Highly trained doctors and nurses across multiple specialties.",
   },
   {
-    icon: <Stethoscope className="w-12 h-12 text-blue-800" />,
     title: "Advanced Technology",
-    desc: "We use state-of-the-art medical equipment to ensure accurate diagnosis and effective treatment.",
+    desc: "State-of-the-art equipment ensures accurate diagnoses and effective treatments.",
   },
   {
-    icon: <Clock className="w-12 h-12 text-blue-800" />,
     title: "24/7 Emergency Care",
-    desc: "Round-the-clock emergency services with fast response to save lives when every second matters.",
+    desc: "Rapid response emergency services when every second counts.",
   },
   {
-    icon: <Users className="w-12 h-12 text-blue-800" />,
     title: "Patient-Centered Approach",
-    desc: "We prioritize your comfort, privacy, and well-being throughout your care journey.",
+    desc: "Prioritizing your comfort, privacy, and well-being always.",
   },
 ];
 
 export default function WhyUs() {
   return (
-    <section className="relative py-20 overflow-hidden">
-      {/* Background gradient */}
-      <div className="absolute inset-0 bg-gray-50"></div>
-
-      {/* Decorative floating SVGs */}
+    <section className="relative py-16 bg-white overflow-hidden">
+      {/* Decorative SVGs */}
       <svg
-        className="absolute top-10 left-0 w-48 h-48 text-blue-200 opacity-20 animate-pulse"
+        className="absolute top-10 left-0 w-32 h-32 text-blue-100 opacity-10"
         fill="none"
         stroke="currentColor"
         strokeWidth="1.5"
@@ -44,7 +37,7 @@ export default function WhyUs() {
       </svg>
 
       <svg
-        className="absolute bottom-10 right-0 w-56 h-56 text-blue-100 opacity-20 animate-bounce"
+        className="absolute bottom-10 right-0 w-40 h-40 text-blue-200 opacity-10"
         fill="none"
         stroke="currentColor"
         strokeWidth="1.5"
@@ -54,64 +47,75 @@ export default function WhyUs() {
         <path d="M24 12v24M12 24h24" />
       </svg>
 
-      <div className="relative max-w-6xl mx-auto px-6 text-center">
-        {/* Heading */}
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Section Title */}
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="text-3xl md:text-4xl font-bold text-blue-900 mb-4"
+          transition={{ duration: 0.5 }}
+          className="text-center text-3xl sm:text-4xl font-bold text-blue-900 mb-4"
         >
           Why Choose Us
         </motion.h2>
-        <p className="text-gray-600 max-w-2xl mx-auto mb-16">
-          At our hospital, we are dedicated to providing exceptional healthcare services 
-          built on trust, innovation, and compassion.
+        <p className="text-center text-gray-600 mb-10">
+          Exceptional healthcare built on trust, innovation, and compassion.
         </p>
 
-        {/* Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-          {reasons.map((item, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: i * 0.2 }}
-              className="bg-white backdrop-blur-md border border-blue-200 shadow-md rounded-2xl p-8 text-center 
-                         hover:shadow-2xl hover:scale-105 transition-all duration-300"
-            >
-              <div className="flex justify-center mb-5">{item.icon}</div>
-              <h3 className="text-lg font-semibold text-blue-800 mb-3">{item.title}</h3>
-              <p className="text-gray-600 text-sm">{item.desc}</p>
-            </motion.div>
-          ))}
+        <div className="flex flex-col lg:flex-row items-center gap-12">
+          {/* Left Content */}
+          <div className="w-full lg:w-1/2">
+            {/* Clean Point-form Rows with Checkmarks */}
+            <ul className="space-y-6">
+              {reasons.map((item, i) => (
+                <motion.li
+                  key={i}
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.4, delay: i * 0.2 }}
+                  className="flex items-start gap-4"
+                >
+                  <CheckCircle className="text-blue-600 w-5 h-5 mt-1 flex-shrink-0" />
+                  <div>
+                    <h3 className="text-lg font-semibold text-blue-900">
+                      {item.title}
+                    </h3>
+                    <p className="text-gray-600 text-sm mt-1">{item.desc}</p>
+                  </div>
+                </motion.li>
+              ))}
+            </ul>
+
+            {/* CTA Buttons */}
+            <div className="mt-10 flex flex-col sm:flex-row gap-4">
+              <a
+                href="/appointment"
+                className="px-6 py-3 bg-blue-800 text-white font-semibold rounded-md 
+                  hover:bg-blue-900 transition"
+              >
+                Book an Appointment
+              </a>
+              <a
+                href="/contact"
+                className="px-6 py-3 border-2 border-blue-800 text-blue-800 font-semibold rounded-md 
+                  hover:bg-blue-50 transition"
+              >
+                Contact Us
+              </a>
+            </div>
+          </div>
+
+          {/* Right Image */}
+          <div className="w-full lg:w-1/2 flex justify-center">
+            <motion.img
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6 }}
+              src="/images/whychooseus.webp" // Replace with your actual image path
+              alt="Medical Team"
+              className="w-full max-w-md rounded-xl shadow-lg object-cover"
+            />
+          </div>
         </div>
-
-        {/* CTA Buttons */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="flex flex-col sm:flex-row gap-4 justify-center"
-        >
-          {/* Primary CTA */}
-          <a
-            href="/appointment" // Change this to your actual appointment page
-            className="px-8 py-4 bg-blue-900 text-white font-semibold rounded-md 
-                       shadow-md hover:bg-red-700 hover:shadow-lg transition-all duration-300"
-          >
-            Book an Appointment
-          </a>
-
-          {/* Secondary CTA */}
-          <a
-            href="/contact" // Change this to your actual contact page
-            className="px-8 py-4 border-2 border-blue-900 text-blue-900 font-semibold rounded-md 
-                       hover:bg-blue-50 transition-all duration-300"
-          >
-            Contact Us
-          </a>
-        </motion.div>
       </div>
     </section>
   );

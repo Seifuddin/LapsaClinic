@@ -4,8 +4,13 @@ import { PhoneCall } from "lucide-react";
 
 export default function EmergencyCall() {
   return (
-    <section className="bg-blue-900 py-16">
-      <div className="max-w-5xl mx-auto px-6 lg:px-8 flex flex-col items-center text-center">
+    <section
+      className="relative bg-black py-16 bg-[url('/images/ambulance7.webp')] bg-cover bg-center"
+    >
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-black/80"></div>
+
+      <div className="relative max-w-5xl mx-auto px-6 lg:px-8 flex flex-col items-center text-center">
         {/* Icon */}
         <div className="mb-6 flex items-center justify-center w-20 h-20 rounded-full bg-blue-100">
           <PhoneCall className="w-10 h-10 text-blue-900" />
@@ -16,7 +21,8 @@ export default function EmergencyCall() {
           24/7 Emergency Hotline
         </h2>
         <p className="text-lg text-blue-100 max-w-xl mx-auto mb-6">
-          In case of any medical emergency, call us immediately. Our emergency team is ready to assist you any time, day or night.
+          In case of any medical emergency, call us immediately. Our emergency
+          team is ready to assist you any time, day or night.
         </p>
 
         {/* Call Button */}

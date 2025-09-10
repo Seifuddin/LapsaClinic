@@ -45,7 +45,7 @@ const services = [
 export default function Services() {
   return (
     <section id="services" className="relative py-20 bg-gray-50 text-gray-800">
-      <div className="max-w-7xl mx-auto px-6 lg:px-12 text-center">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center">
         {/* Heading */}
         <motion.h2
           initial={{ opacity: 0, y: -30 }}
@@ -79,10 +79,10 @@ export default function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="group flex flex-col border border-blue-200 bg-white rounded-xl shadow-md hover:shadow-2xl transition overflow-hidden"
+              className="group flex flex-col border border-blue-300 bg-white rounded-md shadow-md hover:shadow-2xl transition overflow-hidden"
             >
               {/* Service Image */}
-              <div className="relative w-full h-48 md:h-56 overflow-hidden">
+              <div className="relative w-full h-48 overflow-hidden">
                 <Image
                   src={service.image}
                   alt={service.title}

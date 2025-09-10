@@ -43,7 +43,7 @@ export default function Footer() {
                 <MapPin size={18} /> <span>Nairobi, Kenya</span>
               </li>
               <li className="flex items-center space-x-2">
-                <Phone size={18} /> <span>+254 712 345 678</span>
+                <Phone size={18} /> <span>+254 111 608 331</span>
               </li>
               <li className="flex items-center space-x-2">
                 <Mail size={18} /> <span>info@lapsahospital.com</span>

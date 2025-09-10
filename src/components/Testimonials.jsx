@@ -79,14 +79,14 @@ export default function Testimonials() {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
-                className="bg-blue-100 border border-blue-200 rounded-2xl shadow-lg p-6 hover:shadow-xl transition flex flex-col items-center text-center"
+                className="bg-blue-100 border border-blue-300 rounded-md shadow-md p-6 hover:shadow-xl transition flex flex-col items-center text-center"
               >
                 <img
                   src={testimonial.image}
                   alt={testimonial.name}
                   className="w-20 h-20 rounded-full object-cover border-4 border-white shadow-md mt-3 mb-4"
                 />
-                <h3 className="text-lg font-semibold text-blue-900">
+                <h3 className="text-xl font-semibold text-blue-900">
                   {testimonial.name}
                 </h3>
                 <p className="text-sm text-blue-800 mb-2">{testimonial.role}</p>

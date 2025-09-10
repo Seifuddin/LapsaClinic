@@ -5,11 +5,11 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 
 const insuranceProviders = [
-  { name: "SHA", logo: "/images/government-of-kenya-removebg-preview.png" },
-  { name: "NHIF", logo: "/images/government-of-kenya-removebg-preview.png" },
-  { name: "Jubilee", logo: "/images/government-of-kenya-removebg-preview.png" },
-  { name: "AAR", logo: "/images/government-of-kenya-removebg-preview.png" },
-  { name: "Britam", logo: "/images/government-of-kenya-removebg-preview.png" },
+  { name: "SHA", logo: "/images/sha.png" },
+  { name: "NHIF", logo: "/images/nhif.png" },
+  { name: "Jubilee", logo: "/images/jubilee.png" },
+  { name: "AAR", logo: "/images/aar.png" },
+  { name: "Britam", logo: "/images/britam.png" },
 ];
 
 export default function InsuranceCoverage() {

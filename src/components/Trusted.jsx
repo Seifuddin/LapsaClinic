@@ -5,17 +5,17 @@ import { Autoplay } from "swiper/modules";
 import "swiper/css";
 
 const partners = [
-  { id: 1, logo: "/images/government-of-kenya-removebg-preview.png", alt: "World Health Organization" },
-  { id: 2, logo: "/images/government-of-kenya-removebg-preview.png", alt: "NHIF" },
-  { id: 3, logo: "/images/government-of-kenya-removebg-preview.png", alt: "Red Cross" },
-  { id: 4, logo: "/images/government-of-kenya-removebg-preview.png", alt: "UNICEF" },
-  { id: 5, logo: "/images/government-of-kenya-removebg-preview.png", alt: "Insurance Partner 1" },
-  { id: 6, logo: "/images/government-of-kenya-removebg-preview.png", alt: "Insurance Partner 2" },
+  { id: 1, logo: "/images/who.png", alt: "World Health Organization" },
+  { id: 2, logo: "/images/nhif.png", alt: "NHIF" },
+  { id: 3, logo: "/images/redcross.png", alt: "Red Cross" },
+  { id: 4, logo: "/images/unicef.png", alt: "UNICEF" },
+  { id: 5, logo: "/images/aar.png", alt: "Insurance Partner 1" },
+  { id: 6, logo: "/images/britam.png", alt: "Insurance Partner 2" },
 ];
 
 export default function TrustLogos() {
   return (
-    <section className="py-12 border-y-blue-400 border-y bg-gray-50">
+    <section className="py-12 border-y-blue-300 border-y bg-blue-100">
       <div className="max-w-6xl mx-auto px-6">
         <h2 className="text-2xl md:text-3xl font-bold text-center text-blue-900 mb-8">
           Trusted by Leading Health Organizations

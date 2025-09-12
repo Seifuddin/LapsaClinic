@@ -54,7 +54,7 @@ export default function Clinics() {
                 key={index}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.98 }}
-                className="flex flex-col justify-between bg-blue-50 roundedmd shadow-md hover:shadow-xl transition-shadow duration-300 p-8 text-center border border-gray-300"
+                className="flex flex-col justify-between bg-blue-100 rounded-md shadow-md hover:shadow-xl transition-shadow duration-300 p-8 text-center border border-blue-200"
               >
                 <div>
                   {/* Icon */}

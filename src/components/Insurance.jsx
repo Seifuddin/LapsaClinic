@@ -44,14 +44,14 @@ export default function InsuranceCoverage() {
               (provider, index) => (
                 <div
                   key={index}
-                  className="flex justify-center items-center bg-white rounded-xl px-4 py-3 shadow-md min-w-[180px]"
+                  className="flex justify-center items-center bg-white rounded-xl px- py- shadow-md min-w-[180px]"
                 >
                   <Image
                     src={provider.logo}
                     alt={provider.name}
                     width={120}
                     height={60}
-                    className="object-contain"
+                    className="object-contain w-20 h-full"
                   />
                 </div>
               )

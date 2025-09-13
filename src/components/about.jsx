@@ -6,7 +6,7 @@ import { HeartPulse, ShieldCheck, Microscope } from "lucide-react";
 
 export default function About() {
   return (
-    <section id="about" className="relative bg-white py-20">
+    <section id="about" className="relative bg-amber-50 py-20">
       <div className="container mx-auto px-6 flex flex-col lg:flex-row items-center gap-12">
         {/* Image */}
         <motion.div
@@ -31,7 +31,7 @@ export default function About() {
           transition={{ duration: 0.8 }}
           className="flex-1"
         >
-          <h2 className="text-3xl lg:text-4xl font-bold text-blue-900 mb-6">
+          <h2 className="text-2xl md:text-3xl font-serif font-bold text-left text-blue-900 mb-8">
             About <span className="text-blue-800">Lapsa Family Hospital</span>
           </h2>
           <p className="text-gray-600 text-lg mb-6">

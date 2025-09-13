@@ -31,10 +31,10 @@ const steps = [
 
 export default function PatientJourney() {
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-amber-50">
       <div className="max-w-7xl mx-auto px-6 lg:px-1 text-center">
         {/* Header */}
-        <h2 className="text-4xl font-bold text-blue-900 mb-4">
+        <h2 className="text-2xl md:text-3xl font-serif font-bold text-center text-blue-900 mb-8">
           Your Journey to Better Health
         </h2>
         <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-16">
@@ -49,14 +49,14 @@ export default function PatientJourney() {
             return (
               <div
                 key={index}
-                className="relative bg-blue-100 p-8 rounded-md shadow-md hover:shadow-xl transition-all border border-blue-200"
+                className="relative bg-white p-8 rounded-md shadow-md hover:shadow-xl transition-all border border-amber-200"
               >
                 <div className="flex justify-center mb-6">
                   <div className="bg-blue-900 p-3 border border-blue-300 rounded-full">
                     <Icon className="w-7 h-7 text-white" />
                   </div>
                 </div>
-                <h3 className="text-xl font-semibold text-blue-900 mb-2">
+                <h3 className="text-xl font-serif font-semibold text-blue-900 mb-2">
                   {index + 1}. {step.title}
                 </h3>
                 <p className="text-gray-600">{step.description}</p>

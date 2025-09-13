@@ -53,7 +53,7 @@ export default function Testimonials() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-blue-900">
+          <h2 className="text-3xl md:text-4xl font-serif font-bold text-blue-900">
             What Our <span className="text-blue-800">Patients Say</span>
           </h2>
           <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
@@ -79,14 +79,14 @@ export default function Testimonials() {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
-                className="bg-blue-100 border border-blue-200 rounded-md shadow-md p-6 hover:shadow-xl transition flex flex-col items-center text-center"
+                className="bg-amber-50 border border-amber-200 rounded-md shadow-md p-6 hover:shadow-xl transition flex flex-col items-center text-center"
               >
                 <img
                   src={testimonial.image}
                   alt={testimonial.name}
                   className="w-20 h-20 rounded-full object-cover border-4 border-white shadow-md mt-3 mb-4"
                 />
-                <h3 className="text-xl font-semibold text-blue-900">
+                <h3 className="text-xl font-serif font-semibold text-blue-900">
                   {testimonial.name}
                 </h3>
                 <p className="text-sm text-blue-800 mb-2">{testimonial.role}</p>

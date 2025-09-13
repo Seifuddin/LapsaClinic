@@ -44,7 +44,7 @@ const services = [
 
 export default function Services() {
   return (
-    <section id="services" className="relative py-20 bg-gray-50 text-gray-800">
+    <section id="services" className="relative py-20 bg-amber-50 text-gray-800">
       <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center">
         {/* Heading */}
         <motion.h2
@@ -52,7 +52,7 @@ export default function Services() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-3xl md:text-4xl font-bold text-blue-900 mb-6"
+          className="text-3xl md:text-4xl font-serif font-bold text-blue-900 mb-6"
         >
           Our Services
         </motion.h2>
@@ -79,7 +79,7 @@ export default function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="group flex flex-col border border-blue-200 bg-white rounded-md shadow-md hover:shadow-2xl transition overflow-hidden"
+              className="group flex flex-col border border-amber-200 bg-white rounded-md shadow-md hover:shadow-2xl transition overflow-hidden"
             >
               {/* Service Image */}
               <div className="relative w-full h-48 overflow-hidden">
@@ -94,7 +94,7 @@ export default function Services() {
 
               {/* Content */}
               <div className="flex-1 p-6 flex flex-col">
-                <h3 className="text-xl font-semibold text-blue-900 text-left mb-3">
+                <h3 className="text-xl font-serif font-semibold text-blue-900 text-left mb-3">
                   {service.title}
                 </h3>
                 <p className="text-gray-600 text-sm leading-relaxed text-left flex-1">

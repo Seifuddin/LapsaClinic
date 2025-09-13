@@ -53,7 +53,7 @@ export default function WhyUs() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="text-center text-3xl sm:text-4xl font-bold text-blue-900 mb-4"
+          className="text-center text-3xl sm:text-4xl font-serif font-bold text-blue-900 mb-4"
         >
           Why Choose Us
         </motion.h2>
@@ -89,14 +89,14 @@ export default function WhyUs() {
             <div className="mt-10 flex flex-col sm:flex-row gap-4">
               <a
                 href="/appointment"
-                className="px-6 py-3 bg-blue-800 text-white font-semibold rounded-md 
+                className="px-6 py-3 bg-blue-800 text-white font-serif font-semibold rounded-md 
                   hover:bg-blue-900 transition"
               >
                 Book an Appointment
               </a>
               <a
                 href="/contact"
-                className="px-6 py-3 border-2 border-blue-800 text-blue-800 font-semibold rounded-md 
+                className="px-6 py-3 border-2 border-blue-800 text-blue-800 font-serif font-semibold rounded-md 
                   hover:bg-blue-50 transition"
               >
                 Contact Us

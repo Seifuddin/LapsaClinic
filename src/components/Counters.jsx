@@ -14,7 +14,7 @@ export default function Counters() {
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-3xl md:text-5xl font-bold mb-6"
+          className="text-3xl md:text-5xl font-serif font-bold mb-6"
         >
           Need Medical Assistance?
         </motion.h2>

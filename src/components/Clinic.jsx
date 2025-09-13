@@ -32,11 +32,11 @@ const clinics = [
 
 export default function Clinics() {
   return (
-    <section id="clinics" className="py-20 bg-white">
+    <section id="clinics" className="py-20 bg-amber-50">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-blue-900 mb-4">
+          <h2 className="text-4xl font-serif font-bold text-blue-900 mb-4">
             Our Specialized Clinics
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -54,7 +54,7 @@ export default function Clinics() {
                 key={index}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.98 }}
-                className="flex flex-col justify-between bg-blue-100 rounded-md shadow-md hover:shadow-xl transition-shadow duration-300 p-8 text-center border border-blue-200"
+                className="flex flex-col justify-between bg-white rounded-md shadow-md hover:shadow-xl transition-shadow duration-300 p-8 text-center border border-amber-200"
               >
                 <div>
                   {/* Icon */}
@@ -65,7 +65,7 @@ export default function Clinics() {
                   </div>
 
                   {/* Title + Description */}
-                  <h3 className="text-xl font-semibold text-blue-900 mb-3">
+                  <h3 className="text-xl font-serif font-semibold text-blue-900 mb-3">
                     {clinic.name}
                   </h3>
                   <p className="text-gray-600 text-sm leading-relaxed">

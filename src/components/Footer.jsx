@@ -15,7 +15,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
           {/* Logo & About */}
           <div>
-            <h2 className="text-2xl font-bold mb-4">Lapsa Family Hospital</h2>
+            <h2 className="text-2xl font-serif font-bold mb-4">Lapsa Family Hospital</h2>
             <p className="text-gray-200 text-sm leading-relaxed">
               Providing compassionate healthcare with modern facilities, 
               experienced doctors, and 24/7 emergency services to keep 
@@ -25,7 +25,7 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
+            <h3 className="text-lg font-serif font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-3">
               <li><a href="/" className="hover:text-yellow-300 transition">Home</a></li>
               <li><a href="#services" className="hover:text-yellow-300 transition">Services</a></li>
@@ -37,7 +37,7 @@ export default function Footer() {
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
+            <h3 className="text-lg font-serif font-semibold mb-4">Contact Us</h3>
             <ul className="space-y-3 text-sm">
               <li className="flex items-center space-x-2">
                 <MapPin size={18} /> <span>Nairobi, Kenya</span>
@@ -53,7 +53,7 @@ export default function Footer() {
 
           {/* Newsletter */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Newsletter</h3>
+            <h3 className="text-lg font-serif font-semibold mb-4">Newsletter</h3>
             <p className="text-sm mb-4 text-gray-200">
               Subscribe to get health tips and hospital updates.
             </p>
@@ -65,7 +65,7 @@ export default function Footer() {
               />
               <button
                 type="submit"
-                className="bg-yellow-400 px-4 py-2 rounded-r-lg font-semibold hover:bg-yellow-500 transition"
+                className="bg-yellow-400 px-4 py-2 rounded-r-lg font-serif font-semibold hover:bg-yellow-500 transition"
               >
                 Subscribe
               </button>

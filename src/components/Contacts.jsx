@@ -16,7 +16,7 @@ export default function ContactUs() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-3xl md:text-4xl font-bold text-blue-900 mb-12 text-center"
+          className="text-3xl md:text-4xl font-serif font-bold text-blue-900 mb-12 text-center"
         >
           Contact Us
         </motion.h2>
@@ -86,32 +86,32 @@ export default function ContactUs() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="bg-gray-50 border border-blue-400 p-8 rounded-2xl shadow-lg flex flex-col gap-4"
+            className="bg-gray-50 border border-blue-300 p-8 rounded-2xl shadow-lg flex flex-col gap-4"
           >
             <input
               type="text"
               placeholder="Full Name"
-              className="border border-blue-400 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-700"
+              className="border border-blue-200 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-700"
             />
             <input
               type="email"
               placeholder="Email Address"
-              className="border border-blue-400 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-700"
+              className="border border-blue-200 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-700"
             />
             <input
               type="tel"
               placeholder="Phone Number"
-              className="border border-blue-400 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-700"
+              className="border border-blue-200 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-700"
             />
             <textarea
               placeholder="Your Message"
               rows={5}
-              className="border border-blue-400 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-700"
+              className="border border-blue-200 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-700"
             ></textarea>
 
             <button
               type="submit"
-              className="mt-2 bg-blue-900 text-white font-semibold py-3 rounded-xl hover:bg-red-700 transition transform hover:scale-105"
+              className="mt-2 bg-blue-900 text-white font-serif font-semibold py-3 rounded-xl hover:bg-red-700 transition transform hover:scale-105"
             >
               Send Message
             </button>

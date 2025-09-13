@@ -24,7 +24,7 @@ const reasons = [
 
 export default function WhyUs() {
   return (
-    <section className="relative py-16 bg-white overflow-hidden">
+    <section className="relative py-16 bg-amber-50 overflow-hidden">
       {/* Decorative SVGs */}
       <svg
         className="absolute top-10 left-0 w-32 h-32 text-blue-100 opacity-10"
@@ -76,7 +76,7 @@ export default function WhyUs() {
                 >
                   <CheckCircle className="text-blue-600 w-5 h-5 mt-1 flex-shrink-0" />
                   <div>
-                    <h3 className="text-lg font-semibold text-blue-900">
+                    <h3 className="text-lg font-serif font-semibold text-blue-900">
                       {item.title}
                     </h3>
                     <p className="text-gray-600 text-sm mt-1">{item.desc}</p>

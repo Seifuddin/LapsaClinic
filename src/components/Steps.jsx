@@ -49,7 +49,7 @@ export default function PatientJourney() {
             return (
               <div
                 key={index}
-                className="relative bg-white p-8 rounded-md shadow-md hover:shadow-xl transition-all border border-amber-200"
+                className="relative bg-white p-8 rounded-md shadow-md hover:shadow-xl transition-all border border-gray-200"
               >
                 <div className="flex justify-center mb-6">
                   <div className="bg-blue-900 p-3 border border-blue-300 rounded-full">

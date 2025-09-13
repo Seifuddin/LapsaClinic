@@ -46,7 +46,7 @@ export default function About() {
             <div className="flex items-start gap-4">
               <ShieldCheck className="text-blue-800 w-8 h-8" />
               <div>
-                <h3 className="font-semibold text-blue-900">
+                <h3 className="font-serif font-semibold text-blue-900">
                   Trusted Care
                 </h3>
                 <p className="text-gray-600 text-sm">
@@ -59,7 +59,7 @@ export default function About() {
             <div className="flex items-start gap-4">
               <Microscope className="text-blue-800 w-8 h-8" />
               <div>
-                <h3 className="font-semibold text-blue-900">
+                <h3 className="font-serif font-semibold text-blue-900">
                   Modern Facilities
                 </h3>
                 <p className="text-gray-600 text-sm">
@@ -72,7 +72,7 @@ export default function About() {
             <div className="flex items-start gap-4">
               <HeartPulse className="text-blue-800 w-8 h-8" />
               <div>
-                <h3 className="font-semibold text-blue-900">
+                <h3 className="font-serif font-semibold text-blue-900">
                   Compassionate Team
                 </h3>
                 <p className="text-gray-600 text-sm">

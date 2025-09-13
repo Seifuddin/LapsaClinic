@@ -28,7 +28,7 @@ export default function EmergencyCall() {
         {/* Call Button */}
         <a
           href="tel:+254111608331"
-          className="inline-block bg-white text-blue-900 font-semibold px-8 py-4 rounded-full shadow-lg hover:bg-blue-100 transition"
+          className="inline-block bg-white text-blue-900 font-serif font-semibold px-8 py-4 rounded-full shadow-lg hover:bg-blue-100 transition"
         >
           Call Now: +254 111 608 331
         </a>

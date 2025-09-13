@@ -79,7 +79,7 @@ export default function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="group flex flex-col border border-amber-200 bg-white rounded-md shadow-md hover:shadow-2xl transition overflow-hidden"
+              className="group flex flex-col border border-gray-200 bg-white rounded-md shadow-md hover:shadow-2xl transition overflow-hidden"
             >
               {/* Service Image */}
               <div className="relative w-full h-48 overflow-hidden">
@@ -102,7 +102,7 @@ export default function Services() {
                 </p>
 
                 {/* Button */}
-                <button className="mt-6 w-full py-2 bg-blue-900 text-white rounded-lg hover:bg-red-700 transition self-start">
+                <button className="mt-6 font-serif w-full py-2 bg-blue-900 text-white rounded-lg hover:bg-red-700 transition self-start">
                   Learn More
                 </button>
               </div>

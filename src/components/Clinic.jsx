@@ -54,7 +54,7 @@ export default function Clinics() {
                 key={index}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.98 }}
-                className="flex flex-col justify-between bg-white rounded-md shadow-md hover:shadow-xl transition-shadow duration-300 p-8 text-center border border-amber-200"
+                className="flex flex-col justify-between bg-white rounded-md shadow-md hover:shadow-xl transition-shadow duration-300 p-8 text-center border border-gray-200"
               >
                 <div>
                   {/* Icon */}
@@ -75,7 +75,7 @@ export default function Clinics() {
 
                 {/* Learn More Button */}
                 <div className="mt-6">
-                  <button className="w-full py-2 rounded-md font-semibold border border-blue-900 text-blue-900 text-sm hover:bg-red-700 transition">
+                  <button className="w-full py-2 rounded-md font-serif font-semibold border border-blue-900 text-blue-900 text-sm hover:bg-red-700 transition">
                     Learn More
                   </button>
                 </div>

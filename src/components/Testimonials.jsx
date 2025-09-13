@@ -79,7 +79,7 @@ export default function Testimonials() {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
-                className="bg-amber-50 border border-amber-200 rounded-md shadow-md p-6 hover:shadow-xl transition flex flex-col items-center text-center"
+                className="bg-blue-100 border border-gray-300 rounded-md shadow-md p-6 hover:shadow-xl transition flex flex-col items-center text-center"
               >
                 <img
                   src={testimonial.image}

@@ -24,7 +24,7 @@ const reasons = [
 
 export default function WhyUs() {
   return (
-    <section className="relative py-16 bg-amber-50 overflow-hidden">
+    <section className="relative py-16 bg-white overflow-hidden">
       {/* Decorative SVGs */}
       <svg
         className="absolute top-10 left-0 w-32 h-32 text-blue-100 opacity-10"

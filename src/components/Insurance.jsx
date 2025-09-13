@@ -14,7 +14,7 @@ const insuranceProviders = [
 
 export default function InsuranceCoverage() {
   return (
-    <section className="py-16 bg-blue-900 relative overflow-hidden">
+    <section className="py-16 bg-gradient-to-r from-blue-950 via-blue-900 to-cyan-800 relative overflow-hidden">
       <div className="max-w-6xl mx-auto px-6 text-center">
         {/* Icon + Heading */}
         <div className="flex justify-center mb-4">

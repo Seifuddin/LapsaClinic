@@ -34,7 +34,7 @@ export default function PatientJourney() {
     <section className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-6 lg:px-1 text-center">
         {/* Header */}
-        <h2 className="text-2xl md:text-3xl font-serif font-bold text-center text-blue-900 mb-8">
+        <h2 className="text-2xl md:text-3xl font-serif font-bold text-center text-red-700 mb-8">
           Your Journey to Better Health
         </h2>
         <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-16">
@@ -52,11 +52,11 @@ export default function PatientJourney() {
                 className="relative bg-white p-8 rounded-md shadow-md hover:shadow-xl transition-all border border-gray-300"
               >
                 <div className="flex justify-center mb-6">
-                  <div className="bg-blue-900 p-3 border border-blue-300 rounded-full">
+                  <div className="bg-red-700 p-3 borde border-blue-3 rounded-full">
                     <Icon className="w-7 h-7 text-white" />
                   </div>
                 </div>
-                <h3 className="text-xl font-serif font-semibold text-blue-900 mb-2">
+                <h3 className="text-xl font-serif font-semibold text-red-700 mb-2">
                   {index + 1}. {step.title}
                 </h3>
                 <p className="text-gray-600">{step.description}</p>

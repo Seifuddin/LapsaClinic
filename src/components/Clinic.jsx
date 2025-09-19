@@ -36,7 +36,7 @@ export default function Clinics() {
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-serif font-bold text-blue-900 mb-4">
+          <h2 className="text-4xl font-serif font-bold text-red-700 mb-4">
             Our Specialized Clinics
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -59,13 +59,13 @@ export default function Clinics() {
                 <div>
                   {/* Icon */}
                   <div className="mb-6 flex justify-center">
-                    <div className="w-12 h-12 rounded-full bg-gradient-to-r from-blue-700 to-blue-900 flex items-center justify-center shadow-lg">
+                    <div className="w-12 h-12 rounded-full bg-gradient-to-r from-red-700 red-900 flex items-center justify-center shadow-lg">
                       <Icon className="w-8 h-8 text-white" />
                     </div>
                   </div>
 
                   {/* Title + Description */}
-                  <h3 className="text-xl font-serif font-semibold text-blue-900 mb-3">
+                  <h3 className="text-xl font-serif font-semibold text-red-700 mb-3">
                     {clinic.name}
                   </h3>
                   <p className="text-gray-600 text-sm leading-relaxed">
@@ -75,7 +75,7 @@ export default function Clinics() {
 
                 {/* Learn More Button */}
                 <div className="mt-6">
-                  <button className="w-full py-2 rounded-md font-serif font-semibold border bg-blue-900 text-white text-sm hover:bg-red-700 transition">
+                  <button className="w-full py-2 rounded-md font-serif font-semibold border bg-red-700 text-white text-sm hover:bg-red-700 transition">
                     Learn More
                   </button>
                 </div>

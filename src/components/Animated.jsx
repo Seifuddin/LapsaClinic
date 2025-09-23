@@ -23,7 +23,7 @@ const AnimatedCounter = ({ from = 0, to }) => {
   }, [isInView, to, count]);
 
   return (
-    <span ref={ref} className="text-2xl md:text-3xl font-serif font-extrabold text-white">
+    <span ref={ref} className="text-lg md:text-2xl font-serif font-bold text-white">
       {value.toLocaleString()}+
     </span>
   );
@@ -50,7 +50,7 @@ export default function AnimatedCounters() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-3xl md:text-4xl font-serif font-extrabold text-white mb-6"
+          className="text-2xl md:text-3xl font-serif font-extrabold text-white mb-6"
         >
           Our Achievements in Numbers
         </motion.h2>

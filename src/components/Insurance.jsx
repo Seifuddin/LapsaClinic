@@ -20,7 +20,7 @@ export default function InsuranceCoverage() {
         <div className="flex justify-center mb-4">
           <ShieldCheck className="w-14 h-14 text-blue-300" />
         </div>
-        <h2 className="text-3xl md:text-4xl font-serif font-bold text-white mb-3">
+        <h2 className="text-2xl md:text-3xl font-serif font-bold text-white mb-3">
           Insurance Coverage
         </h2>
         <p className="text-blue-100 text-lg max-w-2xl mx-auto mb-12">

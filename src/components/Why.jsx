@@ -53,7 +53,7 @@ export default function WhyUs() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="text-center text-3xl sm:text-4xl font-serif font-bold text-blue-900 mb-4"
+          className="text-center text-2xl md:text-3xl font-serif font-bold text-blue-900 mb-4"
         >
           Why Choose Us
         </motion.h2>
@@ -74,9 +74,9 @@ export default function WhyUs() {
                   transition={{ duration: 0.4, delay: i * 0.2 }}
                   className="flex items-start gap-4"
                 >
-                  <CheckCircle className="text-blue-600 w-5 h-5 mt-1 flex-shrink-0" />
+                  <CheckCircle className="text-red-600 w-5 h-5 mt-1 flex-shrink-0" />
                   <div>
-                    <h3 className="text-lg font-serif font-semibold text-blue-900">
+                    <h3 className="text-lg font-serif font-bold text-red-700">
                       {item.title}
                     </h3>
                     <p className="text-gray-600 text-sm mt-1">{item.desc}</p>

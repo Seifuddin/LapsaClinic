@@ -16,7 +16,7 @@ export default function ContactUs() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-3xl md:text-4xl font-serif font-bold text-blue-900 mb-12 text-center"
+          className="text-2xl md:text-3xl font-serif font-bold text-blue-900 mb-12 text-center"
         >
           Contact Us
         </motion.h2>

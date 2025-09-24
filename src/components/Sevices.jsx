@@ -44,7 +44,7 @@ const services = [
 
 export default function Services() {
   return (
-    <section id="services" className="relative py-20 bg-white-50 text-gray-800">
+    <section id="services" className="relative py-20 bg-white text-gray-800">
       <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center">
         {/* Heading */}
         <motion.h2

@@ -31,7 +31,7 @@ const steps = [
 
 export default function PatientJourney() {
   return (
-    <section className="py-20 bg-blue-50">
+    <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-1 text-center">
         {/* Header */}
         <h2 className="text-2xl md:text-3xl font-serif font-bold text-center text-blue-900 mb-8">

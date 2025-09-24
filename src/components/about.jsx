@@ -6,7 +6,7 @@ import { HeartPulse, ShieldCheck, Microscope } from "lucide-react";
 
 export default function About() {
   return (
-    <section id="about" className="relative bg-white py-20 border--2 border-y-blue-200">
+    <section id="about" className="relative bg-white py-20 border-y-2 border-y-blue-200">
       <div className="container mx-auto px-6 flex flex-col lg:flex-row items-center gap-12">
         {/* Image */}
         <motion.div

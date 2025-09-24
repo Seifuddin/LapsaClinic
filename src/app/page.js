@@ -19,9 +19,9 @@ export default function Home() {
     <div className="overflow-x-hidden">
       <Navbar />
       <HeroSection />
-      <TrustLogos />
       <PatientJourney />
       <About />
+      <TrustLogos />
       <AnimatedCounters />
       <Services />
       <EmergencyCall />

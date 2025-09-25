@@ -1,121 +1,170 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { Phone, Mail, MapPin, MessageCircle } from "lucide-react";
+import { useState } from "react";
+import { Phone, Mail, MapPin, Send, MessageSquare } from "lucide-react";
 
 export default function ContactUs() {
+  const [formData, setFormData] = useState({ name: "", email: "", message: "" });
+  const [status, setStatus] = useState(null); // success | error | null
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (!formData.name || !formData.email || !formData.message) {
+      setStatus("error");
+      return;
+    }
+
+    setTimeout(() => {
+      setStatus("success");
+      setFormData({ name: "", email: "", message: "" });
+    }, 1000);
+  };
+
   return (
-    <section
-      id="contacts"
-      className="relative py-20 bg-white text-gray-800"
-    >
-      <div className="max-w-7xl mx-auto px-6 lg:px-12">
-        {/* Heading */}
-        <motion.h2
-          initial={{ opacity: 0, y: -20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-2xl md:text-3xl font-serif font-bold text-blue-900 mb-12 text-center"
-        >
-          Contact Us
-        </motion.h2>
+    <section id="contact" className="py-20 bg-gradient-to-r from-white to-blue-50">
+      <div className="max-w-6xl mx-auto px-6">
+        {/* Heading + Intro */}
+        <div className="text-center mb-14">
+          <h2 className="text-2xl md:text-3xl font-serif font-bold text-blue-900 mb-3">
+            Get in Touch With Us
+          </h2>
+          <p className="text-lg font-medium text-gray-600 mb-2">
+            We’re here to help and answer any questions you might have.
+          </p>
+          
+        </div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
-          {/* Contact Info */}
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="space-y-6"
-          >
-            <p className="text-gray-600 text-lg">
-              Reach out to <span className="font-semibold text-blue-900">Lapsa Family Hospital</span> for appointments,
-              inquiries, or any health-related questions. Our team is here to assist you.
-            </p>
-
-            {/* Direct Call & WhatsApp Buttons */}
-            <div className="flex flex-wrap gap-4 mt-4">
-              <a
-                href="tel:+254111608331"
-                className="flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-2xl shadow transition transform hover:scale-105"
-              >
-                <Phone className="w-5 h-5" />
-                Call Us
-              </a>
-
-              <a
-                href="https://wa.me/+254111608331"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 bg-emerald-500 hover:bg-emerald-600 text-white px-6 py-3 rounded-2xl shadow transition transform hover:scale-105"
-              >
-                <MessageCircle className="w-5 h-5" />
-                WhatsApp
-              </a>
+        <div className="grid md:grid-cols-2 gap-10">
+          {/* Left Side - Contact Info & Map */}
+         
+          <div>
+            <div className="space-y-6">
+               <p className="text-left text-gray-500 max-w-2xl mx-auto">
+            Whether you want to book an appointment, ask about our services, or
+            simply say hello, feel free to reach out—we’d love to hear from you.
+          </p>
+              <div className="flex items-center space-x-3">
+                <Phone className="text-green-600" />
+                <a
+                  href="tel:+254111608331"
+                  className="text-lg font-medium text-gray-700 hover:text-blue-700 transition"
+                >
+                  +254 111 608 331
+                </a>
+              </div>
+              <div className="flex items-center space-x-3">
+                <Mail className="text-blue-600" />
+                <a
+                  href="mailto:info@hospital.com"
+                  className="text-lg font-medium text-gray-700 hover:text-blue-700 transition"
+                >
+                  info@hospital.com
+                </a>
+              </div>
+              <div className="flex items-center space-x-3">
+                <MapPin className="text-red-600" />
+                <span className="text-lg font-medium text-gray-700">
+                  Nairobi, Kenya
+                </span>
+              </div>
+              <div className="flex items-center space-x-3">
+                <MessageSquare className="text-green-500" />
+                <a
+                  href="https://wa.me/254111608331"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-4 py-2 rounded-lg bg-green-600 text-white font-medium hover:bg-green-700 transition transform hover:scale-105"
+                >
+                  Chat on WhatsApp
+                </a>
+              </div>
             </div>
 
-            {/* Contact Details */}
-            <div className="flex items-center gap-4 mt-6">
-              <Mail className="w-6 h-6 text-blue-900" />
-              <span className="text-gray-700 font-medium">lapsatechnologies@gmail.com</span>
-            </div>
-
-            <div className="flex items-center gap-4">
-              <MapPin className="w-6 h-6 text-blue-900" />
-              <span className="text-gray-700 font-medium">
-                Nairobi, Kenya
-              </span>
-            </div>
-
-            {/* Map placeholder */}
-            <div className="w-full h-64 rounded-lg overflow-hidden shadow-md mt-6">
+            {/* Google Map */}
+            <div className="mt-8">
               <iframe
-                title="Hospital Location"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.000000!2d36.821946!3d-1.292066!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMSDCsDI1JzMwLjAiTiAzNsKwNDknNDYuMCJF!5e0!3m2!1sen!2ske!4v1234567890"
-                className="w-full h-full"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1994.394849225982!2d36.821946!3d-1.292066!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f10f9db8f2a17%3A0x401a3f3c5e0a5a0!2sNairobi!5e0!3m2!1sen!2ske!4v1234567890"
+                width="100%"
+                height="300"
+                style={{ border: 0 }}
+                allowFullScreen=""
                 loading="lazy"
+                title="Hospital Location"
               ></iframe>
             </div>
-          </motion.div>
+          </div>
 
-          {/* Contact Form */}
-          <motion.form
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="bg-white border border-gray-300 p-8 rounded-2xl shadow-lg flex flex-col gap-4"
-          >
-            <input
-              type="text"
-              placeholder="Full Name"
-              className="border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-700"
-            />
-            <input
-              type="email"
-              placeholder="Email Address"
-              className="border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-700"
-            />
-            <input
-              type="tel"
-              placeholder="Phone Number"
-              className="border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-700"
-            />
-            <textarea
-              placeholder="Your Message"
-              rows={5}
-              className="border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-700"
-            ></textarea>
-
-            <button
-              type="submit"
-              className="mt-2 bg-blue-900 text-white font-serif font-semibold py-3 rounded-xl hover:bg-red-700 transition transform hover:scale-105"
+          {/* Right Side - Contact Form */}
+          <div>
+            <form
+              onSubmit={handleSubmit}
+              className="bg-white p-6 rounded-2xl shadow-lg space-y-5"
             >
-              Send Message
-            </button>
-          </motion.form>
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">
+                  Full Name
+                </label>
+                <input
+                  type="text"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  placeholder="Enter your full name"
+                  className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-500"
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">
+                  Email Address
+                </label>
+                <input
+                  type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  placeholder="Enter your email"
+                  className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-500"
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">
+                  Your Message
+                </label>
+                <textarea
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  placeholder="Write your message"
+                  rows="4"
+                  className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-500"
+                ></textarea>
+              </div>
+              <button
+                type="submit"
+                className="w-full flex items-center justify-center space-x-2 bg-blue-600 text-white px-4 py-3 rounded-lg font-medium hover:bg-blue-700 transition transform hover:scale-105"
+              >
+                <Send size={18} />
+                <span>Send Message</span>
+              </button>
+
+              {/* Feedback Messages */}
+              {status === "error" && (
+                <p className="text-red-600 text-sm mt-2">
+                  Please fill in all fields before submitting.
+                </p>
+              )}
+              {status === "success" && (
+                <p className="text-green-600 text-sm mt-2">
+                  ✅ Your message has been sent successfully!
+                </p>
+              )}
+            </form>
+          </div>
         </div>
       </div>
     </section>

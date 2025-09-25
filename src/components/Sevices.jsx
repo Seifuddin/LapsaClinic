@@ -1,58 +1,157 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
+import { X } from "lucide-react";
 
 const services = [
   {
     title: "General Consultation",
     description:
       "Comprehensive medical check-ups and professional advice for your health needs.",
+    details:
+      "Our consultations include thorough physical exams, personalized health advice, preventive screenings, and follow-up care plans tailored to your needs.",
     image: "/images/consult.jpg",
   },
   {
     title: "Emergency Care",
     description:
       "24/7 emergency services with rapid response and life-saving care.",
+    details:
+      "Our emergency unit is staffed with experienced doctors and nurses, equipped to handle trauma, critical conditions, and urgent interventions around the clock.",
     image: "/images/emergency.png",
   },
   {
     title: "Pediatrics",
     description:
       "Specialized care for infants, children, and adolescents in a family-friendly environment.",
+    details:
+      "We provide child-focused healthcare, including immunizations, developmental monitoring, pediatric nutrition, and compassionate care for children of all ages.",
     image: "/images/pediatrichospitalist.jpg",
   },
   {
     title: "Pharmacy",
     description:
       "Fully stocked in-house pharmacy with quality and affordable medicines.",
+    details:
+      "Our pharmacy ensures access to trusted medicines, professional prescription guidance, and patient education for safe and effective use.",
     image: "/images/Pharmacy.jpg",
   },
   {
     title: "Cardiology",
     description:
       "Expert heart care including diagnostics, monitoring, and treatment.",
+    details:
+      "We offer advanced cardiac care, including ECG, echocardiography, blood pressure monitoring, and treatment plans for heart-related conditions.",
     image: "/images/Cardiology.png",
   },
   {
     title: "Laboratory & Diagnostics",
     description:
       "Modern labs for accurate and fast medical tests and results.",
+    details:
+      "Our diagnostics department provides blood tests, imaging, screenings, and reliable results to support effective medical decision-making.",
     image: "/images/laboratory.jpg",
   },
 ];
 
-export default function Services() {
+// Modal Component
+function Modal({ service, onClose }) {
+  // close on Esc key
+  useEffect(() => {
+    const handleEsc = (e) => {
+      if (e.key === "Escape") onClose();
+    };
+    window.addEventListener("keydown", handleEsc);
+    return () => window.removeEventListener("keydown", handleEsc);
+  }, [onClose]);
+
   return (
-    <section id="services" className="relative py-20 bg-white text-gray-800">
+    <AnimatePresence>
+      {service && (
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-4"
+          onClick={onClose}
+        >
+          <motion.div
+            initial={{ scale: 0.85, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            exit={{ scale: 0.85, opacity: 0 }}
+            transition={{ duration: 0.3 }}
+            className="relative bg-white rounded-2xl shadow-2xl max-w-xl w-full overflow-hidden"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Close Button */}
+            <button
+              onClick={onClose}
+              className="absolute top-3 right-3 bg-white/80 p-2 rounded-full shadow hover:bg-red-500 hover:text-white transition"
+            >
+              <X className="w-5 h-5" />
+            </button>
+
+            {/* Image */}
+            <div className="relative w-full h-64">
+              <Image
+                src={service.image}
+                alt={service.title}
+                fill
+                className="object-cover"
+              />
+            </div>
+
+            {/* Content */}
+            <div className="p-6">
+              <h3 className="text-xl font-serif font-bold text-blue-900 mb-3">
+                {service.title}
+              </h3>
+              <p className="text-gray-600 mb-4 leading-relaxed">
+                {service.details}
+              </p>
+              <button
+                onClick={onClose}
+                className="mt-2 font-serif text-sm font-bold w-full py-2 bg-blue-900 text-white rounded-lg hover:bg-red-600 transition"
+              >
+                Close
+              </button>
+            </div>
+          </motion.div>
+        </motion.div>
+      )}
+    </AnimatePresence>
+  );
+}
+
+export default function Services() {
+  const [selectedService, setSelectedService] = useState(null);
+
+  return (
+    <section
+      id="services"
+      className="relative py-20 bg-gradient-to-b from-blue-50 via-white to-blue-50 text-gray-800"
+    >
       <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center">
+        {/* Tagline */}
+        <motion.span
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="text-sm font-semibold text-red-600 tracking-wider uppercase mb-3 inline-block"
+        >
+          Caring for Every Family
+        </motion.span>
+
         {/* Heading */}
         <motion.h2
           initial={{ opacity: 0, y: -30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-2xl md:text-3xl font-serif font-bold text-blue-900 mb-6"
+          className="text-3xl md:text-4xl font-serif font-bold text-blue-900 mb-6"
         >
           Our Services
         </motion.h2>
@@ -63,11 +162,14 @@ export default function Services() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="max-w-2xl mx-auto text-lg text-gray-600 mb-12"
+          className="max-w-2xl mx-auto text-lg text-gray-600 mb-14"
         >
-          At <span className="font-semibold text-blue-900">Lapsa Family Hospital</span>, we
-          provide a wide range of healthcare services tailored to meet the needs
-          of every family member with excellence and compassion.
+          At{" "}
+          <span className="font-semibold text-blue-900">
+            Lapsa Family Hospital
+          </span>
+          , we provide a wide range of healthcare services tailored to meet the
+          needs of every family member with excellence and compassion.
         </motion.p>
 
         {/* Services Grid */}
@@ -79,7 +181,7 @@ export default function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="group flex flex-col border border-gray-300 bg-white rounded-md shadow-lg hover:shadow-2xl transition overflow-hidden"
+              className="group flex flex-col border border-gray-200 bg-white rounded-2xl shadow-md hover:shadow-2xl transition-all duration-500 overflow-hidden hover:-translate-y-2"
             >
               {/* Service Image */}
               <div className="relative w-full h-48 overflow-hidden">
@@ -87,9 +189,9 @@ export default function Services() {
                   src={service.image}
                   alt={service.title}
                   fill
-                  className="object-cover transform group-hover:scale-105 transition duration-500"
+                  className="object-cover transform group-hover:scale-110 transition duration-700"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
               </div>
 
               {/* Content */}
@@ -102,7 +204,10 @@ export default function Services() {
                 </p>
 
                 {/* Button */}
-                <button className="mt-6 font-serif font-semibold w-full py-2 bg-blue-900 text-white rounded-lg hover:bg-red-700 transition self-start">
+                <button
+                  onClick={() => setSelectedService(service)}
+                  className="mt-6 font-serif text-sm font-bold w-full py-2 bg-blue-900 text-white rounded-lg hover:bg-red-600 transition"
+                >
                   Learn More
                 </button>
               </div>
@@ -110,6 +215,12 @@ export default function Services() {
           ))}
         </div>
       </div>
+
+      {/* Modal */}
+      <Modal
+        service={selectedService}
+        onClose={() => setSelectedService(null)}
+      />
     </section>
   );
 }

@@ -9,23 +9,35 @@ const partners = [
   { id: 2, logo: "/images/nhif.png", alt: "NHIF" },
   { id: 3, logo: "/images/redcross.png", alt: "Red Cross" },
   { id: 4, logo: "/images/unicef.png", alt: "UNICEF" },
-  { id: 5, logo: "/images/aar.png", alt: "Insurance Partner 1" },
-  { id: 6, logo: "/images/britam.png", alt: "Insurance Partner 2" },
+  { id: 5, logo: "/images/aar.png", alt: "AAR Insurance" },
+  { id: 6, logo: "/images/britam.png", alt: "Britam Insurance" },
 ];
 
 export default function TrustLogos() {
   return (
-    <section className="py-12 bordr-t-2 border-t-blue-200 shadow-md bg-white">
-      <div className="max-w-6xl mx-auto px-6">
-        <h2 className="text-2xl md:text-3xl font-serif font-extrabold text-center text-blue-900 mb-8">
-          Trusted by Leading Health Organizations
+    <section className="py-16 bg-gradient-to-b from-blue-50 via-white to-blue-50 border-t-2 border-blue-200 shadow-sm">
+      <div className="max-w-6xl mx-auto px-6 text-center">
+        {/* Section Title */}
+        <h2 className="text-2xl md:text-3xl font-serif font-extrabold text-blue-900 mb-3">
+          Trusted by Leading Organizations
         </h2>
 
+        {/* Intro Statement */}
+        <p className="text-gray-600 text-base md:text-lg mb-10 max-w-2xl mx-auto">
+          We collaborate with world-renowned health institutions and insurance
+          providers to ensure the highest level of care and accessibility.
+        </p>
+
+        {/* Logo Slider */}
         <Swiper
           modules={[Autoplay]}
           spaceBetween={30}
           slidesPerView={2}
-          autoplay={{ delay: 2500, disableOnInteraction: false }}
+          autoplay={{
+            delay: 2500,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+          }}
           loop={true}
           breakpoints={{
             640: { slidesPerView: 3 },
@@ -39,7 +51,7 @@ export default function TrustLogos() {
                 <img
                   src={partner.logo}
                   alt={partner.alt}
-                  className="max-h-16 object-contain grayscal hover:grayscale-0 transition duration-300"
+                  className="max-h-16 object-contain grayscale hover:grayscale-0 hover:scale-105 transition duration-300"
                 />
               </div>
             </SwiperSlide>

@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { CheckCircle } from "lucide-react";
+import Image from "next/image";
 
 const reasons = [
   {
@@ -24,10 +25,11 @@ const reasons = [
 
 export default function WhyUs() {
   return (
-    <section className="relative py-16 bg-white overflow-hidden">
+    <section className="relative py-20 bg-gradient-to-b from-blue-50 to-white overflow-hidden">
       {/* Decorative SVGs */}
       <svg
-        className="absolute top-10 left-0 w-32 h-32 text-blue-100 opacity-10"
+        aria-hidden="true"
+        className="absolute top-10 left-0 w-32 h-32 text-blue-200 opacity-10"
         fill="none"
         stroke="currentColor"
         strokeWidth="1.5"
@@ -37,7 +39,8 @@ export default function WhyUs() {
       </svg>
 
       <svg
-        className="absolute bottom-10 right-0 w-40 h-40 text-blue-200 opacity-10"
+        aria-hidden="true"
+        className="absolute bottom-10 right-0 w-40 h-40 text-blue-300 opacity-10"
         fill="none"
         stroke="currentColor"
         strokeWidth="1.5"
@@ -52,69 +55,78 @@ export default function WhyUs() {
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="text-center text-2xl md:text-3xl font-serif font-bold text-blue-900 mb-4"
+          className="text-center text-3xl md:text-4xl font-serif font-bold text-blue-900 mb-4"
         >
           Why Choose Us
         </motion.h2>
-        <p className="text-center text-gray-600 mb-10">
+        <div className="w-24 h-1 bg-red-600 mx-auto rounded-full mb-6"></div>
+        <p className="text-center text-gray-600 mb-14 max-w-2xl mx-auto">
           Exceptional healthcare built on trust, innovation, and compassion.
         </p>
 
-        <div className="flex flex-col lg:flex-row items-center gap-12">
+        <div className="flex flex-col lg:flex-row items-center gap-14">
           {/* Left Content */}
-          <div className="w-full lg:w-1/2">
-            {/* Clean Point-form Rows with Checkmarks */}
-            <ul className="space-y-6">
-              {reasons.map((item, i) => (
-                <motion.li
-                  key={i}
-                  initial={{ opacity: 0, y: 10 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.4, delay: i * 0.2 }}
-                  className="flex items-start gap-4"
-                >
-                  <CheckCircle className="text-red-600 w-5 h-5 mt-1 flex-shrink-0" />
+          <div className="w-full lg:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-6">
+            {reasons.map((item, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: i * 0.2 }}
+                className="p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition group"
+              >
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="text-red-600 w-6 h-6 mt-1 flex-shrink-0 group-hover:scale-110 transition" />
                   <div>
-                    <h3 className="text-lg font-serif font-bold text-red-700">
+                    <h3 className="text-lg font-serif font-bold text-blue-900">
                       {item.title}
                     </h3>
                     <p className="text-gray-600 text-sm mt-1">{item.desc}</p>
                   </div>
-                </motion.li>
-              ))}
-            </ul>
-
-            {/* CTA Buttons */}
-            <div className="mt-10 flex flex-col sm:flex-row gap-4">
-              <a
-                href="/appointment"
-                className="px-6 py-3 bg-blue-800 text-white font-serif font-semibold rounded-md 
-                  hover:bg-blue-900 transition"
-              >
-                Book an Appointment
-              </a>
-              <a
-                href="/contact"
-                className="px-6 py-3 border-2 border-blue-800 text-blue-800 font-serif font-semibold rounded-md 
-                  hover:bg-blue-50 transition"
-              >
-                Contact Us
-              </a>
-            </div>
+                </div>
+              </motion.div>
+            ))}
           </div>
 
           {/* Right Image */}
           <div className="w-full lg:w-1/2 flex justify-center">
-            <motion.img
+            <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              src="/images/whychooseus.webp" // Replace with your actual image path
-              alt="Medical Team"
-              className="w-full max-w-md rounded-xl shadow-lg object-cover"
-            />
+              className="w-full max-w-md rounded-2xl shadow-xl overflow-hidden"
+            >
+              <Image
+                src="/images/whychooseus.webp"
+                alt="Medical Team"
+                width={500}
+                height={400}
+                className="object-cover"
+              />
+            </motion.div>
           </div>
+        </div>
+
+        {/* CTA Buttons */}
+        <div className="mt-14 flex flex-col sm:flex-row justify-center gap-5">
+          <a
+            href="/appointment"
+            className="px-8 py-3 bg-blue-800 text-white font-serif font-semibold rounded-lg shadow 
+              hover:bg-blue-900 transition"
+          >
+            Book an Appointment
+          </a>
+          <a
+            href="/contact"
+            className="px-8 py-3 border-2 border-blue-800 text-blue-800 font-serif font-semibold rounded-lg 
+              hover:bg-blue-50 transition"
+          >
+            Contact Us
+          </a>
         </div>
       </div>
     </section>

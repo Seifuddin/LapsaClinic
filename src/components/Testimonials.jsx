@@ -9,11 +9,11 @@ import "swiper/css/pagination";
 
 const testimonials = [
   {
-    name: "Sarah W.",
-    role: "Patient",
+    name: "E. M. Nguru.",
+    role: "Patient's Friend",
     feedback:
       "The doctors and staff were so caring and attentive. I felt truly supported throughout my treatment. Highly recommend this hospital!",
-    image: "/images/aidoctor.jpg",
+    image: "/images/Screenshot_20221028-204325.png",
     rating: 5,
   },
   {
@@ -21,15 +21,15 @@ const testimonials = [
     role: "Patient's Relative",
     feedback:
       "Excellent facilities and very professional staff. They treated my father with great care and compassion.",
-    image: "/images/aidoctor.jpg",
+    image: "/images/IMG_20221028_140830_410.jpg",
     rating: 4,
   },
   {
-    name: "Grace M.",
+    name: "Ali B.",
     role: "Patient",
     feedback:
       "The emergency team responded so quickly and saved my life. I’m forever grateful for their expertise and kindness.",
-    image: "/images/aidoctor.jpg",
+    image: "/images/Screenshot_20221028-204325.png",
     rating: 5,
   },
   {
@@ -57,7 +57,8 @@ export default function Testimonials() {
             What Our <span className="text-blue-800">Patients Say</span>
           </h2>
           <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
-            We value the trust our patients place in us. Here are some of their stories and experiences.
+            We value the trust our patients place in us. Here are some of their
+            stories and experiences.
           </p>
         </motion.div>
 
@@ -67,7 +68,7 @@ export default function Testimonials() {
           spaceBetween={30}
           slidesPerView={1}
           pagination={{ clickable: true }}
-          autoplay={{ delay: 4000, disableOnInteraction: false }}
+          autoplay={{ delay: 5000, disableOnInteraction: false, pauseOnMouseEnter: true }}
           breakpoints={{
             768: { slidesPerView: 2 },
             1024: { slidesPerView: 3 },
@@ -79,17 +80,17 @@ export default function Testimonials() {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
-                className="bg-amber-50 border border-gray-300 rounded-md shadow-md p-6 hover:shadow-xl transition flex flex-col items-center text-center"
+                className="bg-white border border-gray-200 rounded-xl shadow-md p-6 hover:shadow-xl hover:scale-[1.02] transition transform flex flex-col items-center text-center relative before:absolute before:inset-0 before:rounded-xl before:border-2 before:border-transparent hover:before:border-blue-200 before:transition"
               >
                 <img
                   src={testimonial.image}
                   alt={testimonial.name}
-                  className="w-20 h-20 rounded-full object-cover border-2 border-gray-400 shadow-md mt-3 mb-4"
+                  className="w-20 h-20 rounded-full object-cover border-2 border-gray-300 shadow-md mt-3 mb-4"
                 />
-                <h3 className="text-lg font-serif font-semibold text-red-700">
+                <h3 className="text-base md:text-lg font-serif font-bold text-blue-900">
                   {testimonial.name}
                 </h3>
-                <p className="text-sm text-blue-800 mb-2">{testimonial.role}</p>
+                <p className="text-sm text-gray-500 mb-2">{testimonial.role}</p>
 
                 {/* Rating */}
                 <div className="flex justify-center mb-4">
@@ -101,7 +102,7 @@ export default function Testimonials() {
                   ))}
                 </div>
 
-                <p className="text-gray-800 italic">
+                <p className="text-gray-700 italic leading-relaxed text-sm md:text-base">
                   "{testimonial.feedback}"
                 </p>
               </motion.div>

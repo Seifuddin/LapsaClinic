@@ -106,15 +106,15 @@ export default function Clinics() {
   const [selectedClinic, setSelectedClinic] = useState(null);
 
   return (
-    <section id="clinics" className="py-20 bg-gradient-to-b from-blue-50 to-white">
+    <section id="clinics" className="py-20 bg-gray-50 dient-to-b from-blue-50 to-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-serif font-bold text-blue-900 mb-4">
+          <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-800 mb-4">
             Our Specialized Clinics
           </h2>
-          <div className="w-20 h-1 bg-red-600 mx-auto rounded-full mb-6"></div>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <div className="w-20 h-1 bg-blue-800 mx-auto rounded-full mb-6"></div>
+          <p className="text-gray-600 text-base md:text-lg mb-10 max-w-2xl mx-auto">
             Explore our range of specialized clinics, each dedicated to
             providing expert medical care and personalized attention.
           </p>
@@ -143,18 +143,18 @@ export default function Clinics() {
                 transition={{ duration: 0.5 }}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.98 }}
-                className="flex flex-col justify-between bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 p-8 text-center border border-gray-200"
+                className="flex flex-col justify-between bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 p-4 text-center border border-gray-200"
               >
                 <div>
                   {/* Icon */}
                   <div className="mb-6 flex justify-center">
-                    <div className="w-14 h-14 rounded-full bg-gradient-to-r from-red-700 to-red-900 flex items-center justify-center shadow-lg">
-                      <Icon className="w-8 h-8 text-white" />
+                    <div className="w-10 h-10 rounded-full bg-gradient-to-r from-blue-700 to-blue-900 flex items-center justify-center shadow-lg">
+                      <Icon className="w-6 h-6 text-white" />
                     </div>
                   </div>
 
                   {/* Title + Description */}
-                  <h3 className="text-lg font-serif font-bold text-red-700 mb-3">
+                  <h3 className="md:text-lg font-serif font-bold text-gray-800 mb-3">
                     {clinic.name}
                   </h3>
                   <p className="text-gray-600 text-sm leading-relaxed">
@@ -166,7 +166,7 @@ export default function Clinics() {
                 <div className="mt-6">
                   <button
                     onClick={() => setSelectedClinic(clinic)}
-                    className="w-full py-2 rounded-md font-serif text-sm font-bold bg-red-700 text-white hover:bg-red-800 transition"
+                    className="w-full py-2 rounded fontserif text-sm font-semibold bg-blue-900 text-white hover:bg-red-800 transition"
                   >
                     Learn More
                   </button>

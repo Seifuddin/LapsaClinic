@@ -131,7 +131,7 @@ export default function Services() {
   return (
     <section
       id="services"
-      className="relative py-20 bg-gradient-to-b from-blue-50 via-white to-blue-50 text-gray-800"
+      className="relative py-20 bg-gray-50 dient-to-b from-blue-50 via-white to-blue-50 text-gray-800"
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center">
         {/* Tagline */}
@@ -140,7 +140,7 @@ export default function Services() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="text-sm font-semibold text-red-600 tracking-wider uppercase mb-3 inline-block"
+          className="text-sm font-semibold text-blue-800 tracking-wider uppercase mb-3 inline-block"
         >
           Caring for Every Family
         </motion.span>
@@ -151,10 +151,12 @@ export default function Services() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-3xl md:text-4xl font-serif font-bold text-blue-900 mb-6"
+          className="text-3xl md:text-4xl font-serif font-bold text-gray-800 mb-4"
         >
           Our Services
         </motion.h2>
+        <div className="w-24 h-1 bg-blue-800 mx-auto rounded-full mb-6"></div>
+
 
         {/* Subtext */}
         <motion.p
@@ -162,10 +164,10 @@ export default function Services() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="max-w-2xl mx-auto text-lg text-gray-600 mb-14"
+          className="text-gray-600 text-base md:text-lg mb-10 max-w-2xl mx-auto"
         >
           At{" "}
-          <span className="font-semibold text-blue-900">
+          <span className="font-semibold text-black">
             Lapsa Family Hospital
           </span>
           , we provide a wide range of healthcare services tailored to meet the
@@ -181,7 +183,7 @@ export default function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="group flex flex-col border border-gray-200 bg-white rounded-2xl shadow-md hover:shadow-2xl transition-all duration-500 overflow-hidden hover:-translate-y-2"
+              className="group flex flex-col border border-gray-200 bg-white rounded shadow-md hover:shadow-2xl transition-all duration-500 overflow-hidden hover:-translate-y-2"
             >
               {/* Service Image */}
               <div className="relative w-full h-48 overflow-hidden">
@@ -196,7 +198,7 @@ export default function Services() {
 
               {/* Content */}
               <div className="flex-1 p-6 flex flex-col">
-                <h3 className="text-lg font-serif font-bold text-blue-900 text-left mb-3">
+                <h3 className="md:text-lg font-serif font-bold text-gray-800 text-left mb-3">
                   {service.title}
                 </h3>
                 <p className="text-gray-600 text-sm leading-relaxed text-left flex-1">
@@ -206,7 +208,7 @@ export default function Services() {
                 {/* Button */}
                 <button
                   onClick={() => setSelectedService(service)}
-                  className="mt-6 font-serif text-sm font-bold w-full py-2 bg-blue-900 text-white rounded-lg hover:bg-red-600 transition"
+                  className="mt-6 fontserif text-sm font-semibold w-full py-2 bg-blue-900 text-white rounded hover:bg-red-600 transition"
                 >
                   Learn More
                 </button>

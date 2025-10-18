@@ -20,7 +20,9 @@ export default function EmergencyCall() {
         <h2 className="text-2xl md:text-3xl font-serif font-bold text-white mb-4">
           24/7 Emergency Hotline
         </h2>
-        <p className="text-lg text-blue-100 max-w-xl mx-auto mb-6">
+        <div className="w-24 h-1 bg-white mx-auto rounded-full mb-6"></div>
+
+        <p className="text-gray-200 text-base md:text-lg mb-10 max-w-2xl mx-auto">
           In case of any medical emergency, call us immediately. Our emergency
           team is ready to assist you any time, day or night.
         </p>
@@ -28,7 +30,7 @@ export default function EmergencyCall() {
         {/* Call Button */}
         <a
           href="tel:+254111608331"
-          className="inline-block bg-white text-blue-900 font-serif font-semibold px-8 py-4 rounded-full shadow-lg hover:bg-blue-100 transition"
+          className="inline-block bg-white text-blue-900 font-serif font-semibold px-8 py-2 rounded-full shadow-lg hover:bg-blue-100 transition"
         >
           Call Now: +254 111 608 331
         </a>

@@ -8,8 +8,9 @@ export default function HeroSection() {
       id="home"
       className="relative bg-gradient-to-r from-blue-950 via-indigo-800 to-blue-600 text-white overflow-hidden"
     >
-      {/* Background overlay */}
-      <div className="absolute inset-0 bg-black/40"></div>
+      {/* Background Overlay with Patterns */}
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-900/60 via-[#0a2540]/90 to-blue-800/70 z-0"></div>
+      <div className="absolute inset-0 bg-[url('/images/pattern.png')] opacity-10 bg-cover bg-center z-0"></div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-6 lg:px-14 py-24 flex flex-col md:flex-row gap-10 items-center">
         
@@ -20,10 +21,12 @@ export default function HeroSection() {
           transition={{ duration: 0.7 }}
           className="text-center md:text-left md:w-1/2"
         >
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-4">
             Caring for Your{" "}
             <span className="text-yellow-400">Family’s Health</span>
           </h1>
+        <div className="w-24 h-1 bg-white mx-auto md:mx-0 rounded-full mb-6"></div>
+
 
           <p className="mt-6 text-lg md:text-xl text-gray-200">
             Welcome to <span className="font-semibold">Lapsa Family Hospital</span>, 

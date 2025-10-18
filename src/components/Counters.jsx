@@ -5,8 +5,10 @@ import { Phone, Mail, MessageCircle } from "lucide-react";
 
 export default function Counters() {
   return (
-    <section className="relative py-16 bg-gradient-to-r from-blue-950 via-blue-900 to-cyan-800 text-white overflow-hidden">
-      <div className="absolute inset-0 bg-black/40" />
+    <section className="relative bg-[#0a2540] text-white pt-20 pb-10 overflow-hidden">
+      {/* Background Overlay with Patterns */}
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-900/60 via-[#0a2540]/90 to-blue-800/70 z-0"></div>
+      <div className="absolute inset-0 bg-[url('/images/pattern.png')] opacity-10 bg-cover bg-center z-0"></div>
 
       <div className="relative container mx-auto px-6 md:px-12 lg:px-20 text-center">
         {/* Heading */}
@@ -14,10 +16,12 @@ export default function Counters() {
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-2xl md:text-4xl font-serif font-bold mb-6"
+          className="text-2xl md:text-4xl font-serif font-bold mb-4"
         >
           Need Medical Assistance?
         </motion.h2>
+        <div className="w-24 h-1 bg-white mx-auto rounded-full mb-6"></div>
+
 
         {/* Subtext */}
         <motion.p

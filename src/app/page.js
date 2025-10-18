@@ -20,8 +20,8 @@ export default function Home() {
       <Navbar />
       <HeroSection />
       <PatientJourney />
-      <About />
       <TrustLogos />
+      <About />
       <AnimatedCounters />
       <Services />
       <EmergencyCall />

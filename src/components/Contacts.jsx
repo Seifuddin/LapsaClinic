@@ -1,4 +1,6 @@
 "use client";
+import { motion, AnimatePresence } from "framer-motion";
+
 
 import { useState } from "react";
 import { Phone, Mail, MapPin, Send, MessageSquare } from "lucide-react";
@@ -26,13 +28,25 @@ export default function ContactUs() {
   };
 
   return (
-    <section id="contact" className="py-20 bg-gradient-to-r from-white to-blue-50">
-      <div className="max-w-6xl mx-auto px-6">
+    <section id="contact" className="py-20 bg-gray-50 dient-to-r from-white to-blue-50">
+      <div className="max-w-6xl mx-auto px-6 textcenter">
         {/* Heading + Intro */}
         <div className="text-center mb-14">
-          <h2 className="text-2xl md:text-3xl font-serif font-bold text-blue-900 mb-3">
+          {/* Tagline */}
+                <motion.span
+                  initial={{ opacity: 0, y: -20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5 }}
+                  className="text-sm font-semibold text-blue-800 tracking-wider uppercase mb-3 inline-block"
+                >
+                  Contac Us
+                </motion.span>
+          <h2 className="text-2xl md:text-3xl font-serif font-bold text-gray-800 mb-4">
             Get in Touch With Us
           </h2>
+        <div className="w-24 h-1 bg-blue-800 mx-auto rounded-full mb-6"></div>
+
           <p className="text-lg font-medium text-gray-600 mb-2">
             We’re here to help and answer any questions you might have.
           </p>
@@ -49,31 +63,31 @@ export default function ContactUs() {
             simply say hello, feel free to reach out—we’d love to hear from you.
           </p>
               <div className="flex items-center space-x-3">
-                <Phone className="text-green-600" />
+                <Phone className="text-green-600 bg-white p-1 shadow-lg rounded" />
                 <a
                   href="tel:+254111608331"
-                  className="text-lg font-medium text-gray-700 hover:text-blue-700 transition"
+                  className="text-lg font-medium text-blue-900 hover:text-blue-700 transition"
                 >
                   +254 111 608 331
                 </a>
               </div>
               <div className="flex items-center space-x-3">
-                <Mail className="text-blue-600" />
+                <Mail className="text-blue-600 bg-white p-1 shadow-lg rounded" />
                 <a
                   href="mailto:info@hospital.com"
-                  className="text-lg font-medium text-gray-700 hover:text-blue-700 transition"
+                  className="text-lg font-medium text-blue-900 hover:text-blue-700 transition"
                 >
                   info@hospital.com
                 </a>
               </div>
               <div className="flex items-center space-x-3">
-                <MapPin className="text-red-600" />
-                <span className="text-lg font-medium text-gray-700">
+                <MapPin className="text-red-600 bg-white p-1 shadow-lg rounded" />
+                <span className="text-lg font-medium text-blue-900">
                   Nairobi, Kenya
                 </span>
               </div>
               <div className="flex items-center space-x-3">
-                <MessageSquare className="text-green-500" />
+                <MessageSquare className="text-green-500 bg-white p-1 shadow-lg rounded" />
                 <a
                   href="https://wa.me/254111608331"
                   target="_blank"
@@ -103,7 +117,7 @@ export default function ContactUs() {
           <div>
             <form
               onSubmit={handleSubmit}
-              className="bg-white p-6 rounded-2xl shadow-lg space-y-5"
+              className="bg-white p-6 rounded border border-gray-200 shadow-lg space-y-5"
             >
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">
@@ -115,7 +129,7 @@ export default function ContactUs() {
                   value={formData.name}
                   onChange={handleChange}
                   placeholder="Enter your full name"
-                  className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-500"
+                  className="text-gray-600 w-full p-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500"
                 />
               </div>
               <div>
@@ -128,7 +142,7 @@ export default function ContactUs() {
                   value={formData.email}
                   onChange={handleChange}
                   placeholder="Enter your email"
-                  className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-500"
+                  className="text-gray-600 w-full p-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500"
                 />
               </div>
               <div>
@@ -141,12 +155,12 @@ export default function ContactUs() {
                   onChange={handleChange}
                   placeholder="Write your message"
                   rows="4"
-                  className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-500"
+                  className="text-gray-600 w-full p-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500"
                 ></textarea>
               </div>
               <button
                 type="submit"
-                className="w-full flex items-center justify-center space-x-2 bg-blue-600 text-white px-4 py-3 rounded-lg font-medium hover:bg-blue-700 transition transform hover:scale-105"
+                className="w-full flex items-center justify-center space-x-2 bg-blue-600 text-white px-4 py-3 rounded font-medium hover:bg-blue-700 transition transform hover:scale-105"
               >
                 <Send size={18} />
                 <span>Send Message</span>

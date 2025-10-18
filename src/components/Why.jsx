@@ -25,7 +25,7 @@ const reasons = [
 
 export default function WhyUs() {
   return (
-    <section className="relative py-20 bg-gradient-to-b from-blue-50 to-white overflow-hidden">
+    <section className="relative py-20 bg-gray-50 dient-to-b from-blue-50 to-white overflow-hidden">
       {/* Decorative SVGs */}
       <svg
         aria-hidden="true"
@@ -57,11 +57,11 @@ export default function WhyUs() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="text-center text-3xl md:text-4xl font-serif font-bold text-blue-900 mb-4"
+          className="text-center text-3xl md:text-4xl font-serif font-bold text-gray-800 mb-4"
         >
           Why Choose Us
         </motion.h2>
-        <div className="w-24 h-1 bg-red-600 mx-auto rounded-full mb-6"></div>
+        <div className="w-24 h-1 bg-blue-800 mx-auto rounded-full mb-6"></div>
         <p className="text-center text-gray-600 mb-14 max-w-2xl mx-auto">
           Exceptional healthcare built on trust, innovation, and compassion.
         </p>
@@ -79,9 +79,9 @@ export default function WhyUs() {
                 className="p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition group"
               >
                 <div className="flex items-start gap-3">
-                  <CheckCircle className="text-red-600 w-6 h-6 mt-1 flex-shrink-0 group-hover:scale-110 transition" />
+                  <CheckCircle className="text-blue-800 w-6 h-6 mt-1 flex-shrink-0 group-hover:scale-110 transition" />
                   <div>
-                    <h3 className="text-lg font-serif font-bold text-blue-900">
+                    <h3 className="md:text-lg font-serif font-bold text-gray-800">
                       {item.title}
                     </h3>
                     <p className="text-gray-600 text-sm mt-1">{item.desc}</p>
@@ -111,7 +111,7 @@ export default function WhyUs() {
           </div>
         </div>
 
-        {/* CTA Buttons */}
+        {/* CTA Buttons 
         <div className="mt-14 flex flex-col sm:flex-row justify-center gap-5">
           <a
             href="/appointment"
@@ -128,6 +128,7 @@ export default function WhyUs() {
             Contact Us
           </a>
         </div>
+        */}
       </div>
     </section>
   );

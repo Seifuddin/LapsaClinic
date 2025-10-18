@@ -46,6 +46,7 @@ export default function Testimonials() {
   return (
     <section className="py-16 bg-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        
         {/* Section Title */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -53,10 +54,22 @@ export default function Testimonials() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h2 className="text-2xl md:text-3xl font-serif font-bold text-blue-900">
-            What Our <span className="text-blue-800">Patients Say</span>
+          {/* Tagline */}
+                <motion.span
+                  initial={{ opacity: 0, y: -20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5 }}
+                  className="text-sm text-center font-semibold text-blue-800 tracking-wider uppercase mb-3 inline-block"
+                >
+                  Client Testimonials
+                </motion.span>
+          <h2 className="text-2xl md:text-3xl font-serif font-bold text-gray-800 mb-4">
+            What Our <span className="text-gray-900">Patients Say</span>
           </h2>
-          <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
+        <div className="w-24 h-1 bg-blue-800 mx-auto rounded-full mb-6"></div>
+
+          <p className="text-gray-600 text-base md:text-lg mb-10 max-w-2xl mx-auto">
             We value the trust our patients place in us. Here are some of their
             stories and experiences.
           </p>

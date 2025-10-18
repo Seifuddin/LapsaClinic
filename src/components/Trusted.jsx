@@ -15,12 +15,14 @@ const partners = [
 
 export default function TrustLogos() {
   return (
-    <section className="py-16 bg-gradient-to-b from-blue-50 via-white to-blue-50 border-t-2 border-blue-200 shadow-sm">
-      <div className="max-w-6xl mx-auto px-6 text-center">
+    <section className=" bg-white gradient-to-b from-blue-50 via-white to-blue-50 border--2 border-blue-200 shadow-sm">
+      <div className="max-w-6xl mx-auto px-6 text-center border-y-2 border-gray-200 py-10">
         {/* Section Title */}
-        <h2 className="text-2xl md:text-3xl font-serif font-extrabold text-blue-900 mb-3">
+        <h2 className="text-2xl md:text-3xl font-serif font-extrabold text-gray-900 mb-3">
           Trusted by Leading Organizations
         </h2>
+        <div className="w-24 h-1 bg-blue-800 mx-auto rounded-full mb-6"></div>
+
 
         {/* Intro Statement */}
         <p className="text-gray-600 text-base md:text-lg mb-10 max-w-2xl mx-auto">
@@ -51,7 +53,7 @@ export default function TrustLogos() {
                 <img
                   src={partner.logo}
                   alt={partner.alt}
-                  className="max-h-16 object-contain grayscale hover:grayscale-0 hover:scale-105 transition duration-300"
+                  className="max-h-16 object-contain graycale hover:grayscale-0 hover:scale-105 transition duration-300"
                 />
               </div>
             </SwiperSlide>

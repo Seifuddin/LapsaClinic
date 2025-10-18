@@ -9,13 +9,18 @@ export default function Footer() {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      className="bg-gradient-to-r from-blue-950 via-blue-800 to-blue-900 text-white py-12 mt20"
-    >
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+     className="relative bg-[#0a2540] text-white pt-20 pb-10 overflow-hidden">
+      {/* Background Overlay with Patterns */}
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-900/60 via-[#0a2540]/90 to-blue-800/70 z-0"></div>
+      <div className="absolute inset-0 bg-[url('/images/pattern.png')] opacity-10 bg-cover bg-center z-0"></div>
+
+      <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
           {/* Logo & About */}
           <div>
-            <h2 className="text-2xl font-serif font-bold mb-4">Lapsa Family Hospital</h2>
+            <h2 className="text-2xl font-serif font-bold mb-3">Lapsa Family Hospital</h2>
+        <div className="w-24 h-1 bg-white mxauto rounded-full mb-4"></div>
+
             <p className="text-gray-200 text-sm leading-relaxed">
               Providing compassionate healthcare with modern facilities, 
               experienced doctors, and 24/7 emergency services to keep 

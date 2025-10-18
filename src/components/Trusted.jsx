@@ -15,7 +15,7 @@ const partners = [
 
 export default function TrustLogos() {
   return (
-    <section className=" bg-white gradient-to-b from-blue-50 via-white to-blue-50 border--2 border-blue-200 shadow-sm">
+    <section className=" bg-gray-50 gradient-to-b from-blue-50 via-white to-blue-50 border--2 border-blue-200 shadow-sm">
       <div className="max-w-6xl mx-auto px-6 text-center border-y-2 border-gray-200 py-10">
         {/* Section Title */}
         <h2 className="text-2xl md:text-3xl font-serif font-extrabold text-gray-900 mb-3">
@@ -25,7 +25,7 @@ export default function TrustLogos() {
 
 
         {/* Intro Statement */}
-        <p className="text-gray-600 text-base md:text-lg mb-10 max-w-2xl mx-auto">
+        <p className="text-gray-700 text-base md:text-lg mb-10 max-w-2xl mx-auto">
           We collaborate with world-renowned health institutions and insurance
           providers to ensure the highest level of care and accessibility.
         </p>

@@ -32,7 +32,7 @@ const steps = [
 
 export default function PatientJourney() {
   return (
-    <section className="py-20 bg-white relative overflow-hidden">
+    <section className="py-20 bg-gray-50 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 lg:px-1 text-center">
         {/* Semi Title */}
         <p className="text-sm uppercase tracking-wide font-semibold text-blue-800 mb-2">
@@ -47,7 +47,7 @@ export default function PatientJourney() {
 
 
         {/* Intro Text */}
-        <p className="text-gray-600 text-base md:text-lg mb-10 max-w-2xl mx-auto">
+        <p className="text-gray-700 text-base md:text-lg mb-10 max-w-2xl mx-auto">
           We guide you through every stage of your health journey — from the
           first appointment to long-term wellness.
         </p>
@@ -68,7 +68,7 @@ export default function PatientJourney() {
                 >
                   {/* Mobile vertical connector (except last card) */}
                   {index !== steps.length - 1 && (
-                    <div className="lg:hidden absolute bottom-[-40px] left-1/2 transform -translate-x-1/2 w-[2px] h-[40px] bg-gradient-to-b from-red-700 to-red-900"></div>
+                    <div className="lg:hidden absolute bottom-[-40px] left-1/2 transform -translate-x-1/2 w-[2px] h-[40px] bg-gradient-to-b from-blue-700 to-blue-900"></div>
                   )}
 
                   {/* Desktop horizontal connector (except last card) */}
@@ -84,12 +84,12 @@ export default function PatientJourney() {
                   </div>
 
                   {/* Title */}
-                  <h3 className="text-lg font-serif font-bold text-blue-900 mb-2">
+                  <h3 className="text-lg font-serif font-bold text-gray-800 mb-2">
                     {index + 1}. {step.title}
                   </h3>
 
                   {/* Description */}
-                  <p className="text-gray-600 text-sm">{step.description}</p>
+                  <p className="text-gray-700 text-sm">{step.description}</p>
                 </motion.div>
               );
             })}

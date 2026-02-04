@@ -15,8 +15,8 @@ const partners = [
 
 export default function TrustLogos() {
   return (
-    <section className=" bg-gray-50 gradient-to-b from-blue-50 via-white to-blue-50 border--2 border-blue-200 shadow-sm">
-      <div className="max-w-6xl mx-auto px-6 text-center border-y-2 border-gray-200 py-10">
+    <section className="bg-blue-100 gradient-to-b from-blue-50 via-white to-blue-50 shadow-sm border-y border-gray-200 px-6">
+      <div className="max-w-7xl mx-auto text-center py-10">
         {/* Section Title */}
         <h2 className="text-2xl md:text-3xl font-serif font-extrabold text-gray-900 mb-3">
           Trusted by Leading Organizations

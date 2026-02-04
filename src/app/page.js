@@ -13,6 +13,7 @@ import TrustLogos from "@/components/Trusted";
 import InsuranceCoverage from "@/components/Insurance";
 import PatientJourney from "@/components/Steps";
 import EmergencyCall from "@/components/Emergency";
+import WhatsAppButton from "@/components/WhatsApp";
 
 export default function Home() {
   return (
@@ -31,6 +32,7 @@ export default function Home() {
       <InsuranceCoverage />
       <Testimonials />
       <ContactUs />
+      <WhatsAppButton />
       <Footer />
     </ div>
   );

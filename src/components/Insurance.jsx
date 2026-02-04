@@ -14,19 +14,19 @@ const insuranceProviders = [
 
 export default function InsuranceCoverage() {
   return (
-    <section className="relative bg-[#0a2540] text-white pt-20 pb-10 overflow-hidden">
+    <section className="relative bg-[#0a2540] text-white pt-20 pb-10 p overflow-hidden">
       {/* Background Overlay with Patterns */}
       <div className="absolute inset-0 bg-gradient-to-br from-blue-900/60 via-[#0a2540]/90 to-blue-800/70 z-0"></div>
       <div className="absolute inset-0 bg-[url('/images/pattern.png')] opacity-10 bg-cover bg-center z-0"></div>
-      <div className="relative max-w-6xl mx-auto px-6 text-center">
+      <div className="relative max-w-7xl mx-auto px6 text-center">
         {/* Icon + Heading */}
         <div className="flex justify-center mb-4">
-          <ShieldCheck className="w-14 h-14 text-blue-300" />
+          <ShieldCheck className="w-14 h-14 text-yellow-400" />
         </div>
         <h2 className="text-2xl md:text-3xl font-serif font-bold text-white mb-3">
           Insurance Coverage
         </h2>
-        <div className="w-24 h-1 bg-white mx-auto rounded-full mb-6"></div>
+        <div className="w-24 h-1 bg-yellow-400 mx-auto rounded-full mb-6"></div>
 
         <p className="text-blue-100 text-lg max-w-2xl mx-auto mb-12">
           💳 We accept{" "}

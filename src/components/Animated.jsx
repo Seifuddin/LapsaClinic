@@ -30,20 +30,20 @@ const AnimatedCounter = ({ from = 0, to }) => {
 };
 
 const stats = [
-  { icon: Users, label: "Happy Patients", value: 12000, color: "text-green-400" },
-  { icon: Stethoscope, label: "Expert Doctors", value: 85, color: "text-blue-300" },
-  { icon: HeartPulse, label: "Successful Surgeries", value: 4500, color: "text-red-400" },
-  { icon: Ambulance, label: "Ambulances", value: 15, color: "text-purple-400" },
+  { icon: Users, label: "Happy Patients", value: 12000, color: "text-yellow-400 00" },
+  { icon: Stethoscope, label: "Expert Doctors", value: 85, color: "text-yellow-400 0" },
+  { icon: HeartPulse, label: "Successful Surgeries", value: 4500, color: "text-yellow-400 " },
+  { icon: Ambulance, label: "Ambulances", value: 15, color: "text-yellow-400 400" },
 ];
 
 export default function AnimatedCounters() {
   return (
-    <section className="relative bg-[#0a2540] text-white pt-20 pb-10 overflow-hidden">
+    <section className="relative bg-[#0a2540] text-white px-6 pt-20 pb-10 overflow-hidden">
       {/* Background Overlay with Patterns */}
       <div className="absolute inset-0 bg-gradient-to-br from-blue-900/60 via-[#0a2540]/90 to-blue-800/70 z-0"></div>
       <div className="absolute inset-0 bg-[url('/images/pattern.png')] opacity-10 bg-cover bg-center z-0"></div>
 
-      <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-12 text-center z-10">
+      <div className="relative max-w-7xl mx-auto px4 sm:px6 lg:px12 text-center z-10">
         {/* Heading */}
         <motion.h2
           initial={{ opacity: 0, y: -20 }}

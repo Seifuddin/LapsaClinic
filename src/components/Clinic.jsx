@@ -106,8 +106,8 @@ export default function Clinics() {
   const [selectedClinic, setSelectedClinic] = useState(null);
 
   return (
-    <section id="clinics" className="py-20 bg-gray-50 dient-to-b from-blue-50 to-white">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+    <section id="clinics" className="py-20 px-6 bg-gray-50 dient-to-b from-blue-50 to-white">
+      <div className="max-w-7xl mx-auto lg:px8">
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-800 mb-4">
@@ -143,13 +143,13 @@ export default function Clinics() {
                 transition={{ duration: 0.5 }}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.98 }}
-                className="flex flex-col justify-between bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 p-4 text-center border border-gray-200"
+                className="flex flex-col justify-between bg-blue-100 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 p-4 text-center border border-gray-200"
               >
                 <div>
                   {/* Icon */}
                   <div className="mb-6 flex justify-center">
                     <div className="w-10 h-10 rounded-full bg-gradient-to-r from-blue-700 to-blue-900 flex items-center justify-center shadow-lg">
-                      <Icon className="w-6 h-6 text-white" />
+                      <Icon className="w-6 h-6 text-yellow-400" />
                     </div>
                   </div>
 

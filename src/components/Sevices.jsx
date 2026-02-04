@@ -131,9 +131,9 @@ export default function Services() {
   return (
     <section
       id="services"
-      className="relative py-20 bg-gray-50 dient-to-b from-blue-50 via-white to-blue-50 text-gray-800"
+      className="relative px-6 py-20 bg-gray-50 dient-to-b from-blue-50 via-white to-blue-50 text-gray-800"
     >
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center">
+      <div className="max-w-7xl mx-auto lg:px8 text-center">
         {/* Tagline */}
         <motion.span
           initial={{ opacity: 0, y: -20 }}
@@ -183,7 +183,7 @@ export default function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="group flex flex-col border border-gray-200 bg-white rounded shadow-md hover:shadow-2xl transition-all duration-500 overflow-hidden hover:-translate-y-2"
+              className="group flex flex-col border border-gray-200 bg-blue-50 rounded shadow-md hover:shadow-2xl transition-all duration-500 overflow-hidden hover:-translate-y-2"
             >
               {/* Service Image */}
               <div className="relative w-full h-48 overflow-hidden">

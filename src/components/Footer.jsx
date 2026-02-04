@@ -9,17 +9,17 @@ export default function Footer() {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.8, ease: "easeOut" }}
-     className="relative bg-[#0a2540] text-white pt-20 pb-10 overflow-hidden">
+     className="relative bg-[#0a2540] text-white pt-20 pb-10 overflow-hidden px-6">
       {/* Background Overlay with Patterns */}
       <div className="absolute inset-0 bg-gradient-to-br from-blue-900/60 via-[#0a2540]/90 to-blue-800/70 z-0"></div>
       <div className="absolute inset-0 bg-[url('/images/pattern.png')] opacity-10 bg-cover bg-center z-0"></div>
 
-      <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
+      <div className="relative max-w-7xl mx-auto px-6lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
           {/* Logo & About */}
           <div>
-            <h2 className="text-2xl font-serif font-bold mb-3">Lapsa Family Hospital</h2>
-        <div className="w-24 h-1 bg-white mxauto rounded-full mb-4"></div>
+            <h2 className="text-xl font-serif font-bold mb-3">Lapsa Family Hospital</h2>
+        <div className="w-24 h-1 bg-yellow-400 mxauto rounded-full mb-4"></div>
 
             <p className="text-gray-200 text-sm leading-relaxed">
               Providing compassionate healthcare with modern facilities, 
@@ -62,15 +62,15 @@ export default function Footer() {
             <p className="text-sm mb-4 text-gray-200">
               Subscribe to get health tips and hospital updates.
             </p>
-            <form className="flex">
+            <form className="flex border rounded-lg">
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="px-3 py-2 w-full rounded-l-lg border text-gray-300 focus:outline-none"
+                className="px-3 py-2 w-full rounded-l-lg text-gray-300 focus:outline-none"
               />
               <button
                 type="submit"
-                className="bg-yellow-400 px-4 py-2 rounded-r-lg font-serif font-semibold hover:bg-yellow-500 transition"
+                className="bg-blue-600 px-4 py-2 rounded-r-lg font-serif font-semibold hover:bg-yellow-500 transition"
               >
                 Subscribe
               </button>

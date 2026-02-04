@@ -11,28 +11,33 @@ export default function EmergencyCall() {
       <div className="absolute inset-0 bg-black/80"></div>
 
       <div className="relative max-w-5xl mx-auto px-6 lg:px-8 flex flex-col items-center text-center">
-        {/* Icon */}
+        {/* Icon 
         <div className="mb-6 flex items-center justify-center w-20 h-20 rounded-full bg-blue-100">
           <PhoneCall className="w-10 h-10 text-blue-900" />
         </div>
-
+          */}
         {/* Title */}
         <h2 className="text-2xl md:text-3xl font-serif font-bold text-white mb-4">
           24/7 Emergency Hotline
         </h2>
-        <div className="w-24 h-1 bg-white mx-auto rounded-full mb-6"></div>
+        <div className="w-24 h-1 bg-yellow-400 mx-auto rounded-full mb-6"></div>
 
-        <p className="text-gray-200 text-base md:text-lg mb-10 max-w-2xl mx-auto">
+        <p className="text-gray-200 text-base md:text-lg mb10 max-w-2xl mx-auto">
           In case of any medical emergency, call us immediately. Our emergency
           team is ready to assist you any time, day or night.
         </p>
+        <p className="text-yellow-400 text-base md:text-lg mb-10 max-w-2xl mx-auto">
+          Tap the button below to make a call
+        </p>
 
-        {/* Call Button */}
+          {/* className="inline-block bg-green-500 text-white -900 font-serif font-semibold px-8 py-2 rounded-full shadow-lg hover:bg-blue-100 transition" */}
+        {/* Call Button  */}
         <a
           href="tel:+254111608331"
-          className="inline-block bg-white text-blue-900 font-serif font-semibold px-8 py-2 rounded-full shadow-lg hover:bg-blue-100 transition"
         >
-          Call Now: +254 111 608 331
+          <div className="mb-6 flex items-center justify-center w-20 h-20 rounded-full bg-green-500">
+          <PhoneCall className="w-10 h-10 text-white" />
+        </div>
         </a>
       </div>
     </section>

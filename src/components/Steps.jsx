@@ -64,7 +64,7 @@ export default function PatientJourney() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: index * 0.2 }}
-                  className="relative bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all border border-gray-200"
+                  className="relative bg-blue-100 p-6 rounded-xl shadow-md hover:shadow-xl transition-all border border-gray-200"
                 >
                   {/* Mobile vertical connector (except last card) */}
                   {index !== steps.length - 1 && (
@@ -79,7 +79,7 @@ export default function PatientJourney() {
                   {/* Icon */}
                   <div className="flex justify-center mb-6">
                     <div className="bg-gradient-to-r from-blue-700 to-blue-900 p-3 rounded-full shadow-md">
-                      <Icon className="w-5 h-5 text-white" />
+                      <Icon className="w-5 h-5 text-yellow-400" />
                     </div>
                   </div>
 

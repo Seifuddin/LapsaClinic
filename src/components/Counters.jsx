@@ -20,7 +20,7 @@ export default function Counters() {
         >
           Need Medical Assistance?
         </motion.h2>
-        <div className="w-24 h-1 bg-white mx-auto rounded-full mb-6"></div>
+        <div className="w-24 h-1 bg-yellow-400 mx-auto rounded-full mb-6"></div>
 
 
         {/* Subtext */}
@@ -45,10 +45,10 @@ export default function Counters() {
           {/* Phone Call Button */}
           <a
             href="tel:0111608331"
-            className="flex items-center gap-2 bg-green-600 hover:bg-green-700 px-6 py-3 rounded-2xl shadow-lg transition transform hover:scale-105"
+            className="flex items-center gap-2 bg-green-600 border border-white/20 hover:bg-green-700 px-6 py-3 rounded-2xl shadow-lg transition transform hover:scale-105"
           >
-            <Phone className="w-5 h-5" />
-            <span className="font-medium">Call Us</span>
+            <Phone className="w-5 h-5 text-yellow-400" />
+            <span className="font-medium text-yellow-400">Call Us</span>
           </a>
 
           {/* WhatsApp Button */}
@@ -56,19 +56,19 @@ export default function Counters() {
             href="https://wa.me/+254111608331"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 bg-emerald-500 hover:bg-emerald-600 px-6 py-3 rounded-2xl shadow-lg transition transform hover:scale-105"
+            className="flex items-center gap-2 bg-emerald-500 border border-white/20 hover:bg-emerald-600 px-6 py-3 rounded-2xl shadow-lg transition transform hover:scale-105"
           >
-            <MessageCircle className="w-5 h-5" />
-            <span className="font-medium">WhatsApp</span>
+            <MessageCircle className="w-5 h-5 text-yellow-400" />
+            <span className="font-medium text-yellow-400">WhatsApp</span>
           </a>
 
           {/* Email Button */}
           <a
             href="mailto:info@lapsafamilyhospital.com"
-            className="flex items-center gap-2 bg-blue-900 hover:bg-red-700 px-6 py-3 rounded-2xl shadow-lg transition transform hover:scale-105"
+            className="flex items-center gap-2 bg-blue-900 border border-white/20 hover:bg-red-700 px-6 py-3 rounded-2xl shadow-lg transition transform hover:scale-105"
           >
-            <Mail className="w-5 h-5" />
-            <span className="font-medium">Email Us</span>
+            <Mail className="w-5 h-5 text-yellow-400" />
+            <span className="font-medium text-yellow-400">Email Us</span>
           </a>
         </motion.div>
       </div>

@@ -28,8 +28,8 @@ export default function ContactUs() {
   };
 
   return (
-    <section id="contact" className="py-20 bg-gray-50 dient-to-r from-white to-blue-50">
-      <div className="max-w-6xl mx-auto px-6 textcenter">
+    <section id="contact" className="py-20 px-6 bg-gray-50 dient-to-r from-white to-blue-50">
+      <div className="max-w-7xl mx-auto textcenter">
         {/* Heading + Intro */}
         <div className="text-center mb-14">
           {/* Tagline */}
@@ -66,7 +66,7 @@ export default function ContactUs() {
                 <Phone className="text-green-600 bg-white p-1 shadow-lg rounded" />
                 <a
                   href="tel:+254111608331"
-                  className="text-lg font-medium text-blue-900 hover:text-blue-700 transition"
+                  className="text-md font-medium text-blue-900 hover:text-blue-700 transition"
                 >
                   +254 111 608 331
                 </a>
@@ -75,14 +75,14 @@ export default function ContactUs() {
                 <Mail className="text-blue-600 bg-white p-1 shadow-lg rounded" />
                 <a
                   href="mailto:info@hospital.com"
-                  className="text-lg font-medium text-blue-900 hover:text-blue-700 transition"
+                  className="text-md font-medium text-blue-900 hover:text-blue-700 transition"
                 >
                   info@hospital.com
                 </a>
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin className="text-red-600 bg-white p-1 shadow-lg rounded" />
-                <span className="text-lg font-medium text-blue-900">
+                <span className="text-md font-medium text-blue-900">
                   Nairobi, Kenya
                 </span>
               </div>

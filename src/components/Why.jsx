@@ -25,7 +25,7 @@ const reasons = [
 
 export default function WhyUs() {
   return (
-    <section className="relative py-20 bg-gray-50 dient-to-b from-blue-50 to-white overflow-hidden">
+    <section className="relative py-20 px-6 bg-gray-50 dient-to-b from-blue-50 to-white overflow-hidden">
       {/* Decorative SVGs */}
       <svg
         aria-hidden="true"
@@ -50,7 +50,7 @@ export default function WhyUs() {
         <path d="M24 12v24M12 24h24" />
       </svg>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative max-w-7xl mx-auto px4 sm:px6 lg:px8">
         {/* Section Title */}
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
@@ -76,7 +76,7 @@ export default function WhyUs() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.2 }}
-                className="p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition group"
+                className="p-6 bg-blue-100 rounded-xl shadow-md hover:shadow-lg transition group"
               >
                 <div className="flex items-start gap-3">
                   <CheckCircle className="text-blue-800 w-6 h-6 mt-1 flex-shrink-0 group-hover:scale-110 transition" />

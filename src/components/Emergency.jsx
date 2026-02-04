@@ -35,7 +35,7 @@ export default function EmergencyCall() {
         <a
           href="tel:+254111608331"
         >
-          <div className="mb-6 flex items-center justify-center w-20 h-20 rounded-full bg-green-500">
+          <div className="mb-6 flex items-center justify-center w-14 h-14 rounded-full bg-green-500">
           <PhoneCall className="w-7 h-7 text-white" />
         </div>
         </a>

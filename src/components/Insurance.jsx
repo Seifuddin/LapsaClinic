@@ -14,7 +14,7 @@ const insuranceProviders = [
 
 export default function InsuranceCoverage() {
   return (
-    <section className="relative bg-[#0a2540] text-white pt-20 pb-10 p overflow-hidden">
+    <section className="relative bg-[#0a2540] text-white px-6 pt-20 pb-10 p overflow-hidden">
       {/* Background Overlay with Patterns */}
       <div className="absolute inset-0 bg-gradient-to-br from-blue-900/60 via-[#0a2540]/90 to-blue-800/70 z-0"></div>
       <div className="absolute inset-0 bg-[url('/images/pattern.png')] opacity-10 bg-cover bg-center z-0"></div>
@@ -49,7 +49,7 @@ export default function InsuranceCoverage() {
               (provider, index) => (
                 <div
                   key={index}
-                  className="flex justify-center items-center bg-white rounded-xl px- py- shadow-md min-w-[180px]"
+                  className="flex justify-center items-center bg-white rounded px- py- shadow-md min-w-[180px]"
                 >
                   <Image
                     src={provider.logo}

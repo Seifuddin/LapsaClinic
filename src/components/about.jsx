@@ -64,7 +64,7 @@ export default function About() {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-6">
             <motion.div
               whileHover={{ scale: 1.05 }}
-              className="flex flex-col items-center text-center p-4 rounded-xl border border-blue-100 bg-white hover:bg-blue-50 transition shadow-sm"
+              className="flex flex-col items-center text-center p-4 rounded border border-blue-100 bg-white hover:bg-blue-50 transition shadow-sm"
             >
               <ShieldCheck className="text-blue-600 w-10 h-10 mb-3" />
               <h4 className="font-semibold text-gray-800 mb-1">Trust</h4>
@@ -73,7 +73,7 @@ export default function About() {
 
             <motion.div
               whileHover={{ scale: 1.05 }}
-              className="flex flex-col items-center text-center p-4 rounded-xl border border-blue-100 bg-blue-100 hover:bg-blue-50 transition shadow-sm"
+              className="flex flex-col items-center text-center p-4 rounded border border-blue-100 bg-white hover:bg-blue-50 transition shadow-sm"
             >
               <Microscope className="text-blue-600 w-10 h-10 mb-3" />
               <h4 className="font-semibold text-gray-800 mb-1">Innovation</h4>
@@ -82,7 +82,7 @@ export default function About() {
 
             <motion.div
               whileHover={{ scale: 1.05 }}
-              className="flex flex-col items-center text-center p-4 rounded-xl border border-blue-100 bg-blue-100 hover:bg-blue-50 transition shadow-sm"
+              className="flex flex-col items-center text-center p-4 rounded border border-blue-100 bg-white hover:bg-blue-50 transition shadow-sm"
             >
               <HeartPulse className="text-blue-600 w-10 h-10 mb-3" />
               <h4 className="font-semibold text-gray-800 mb-1">Compassion</h4>

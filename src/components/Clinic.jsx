@@ -143,7 +143,7 @@ export default function Clinics() {
                 transition={{ duration: 0.5 }}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.98 }}
-                className="flex flex-col justify-between bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 p-4 text-center border border-gray-200"
+                className="flex flex-col justify-between bg-white rounded shadow-md hover:shadow-xl transition-shadow duration-300 p-4 text-center border border-gray-200"
               >
                 <div>
                   {/* Icon */}

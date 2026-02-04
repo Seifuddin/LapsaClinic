@@ -23,7 +23,7 @@ const AnimatedCounter = ({ from = 0, to }) => {
   }, [isInView, to, count]);
 
   return (
-    <span ref={ref} className="text-lg md:text-2xl font-serif font-bold text-white">
+    <span ref={ref} className="text-lg md:text-2xl fontserif font-bold text-yellow-400">
       {value.toLocaleString()}+
     </span>
   );
@@ -54,7 +54,7 @@ export default function AnimatedCounters() {
         >
           Our Achievements in Numbers
         </motion.h2>
-        <div className="w-24 h-1 bg-white mx-auto rounded-full mb-6"></div>
+        <div className="w-24 h-1 bg-yellow-400 mx-auto rounded-full mb-6"></div>
 
 
         <p className="text-blue-200 text-sm md:text-base max-w-2xl mx-auto mb-10">
@@ -73,7 +73,7 @@ export default function AnimatedCounters() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 whileHover={{ scale: 1.05 }}
-                className="bg-white/10 backdrop-blur-md border border-white/20 p-4 xs:p-5 sm:p-6 rounded-2xl flex flex-col items-center"
+                className="bg-white/10 backdrop-blur-md border border-white/20 p-4 xs:p-5 sm:p-6 rounded flex flex-col items-center"
               >
                 {/* Icon */}
                 <div className="w-14 h-14 flex items-center justify-center rounded-full bg-white/20 mb-2 xs:mb-3">

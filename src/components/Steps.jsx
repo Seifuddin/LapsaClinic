@@ -64,7 +64,7 @@ export default function PatientJourney() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: index * 0.2 }}
-                  className="relative bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all border border-gray-200"
+                  className="relative bg-white p-6 rounded shadow-md hover:shadow-xl transition-all border border-gray-200"
                 >
                   {/* Mobile vertical connector (except last card) */}
                   {index !== steps.length - 1 && (

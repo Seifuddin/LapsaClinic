@@ -154,7 +154,7 @@ export default function Clinics() {
                   </div>
 
                   {/* Title + Description */}
-                  <h3 className="md:text-lg font-serif font-bold text-gray-800 mb-3">
+                  <h3 className="md:text-lg fontserif font-bold text-gray-800 mb-3">
                     {clinic.name}
                   </h3>
                   <p className="text-gray-600 text-sm leading-relaxed">

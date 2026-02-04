@@ -28,7 +28,7 @@ export default function Counters() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-lg md:text-xl mb-10 text-gray-200 max-w-2xl mx-auto"
+          className="text-base md:text-xl mb-10 text-gray-200 max-w-2xl mx-auto"
         >
           Our doctors and specialists are available to help you. 
           Contact us today to book an appointment or get more information 

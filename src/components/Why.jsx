@@ -76,12 +76,12 @@ export default function WhyUs() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.2 }}
-                className="p-6 bg-blue-100 rounded shadow-md hover:shadow-lg transition group"
+                className="p-6 bg-white rounded shadow-md hover:shadow-lg transition group"
               >
                 <div className="flex items-start gap-3">
                   <CheckCircle className="text-blue-800 w-6 h-6 mt-1 flex-shrink-0 group-hover:scale-110 transition" />
                   <div>
-                    <h3 className="md:text-lg font-serif font-bold text-gray-800">
+                    <h3 className="md:text-lg fontserif font-bold text-gray-800">
                       {item.title}
                     </h3>
                     <p className="text-gray-600 text-sm mt-1">{item.desc}</p>
@@ -98,7 +98,7 @@ export default function WhyUs() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="w-full max-w-md rounded-2xl shadow-xl overflow-hidden"
+              className="w-full max-w-md rounded shadow-xl overflow-hidden"
             >
               <Image
                 src="/images/whychooseus.webp"

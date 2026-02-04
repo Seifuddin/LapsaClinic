@@ -77,7 +77,7 @@ export default function ContactUs() {
                   href="mailto:info@hospital.com"
                   className="text-md font-medium text-blue-900 hover:text-blue-700 transition"
                 >
-                  info@hospital.com
+                  lapsatechnologies@gmail.com
                 </a>
               </div>
               <div className="flex items-center space-x-3">

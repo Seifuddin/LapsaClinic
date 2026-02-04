@@ -28,7 +28,7 @@ export default function InsuranceCoverage() {
         </h2>
         <div className="w-24 h-1 bg-yellow-400 mx-auto rounded-full mb-6"></div>
 
-        <p className="text-blue-100 text-lg max-w-2xl mx-auto mb-12">
+        <p className="text-blue-100 text-base max-w-2xl mx-auto mb-12">
           💳 We accept{" "}
           <span className="font-semibold text-yellow-400">SHA</span> and all major
           insurance providers for easy and affordable access to care.

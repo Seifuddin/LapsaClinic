@@ -62,7 +62,7 @@ export default function Footer() {
             <p className="text-sm mb-4 text-gray-200">
               Subscribe to get health tips and hospital updates.
             </p>
-            <form className="flex border rounded-lg">
+            <form className="flex border border-white/50 rounded-lg">
               <input
                 type="email"
                 placeholder="Enter your email"
@@ -70,7 +70,7 @@ export default function Footer() {
               />
               <button
                 type="submit"
-                className="bg-blue-600 px-4 py-2 rounded-r-lg font-serif font-semibold hover:bg-yellow-500 transition"
+                className="bg-blue-600 px-4 py-2 rounded-r-lg fontserif font-semibold hover:bg-yellow-500 transition"
               >
                 Subscribe
               </button>

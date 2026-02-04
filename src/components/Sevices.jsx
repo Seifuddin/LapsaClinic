@@ -198,7 +198,7 @@ export default function Services() {
 
               {/* Content */}
               <div className="flex-1 p-6 flex flex-col">
-                <h3 className="md:text-lg font-serif font-bold text-gray-800 text-left mb-3">
+                <h3 className="md:text-lg fontserif font-bold text-gray-800 text-left mb-3">
                   {service.title}
                 </h3>
                 <p className="text-gray-600 text-sm leading-relaxed text-left flex-1">

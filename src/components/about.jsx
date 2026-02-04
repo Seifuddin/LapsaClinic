@@ -22,7 +22,7 @@ export default function About() {
             alt="Lapsa Family Hospital"
             width={550}
             height={450}
-            className="rounded-2xl shadow-lg object-cover border border-blue-100"
+            className="rounded shadow-lg object-cover border border-blue-100"
           />
         </motion.div>
 

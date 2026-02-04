@@ -60,7 +60,7 @@ export default function HeroSection() {
           <img
             src="/images/aidoctor.jpg"
             alt="Hospital illustration"
-            className="w-full rounded-3xl max-w-md md:max-w-lg lg:max-w-xl drop-shadow-2xl"
+            className="w-full rounded max-w-md md:max-w-lg lg:max-w-xl drop-shadow-2xl"
           />
         </motion.div>
       </div>

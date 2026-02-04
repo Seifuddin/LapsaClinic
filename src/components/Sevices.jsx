@@ -151,7 +151,7 @@ export default function Services() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-3xl md:text-4xl font-serif font-bold text-gray-800 mb-4"
+          className="text-2xl md:text-4xl font-serif font-bold text-gray-800 mb-4"
         >
           Our Services
         </motion.h2>
@@ -183,7 +183,7 @@ export default function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="group flex flex-col border border-gray-200 bg-blue-50 rounded shadow-md hover:shadow-2xl transition-all duration-500 overflow-hidden hover:-translate-y-2"
+              className="group flex flex-col border border-gray-200 bg-white rounded shadow-md hover:shadow-2xl transition-all duration-500 overflow-hidden hover:-translate-y-2"
             >
               {/* Service Image */}
               <div className="relative w-full h-48 overflow-hidden">

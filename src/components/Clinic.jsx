@@ -110,7 +110,7 @@ export default function Clinics() {
       <div className="max-w-7xl mx-auto lg:px8">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-800 mb-4">
+          <h2 className="text-2xl md:text-4xl font-serif font-bold text-gray-800 mb-4">
             Our Specialized Clinics
           </h2>
           <div className="w-20 h-1 bg-blue-800 mx-auto rounded-full mb-6"></div>
@@ -143,7 +143,7 @@ export default function Clinics() {
                 transition={{ duration: 0.5 }}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.98 }}
-                className="flex flex-col justify-between bg-blue-100 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 p-4 text-center border border-gray-200"
+                className="flex flex-col justify-between bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 p-4 text-center border border-gray-200"
               >
                 <div>
                   {/* Icon */}

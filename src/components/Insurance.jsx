@@ -21,7 +21,7 @@ export default function InsuranceCoverage() {
       <div className="relative max-w-7xl mx-auto px6 text-center">
         {/* Icon + Heading */}
         <div className="flex justify-center mb-4">
-          <ShieldCheck className="w-14 h-14 text-yellow-400" />
+          <ShieldCheck className="w-12 h-12 text-yellow-400" />
         </div>
         <h2 className="text-2xl md:text-3xl font-serif font-bold text-white mb-3">
           Insurance Coverage
@@ -30,7 +30,7 @@ export default function InsuranceCoverage() {
 
         <p className="text-blue-100 text-lg max-w-2xl mx-auto mb-12">
           💳 We accept{" "}
-          <span className="font-semibold text-white">SHA</span> and all major
+          <span className="font-semibold text-yellow-400">SHA</span> and all major
           insurance providers for easy and affordable access to care.
         </p>
 

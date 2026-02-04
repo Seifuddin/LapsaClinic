@@ -88,10 +88,10 @@ export default function Footer() {
         >
           {/* Social Media */}
           <div className="flex space-x-6 mb-4 md:mb-0">
-            <a href="#" className="hover:text-yellow-300 transition"><Facebook /></a>
-            <a href="#" className="hover:text-yellow-300 transition"><Twitter /></a>
-            <a href="#" className="hover:text-yellow-300 transition"><Instagram /></a>
-            <a href="#" className="hover:text-yellow-300 transition"><Linkedin /></a>
+            <a href="https://www.facebook.com/profile.php?id=61570201295782" className="hover:text-yellow-300 transition"><Facebook /></a>
+            <a href="https://x.com/Lapsa020?t=6Mt7tfu41Aw5JKx3vy9BwA&s=09" className="hover:text-yellow-300 transition"><Twitter /></a>
+            <a href="https://www.instagram.com/invites/contact/?utm_source=ig_contact_invite&utm_medium=copy_link&utm_content=v17tv48" className="hover:text-yellow-300 transition"><Instagram /></a>
+            <a href="https://www.linkedin.com/in/edwin-nguru-92ab23312?utm_sources=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" className="hover:text-yellow-300 transition"><Linkedin /></a>
           </div>
 
           {/* Copyright */}

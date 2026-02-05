@@ -66,7 +66,7 @@ function Modal({ clinic, onClose }) {
             {/* Icon */}
             <div className="mb-4 flex justify-center">
               <div className="w-16 h-16 rounded-full bg-gradient-to-r from-red-700 to-red-900 flex items-center justify-center shadow-lg">
-                <Icon className="w-8 h-8 text-white" />
+                <Icon className="w-8 h-8 text-yellow-500" />
               </div>
             </div>
 
@@ -148,7 +148,7 @@ export default function Clinics() {
                 <div>
                   {/* Icon */}
                   <div className="mb-6 flex justify-center">
-                    <div className="w-10 h-10 rounded-full bg-gradient-to-r from-blue-700 to-blue-900 flex items-center justify-center shadow-lg">
+                    <div className="w-10 h-10 bg-gradient-to-r from-blue-700 to-blue-900 p-2 rounded flex items-center justify-center shadow-lg">
                       <Icon className="w-6 h-6 text-yellow-400" />
                     </div>
                   </div>

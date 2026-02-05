@@ -79,7 +79,7 @@ export default function WhyUs() {
                 className="p-6 bg-white rounded shadow-md hover:shadow-lg transition group"
               >
                 <div className="flex items-start gap-3">
-                  <CheckCircle className="text-blue-800 w-6 h-6 mt-1 flex-shrink-0 group-hover:scale-110 transition" />
+                  <CheckCircle className="text-yellow-500 w-9 h-9 mt-1 bg-gradient-to-r from-blue-700 to-blue-900 p-2 rounded flex-shrink-0 group-hover:scale-110 transition" />
                   <div>
                     <h3 className="md:text-lg fontserif font-bold text-gray-800">
                       {item.title}

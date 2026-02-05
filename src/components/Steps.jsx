@@ -78,13 +78,13 @@ export default function PatientJourney() {
 
                   {/* Icon */}
                   <div className="flex justify-center mb-6">
-                    <div className="bg-gradient-to-r from-blue-700 to-blue-900 p-3 rounded-full shadow-md">
-                      <Icon className="w-5 h-5 text-yellow-400" />
+                    <div className="bg-gradient-to-r from-blue-700 to-blue-900 p-2 rounded -full shadow-md">
+                      <Icon className="w-6 h-6 text-yellow-500" />
                     </div>
                   </div>
 
                   {/* Title */}
-                  <h3 className="text-lg fontserif font-bold text-gray-800 mb-2">
+                  <h3 className="md:text-lg fontserif font-bold text-gray-800 mb-2">
                     {index + 1}. {step.title}
                   </h3>
 

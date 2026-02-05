@@ -40,14 +40,14 @@ export default function ContactUs() {
                   transition={{ duration: 0.5 }}
                   className="text-sm font-semibold text-blue-800 tracking-wider uppercase mb-3 inline-block"
                 >
-                  Contac Us
+                  Contact Us
                 </motion.span>
           <h2 className="text-2xl md:text-3xl font-serif font-bold text-gray-800 mb-4">
             Get in Touch With Us
           </h2>
         <div className="w-24 h-1 bg-blue-800 mx-auto rounded-full mb-6"></div>
 
-          <p className="text-lg font-medium text-gray-600 mb-2">
+          <p className="text-b ase font-medium text-gray-600 mb-2">
             We’re here to help and answer any questions you might have.
           </p>
           
@@ -58,36 +58,36 @@ export default function ContactUs() {
          
           <div>
             <div className="space-y-6">
-               <p className="text-left text-gray-500 max-w-2xl mx-auto">
+               <p className="text-left text-gray-600 max-w-2xl mx-auto">
             Whether you want to book an appointment, ask about our services, or
             simply say hello, feel free to reach out—we’d love to hear from you.
           </p>
               <div className="flex items-center space-x-3">
-                <Phone className="text-green-600 bg-white p-1 shadow-lg rounded" />
+                <Phone className="text-yellow-400 -600 bg-gradient-to-r from-blue-700 to-blue-900 p-1 shadow-lg rounded" />
                 <a
                   href="tel:+254111608331"
-                  className="text-md font-medium text-blue-900 hover:text-blue-700 transition"
+                  className="text-md font-medium text-blue-950 text-base hover:text-blue-700 transition"
                 >
                   +254 111 608 331
                 </a>
               </div>
               <div className="flex items-center space-x-3">
-                <Mail className="text-blue-600 bg-white p-1 shadow-lg rounded" />
+                <Mail className="text-yellow-400 600 bg-gradient-to-r from-blue-700 to-blue-900 p-1 shadow-lg rounded" />
                 <a
                   href="mailto:info@hospital.com"
-                  className="text-md font-medium text-blue-900 hover:text-blue-700 transition"
+                  className="text-md font-medium text-blue-950 text-base hover:text-blue-700 transition"
                 >
                   lapsatechnologies@gmail.com
                 </a>
               </div>
               <div className="flex items-center space-x-3">
-                <MapPin className="text-red-600 bg-white p-1 shadow-lg rounded" />
-                <span className="text-md font-medium text-blue-900">
+                <MapPin className="text-yellow-400 00 bg-gradient-to-r from-blue-700 to-blue-900 p-1 shadow-lg rounded" />
+                <span className="text-md font-medium text-blue-950 text-base">
                   Nairobi, Kenya
                 </span>
               </div>
               <div className="flex items-center space-x-3">
-                <MessageSquare className="text-green-500 bg-white p-1 shadow-lg rounded" />
+                <MessageSquare className="text-yellow-400 -500 bg-gradient-to-r from-blue-700 to-blue-900 p-1 shadow-lg rounded" />
                 <a
                   href="https://wa.me/254111608331"
                   target="_blank"
@@ -160,7 +160,7 @@ export default function ContactUs() {
               </div>
               <button
                 type="submit"
-                className="w-full flex items-center justify-center space-x-2 bg-blue-600 text-white px-4 py-3 rounded font-medium hover:bg-blue-700 transition transform hover:scale-105"
+                className="w-full flex items-center justify-center space-x-2 bg-gradient-to-r from-blue-700 to-blue-900 text-white px-4 py-3 rounded font-medium hover:bg-blue-700 transition transform hover:scale-105"
               >
                 <Send size={18} />
                 <span>Send Message</span>

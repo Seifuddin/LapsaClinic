@@ -36,7 +36,7 @@ export default function Navbar() {
             ))}
             <Link
               href="#appointment"
-              className="ml-4 px-4 py-2 bg-blue-900 text-white rounded-full hover:bg-red-700 transition"
+              className="ml-4 px-4 py-2 bg-blue-900 text-yellow-400 rounded-full hover:bg-red-700 transition"
             >
               Book Appointment
             </Link>

@@ -1,6 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin } from "lucide-react";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -70,7 +71,7 @@ export default function Footer() {
               />
               <button
                 type="submit"
-                className="bg-blue-600 px-4 py-2 rounded-r-lg fontserif font-semibold hover:bg-yellow-500 transition"
+                className="bg-blue-600 border-l border-white/40 px-4 py-2 rounded-r-lg fontserif fontsemibold hover:bg-yellow-500 transition text-yellow-400"
               >
                 Subscribe
               </button>
@@ -84,7 +85,7 @@ export default function Footer() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.3 }}
-          className="border-t border-gray-400 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center"
+          className="relative mt-12 border-t border-gray-500 pt-6 text-center text-sm text-gray-400 z-10 space-y-2"
         >
           {/* Social Media */}
           <div className="flex space-x-6 mb-4 md:mb-0">
@@ -95,9 +96,24 @@ export default function Footer() {
           </div>
 
           {/* Copyright */}
-          <p className="text-gray-200 text-sm">
+          <p className="text-gray-300 text-sm">
             © {new Date().getFullYear()} Lapsa Family Hospital. All rights reserved.
           </p>
+
+           <p className="text-gray-300">
+          Designed & Powered by{" "}
+          <Link
+            href="https://lapsa.vercel.app"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="relative text-blue-400 font-semibold transition-all duration-300 
+                       after:content-[''] after:absolute after:left-0 after:-bottom-1 
+                       after:w-0 after:h-[2px] after:bg-blue-400 
+                       hover:after:w-full after:transition-all after:duration-300"
+          >
+            Lapsa Web and Graphics
+          </Link>
+        </p>
         </motion.div>
       </div>
     </motion.footer>

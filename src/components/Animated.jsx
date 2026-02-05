@@ -30,10 +30,10 @@ const AnimatedCounter = ({ from = 0, to }) => {
 };
 
 const stats = [
-  { icon: Users, label: "Happy Patients", value: 12000, color: "text-yellow-400 00" },
-  { icon: Stethoscope, label: "Expert Doctors", value: 85, color: "text-yellow-400 0" },
-  { icon: HeartPulse, label: "Successful Surgeries", value: 4500, color: "text-yellow-400 " },
-  { icon: Ambulance, label: "Ambulances", value: 15, color: "text-yellow-400 400" },
+  { icon: Users, label: "Happy Patients", value: 12000, color: "text-yellow-500 00" },
+  { icon: Stethoscope, label: "Expert Doctors", value: 85, color: "text-yellow-500 0" },
+  { icon: HeartPulse, label: "Successful Surgeries", value: 4500, color: "text-yellow-500 " },
+  { icon: Ambulance, label: "Ambulances", value: 15, color: "text-yellow-400 500" },
 ];
 
 export default function AnimatedCounters() {
@@ -73,10 +73,10 @@ export default function AnimatedCounters() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 whileHover={{ scale: 1.05 }}
-                className="bg-white/10 backdrop-blur-md border border-white/20 p-4 xs:p-5 sm:p-6 rounded flex flex-col items-center"
+                className="bg-white/5 backdrop-blur-md border border-white/20 p-4 xs:p-5 sm:p-6 rounded flex flex-col items-center"
               >
                 {/* Icon */}
-                <div className="w-14 h-14 flex items-center justify-center rounded-full bg-white/20 mb-2 xs:mb-3">
+                <div className="w-10 h-10 flex items-center justify-center bg-gradient-to-r from-blue-700 to-blue-900 p-2 rounded -full shadow-md border border-white/10">
                   <Icon className={`${stat.color} w-6 h-6`} />
                 </div>
 

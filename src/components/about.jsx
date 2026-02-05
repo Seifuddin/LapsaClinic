@@ -39,7 +39,7 @@ export default function About() {
             About Us
           </p>
 
-          <h2 className="text-2xl md:text-4xl font-serif font-extrabold text-gray-800 mb-4 text-center md:text-left">
+          <h2 className="text-2xl md:text-3xl font-serif font-extrabold text-gray-800 mb-4 text-center md:text-left">
             Who We Are
           </h2>
 
@@ -66,7 +66,7 @@ export default function About() {
               whileHover={{ scale: 1.05 }}
               className="flex flex-col items-center text-center p-4 rounded border border-blue-100 bg-white hover:bg-blue-50 transition shadow-sm"
             >
-              <ShieldCheck className="text-blue-600 w-10 h-10 mb-3" />
+              <ShieldCheck className="text-yellow-500 w-10 h-10 mb-3 bg-gradient-to-r from-blue-700 to-blue-900 p-2 rounded -full shadow-md" />
               <h4 className="font-semibold text-gray-800 mb-1">Trust</h4>
               <p className="text-gray-600 text-sm">Building confidence through honesty and dependable care.</p>
             </motion.div>
@@ -75,7 +75,7 @@ export default function About() {
               whileHover={{ scale: 1.05 }}
               className="flex flex-col items-center text-center p-4 rounded border border-blue-100 bg-white hover:bg-blue-50 transition shadow-sm"
             >
-              <Microscope className="text-blue-600 w-10 h-10 mb-3" />
+              <Microscope className="text-yellow-500 w-10 h-10 mb-3 bg-gradient-to-r from-blue-700 to-blue-900 p-2 rounded -full shadow-md" />
               <h4 className="font-semibold text-gray-800 mb-1">Innovation</h4>
               <p className="text-gray-600 text-sm">Using advanced technology and research to improve outcomes.</p>
             </motion.div>
@@ -84,7 +84,7 @@ export default function About() {
               whileHover={{ scale: 1.05 }}
               className="flex flex-col items-center text-center p-4 rounded border border-blue-100 bg-white hover:bg-blue-50 transition shadow-sm"
             >
-              <HeartPulse className="text-blue-600 w-10 h-10 mb-3" />
+              <HeartPulse className="text-yellow-500 w-10 h-10 mb-3 bg-gradient-to-r from-blue-700 to-blue-900 p-2 rounded -full shadow-md" />
               <h4 className="font-semibold text-gray-800 mb-1">Compassion</h4>
               <p className="text-gray-600 text-sm">Caring for every patient with empathy, kindness, and respect.</p>
             </motion.div>

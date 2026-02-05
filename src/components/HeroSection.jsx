@@ -21,7 +21,7 @@ export default function HeroSection() {
           transition={{ duration: 0.7 }}
           className="text-center md:text-left md:w-1/2"
         >
-          <h1 className="text-4xl md:text-5xl lg:text-6xl text-yellow-400 font-extrabold leading-tight mb-4">
+          <h1 className="text-3xl md:text-5xl lg:text-6xl text-yellow-400 font-extrabold leading-tight mb-4">
             Caring for Your{" "}
             <span className="text-white">Family’s Health</span>
           </h1>

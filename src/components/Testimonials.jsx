@@ -44,7 +44,7 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section className="py-16 px-6 bg-white">
+    <section className="py-16 px-6 bg-gray-50">
       <div className="max-w-7xl mx-auto px6 lg:px8">
         
         {/* Section Title */}
@@ -93,14 +93,14 @@ export default function Testimonials() {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
-                className="bg-blue-100 border border-gray-200 rounded-xl shadow-md p-6 hover:shadow-xl hover:scale-[1.02] transition transform flex flex-col items-center text-center relative before:absolute before:inset-0 before:rounded-xl before:border-2 before:border-transparent hover:before:border-blue-200 before:transition"
+                className="bg-white border border-gray-200 rounded shadow-md p-6 hover:shadow-xl hover:scale-[1.02] transition transform flex flex-col items-center text-center relative before:absolute before:inset-0 before:rounded-xl before:border-2 before:border-transparent hover:before:border-blue-200 before:transition"
               >
                 <img
                   src={testimonial.image}
                   alt={testimonial.name}
                   className="w-20 h-20 rounded-full object-cover border-2 border-gray-300 shadow-md mt-3 mb-4"
                 />
-                <h3 className="text-base md:text-lg font-serif font-bold text-blue-900">
+                <h3 className="text-base md:text-lg fontserif font-bold text-blue-900">
                   {testimonial.name}
                 </h3>
                 <p className="text-sm text-gray-500 mb-2">{testimonial.role}</p>

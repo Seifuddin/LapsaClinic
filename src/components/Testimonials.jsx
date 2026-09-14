@@ -13,7 +13,7 @@ const testimonials = [
     role: "Patient's Friend",
     feedback:
       "The doctors and staff were so caring and attentive. I felt truly supported throughout my treatment. Highly recommend this hospital!",
-    image: "/images/Screenshot_20221028-204325.png",
+    image: "/images/edited-photo.png",
     rating: 5,
   },
   {

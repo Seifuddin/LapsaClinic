@@ -1,134 +1,169 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { CheckCircle } from "lucide-react";
+import { ArrowUpRight, Check, ShieldCheck } from "lucide-react";
 import Image from "next/image";
 
 const reasons = [
   {
+    number: "01",
     title: "Expert Medical Team",
     desc: "Highly trained doctors and nurses across multiple specialties.",
   },
   {
+    number: "02",
     title: "Advanced Technology",
-    desc: "State-of-the-art equipment ensures accurate diagnoses and effective treatments.",
+    desc: "Modern medical equipment supporting accurate diagnosis and effective treatment.",
   },
   {
+    number: "03",
     title: "24/7 Emergency Care",
-    desc: "Rapid response emergency services when every second counts.",
+    desc: "Rapid-response emergency services when every second matters.",
   },
   {
-    title: "Patient-Centered Approach",
-    desc: "Prioritizing your comfort, privacy, and well-being always.",
+    number: "04",
+    title: "Patient-Centered Care",
+    desc: "Your comfort, privacy, dignity and well-being remain at the heart of what we do.",
   },
 ];
 
 export default function WhyUs() {
   return (
-    <section className="relative py-20 px-6 bg-gray-50 dient-to-b from-blue-50 to-white overflow-hidden">
-      {/* Decorative SVGs */}
-      <svg
-        aria-hidden="true"
-        className="absolute top-10 left-0 w-32 h-32 text-blue-200 opacity-10"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        viewBox="0 0 48 48"
-      >
-        <path d="M4 24h8l4-10 6 20 4-10h18" />
-      </svg>
+    <section className="relative overflow-hidden bg-white py-16 sm:py-20 lg:py-24">
+      {/* Subtle background details */}
+      <div className="pointer-events-none absolute right-0 top-0 h-80 w-80 translate-x-1/3 -translate-y-1/3 rounded-full border border-teal-500/10" />
+      <div className="pointer-events-none absolute right-16 top-16 h-52 w-52 rounded-full border border-blue-500/10" />
 
-      <svg
-        aria-hidden="true"
-        className="absolute bottom-10 right-0 w-40 h-40 text-blue-300 opacity-10"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        viewBox="0 0 48 48"
-      >
-        <circle cx="24" cy="24" r="20" />
-        <path d="M24 12v24M12 24h24" />
-      </svg>
+      <div className="relative mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
+        <div className="grid items-center gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
 
-      <div className="relative max-w-7xl mx-auto px4 sm:px6 lg:px8">
-        {/* Section Title */}
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="text-center text-2xl md:text-4xl font-serif font-bold text-gray-800 mb-4"
-        >
-          Why Choose Us
-        </motion.h2>
-        <div className="w-24 h-1 bg-blue-800 mx-auto rounded-full mb-6"></div>
-        <p className="text-center text-gray-600 mb-14 max-w-2xl mx-auto">
-          Exceptional healthcare built on trust, innovation, and compassion.
-        </p>
+          {/* LEFT — Image composition */}
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+            className="relative order-2 lg:order-1"
+          >
+            <div className="relative mx-auto max-w-lg">
+              {/* Image */}
+              <div className="relative overflow-hidden">
+                <Image
+                  src="/images/whychooseus.webp"
+                  alt="Lapsa Family Hospital medical team"
+                  width={700}
+                  height={560}
+                  className="h-[360px] w-full object-cover sm:h-[430px] lg:h-[500px]"
+                />
 
-        <div className="flex flex-col lg:flex-row items-center gap-14">
-          {/* Left Content */}
-          <div className="w-full lg:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-6">
-            {reasons.map((item, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: i * 0.2 }}
-                className="p-6 bg-white rounded shadow-md hover:shadow-lg transition group"
-              >
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="text-yellow-500 w-9 h-9 mt-1 bg-gradient-to-r from-blue-700 to-blue-900 p-2 rounded flex-shrink-0 group-hover:scale-110 transition" />
-                  <div>
-                    <h3 className="md:text-lg fontserif font-bold text-gray-800">
+                {/* Subtle image overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-[#082B52]/35 via-transparent to-transparent" />
+              </div>
+
+              {/* Teal accent */}
+              <div className="absolute -bottom-3 left-6 h-1 w-24 bg-teal-500" />
+
+              {/* Floating trust marker */}
+              <div className="absolute bottom-6 left-6 flex items-center gap-3 bg-white px-4 py-3 shadow-xl sm:left-8">
+                <div className="flex h-9 w-9 items-center justify-center bg-[#E8F8F5] text-teal-600">
+                  <ShieldCheck className="h-5 w-5" />
+                </div>
+
+                <div>
+                  <p className="text-xs font-semibold uppercase tracking-wider text-[#082B52]">
+                    Trusted Care
+                  </p>
+                  <p className="text-[11px] text-slate-500">
+                    Built around our patients
+                  </p>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* RIGHT — Content */}
+          <div className="order-1 lg:order-2">
+            {/* Eyebrow */}
+            <motion.div
+              initial={{ opacity: 0, y: 15 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="mb-5 flex items-center gap-3"
+            >
+              <span className="h-px w-9 bg-teal-500" />
+
+              <span className="text-xs font-semibold uppercase tracking-[0.2em] text-teal-600">
+                Why Lapsa Family Hospital
+              </span>
+            </motion.div>
+
+            {/* Heading */}
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="max-w-xl text-3xl font-bold tracking-tight text-[#082B52] sm:text-4xl lg:text-5xl"
+            >
+              Healthcare built around{" "}
+              <span className="text-teal-600">you.</span>
+            </motion.h2>
+
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="mt-5 max-w-xl text-sm leading-7 text-slate-600 sm:text-base"
+            >
+              We combine experienced professionals, modern medical technology
+              and compassionate care to create a healthcare experience you can
+              trust — from your first consultation through recovery.
+            </motion.p>
+
+            {/* Reasons */}
+            <div className="mt-8 border-t border-slate-200">
+              {reasons.map((item, index) => (
+                <motion.div
+                  key={item.number}
+                  initial={{ opacity: 0, x: 20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{
+                    duration: 0.5,
+                    delay: 0.15 + index * 0.08,
+                  }}
+                  className="group flex gap-4 border-b border-slate-200 py-5 sm:gap-6"
+                >
+                  {/* Number */}
+                  <span className="w-8 shrink-0 pt-1 text-xs font-semibold tracking-wider text-teal-600">
+                    {item.number}
+                  </span>
+
+                  {/* Check */}
+                  <div className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#E8F8F5] text-teal-600 transition-transform duration-300 group-hover:scale-110">
+                    <Check className="h-4 w-4" strokeWidth={2.5} />
+                  </div>
+
+                  {/* Text */}
+                  <div className="min-w-0 flex-1">
+                    <h3 className="text-base font-semibold text-[#082B52] sm:text-lg">
                       {item.title}
                     </h3>
-                    <p className="text-gray-600 text-sm mt-1">{item.desc}</p>
+
+                    <p className="mt-1 max-w-lg text-sm leading-6 text-slate-500">
+                      {item.desc}
+                    </p>
                   </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
 
-          {/* Right Image */}
-          <div className="w-full lg:w-1/2 flex justify-center">
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="w-full max-w-md rounded shadow-xl overflow-hidden"
-            >
-              <Image
-                src="/images/whychooseus.webp"
-                alt="Medical Team"
-                width={500}
-                height={400}
-                className="object-cover"
-              />
-            </motion.div>
+                  {/* Arrow */}
+                  <ArrowUpRight className="mt-1 hidden h-4 w-4 shrink-0 text-slate-300 transition-all duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-teal-500 sm:block" />
+                </motion.div>
+              ))}
+            </div>
           </div>
         </div>
-
-        {/* CTA Buttons 
-        <div className="mt-14 flex flex-col sm:flex-row justify-center gap-5">
-          <a
-            href="/appointment"
-            className="px-8 py-3 bg-blue-800 text-white font-serif font-semibold rounded-lg shadow 
-              hover:bg-blue-900 transition"
-          >
-            Book an Appointment
-          </a>
-          <a
-            href="/contact"
-            className="px-8 py-3 border-2 border-blue-800 text-blue-800 font-serif font-semibold rounded-lg 
-              hover:bg-blue-50 transition"
-          >
-            Contact Us
-          </a>
-        </div>
-        */}
       </div>
     </section>
   );

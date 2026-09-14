@@ -1,76 +1,136 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Phone, Mail, MessageCircle } from "lucide-react";
+import { Phone, Mail, MessageCircle, ArrowUpRight } from "lucide-react";
 
 export default function Counters() {
   return (
-    <section className="relative bg-[#0a2540] text-white pt-20 pb-10 overflow-hidden">
-      {/* Background Overlay with Patterns */}
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-900/60 via-[#0a2540]/90 to-blue-800/70 z-0"></div>
-      <div className="absolute inset-0 bg-[url('/images/pattern.png')] opacity-10 bg-cover bg-center z-0"></div>
+    <section className="relative overflow-hidden bg-[#082B52] text-white">
+      {/* Subtle background detail */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute -right-24 -top-24 h-72 w-72 rounded-full border border-teal-400/10" />
+        <div className="absolute -right-12 -top-12 h-48 w-48 rounded-full border border-teal-400/10" />
 
-      <div className="relative container mx-auto px-6 md:px-12 lg:px-20 text-center">
-        {/* Heading */}
-        <motion.h2
-          initial={{ opacity: 0, y: -30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="text-2xl md:text-4xl font-serif font-bold mb-4"
-        >
-          Need Medical Assistance?
-        </motion.h2>
-        <div className="w-24 h-1 bg-yellow-400 mx-auto rounded-full mb-6"></div>
+        <div className="absolute left-0 bottom-0 h-px w-1/3 bg-teal-400/40" />
+        <div className="absolute right-0 top-0 h-px w-1/4 bg-teal-400/30" />
+      </div>
 
+      <div className="relative mx-auto max-w-7xl px-6 py-12 sm:px-8 lg:px-12">
+        <div className="grid items-center gap-10 lg:grid-cols-[1fr_auto]">
 
-        {/* Subtext */}
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-base md:text-xl mb-10 text-gray-200 max-w-2xl mx-auto"
-        >
-          Our doctors and specialists are available to help you. 
-          Contact us today to book an appointment or get more information 
-          about our services.
-        </motion.p>
-
-        {/* Buttons */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="flex flex-wrap justify-center gap-6"
-        >
-          {/* Phone Call Button */}
-          <a
-            href="tel:0111608331"
-            className="flex items-center gap-2 bg-green-600 border border-white/20 hover:bg-green-700 px-6 py-3 rounded-2xl shadow-lg transition transform hover:scale-105"
+          {/* Main message */}
+          <motion.div
+            initial={{ opacity: 0, x: -25 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
           >
-            <Phone className="w-5 h-5 text-yellow-400" />
-            <span className="font-medium text-yellow-400">Call Us</span>
-          </a>
+            {/* Eyebrow */}
+            <div className="mb-4 flex items-center gap-3">
+              <span className="h-px w-8 bg-teal-400" />
+              <span className="text-xs font-semibold uppercase tracking-[0.2em] text-teal-300">
+                Patient Support
+              </span>
+            </div>
 
-          {/* WhatsApp Button */}
-          <a
-            href="https://wa.me/+254111608331"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 bg-emerald-500 border border-white/20 hover:bg-emerald-600 px-6 py-3 rounded-2xl shadow-lg transition transform hover:scale-105"
-          >
-            <MessageCircle className="w-5 h-5 text-yellow-400" />
-            <span className="font-medium text-yellow-400">WhatsApp</span>
-          </a>
+            <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:gap-6">
+              <h2 className="max-w-xl text-3xl font-bold tracking-tight sm:text-4xl">
+                Need medical assistance?
+              </h2>
 
-          {/* Email Button */}
-          <a
-            href="mailto:info@lapsafamilyhospital.com"
-            className="flex items-center gap-2 bg-blue-900 border border-white/20 hover:bg-red-700 px-6 py-3 rounded-2xl shadow-lg transition transform hover:scale-105"
+              <span className="mb-1 flex w-fit items-center gap-2 border border-white/15 px-3 py-1.5 text-xs font-medium text-white/70">
+                <span className="h-2 w-2 rounded-full bg-teal-400" />
+                Available to help
+              </span>
+            </div>
+
+            <p className="mt-4 max-w-2xl text-sm leading-7 text-white/65 sm:text-base">
+              Our doctors and support team are ready to assist you.
+              Contact us to book an appointment, ask a question, or learn
+              more about our services.
+            </p>
+          </motion.div>
+
+          {/* Contact actions */}
+          <motion.div
+            initial={{ opacity: 0, x: 25 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.15 }}
+            className="flex flex-col border-t border-white/15 lg:min-w-[390px] lg:border-l lg:border-t-0 lg:pl-8"
           >
-            <Mail className="w-5 h-5 text-yellow-400" />
-            <span className="font-medium text-yellow-400">Email Us</span>
-          </a>
-        </motion.div>
+            {/* Phone */}
+            <a
+              href="tel:0111608331"
+              className="group flex items-center justify-between border-b border-white/15 py-4 transition-colors hover:bg-white/[0.03] lg:px-3"
+            >
+              <div className="flex items-center gap-4">
+                <span className="flex h-10 w-10 items-center justify-center border border-teal-400/30 text-teal-300">
+                  <Phone className="h-4 w-4" />
+                </span>
+
+                <div>
+                  <p className="text-xs uppercase tracking-wider text-white/40">
+                    Call us
+                  </p>
+                  <p className="mt-0.5 text-sm font-semibold">
+                    0111 608 331
+                  </p>
+                </div>
+              </div>
+
+              <ArrowUpRight className="h-4 w-4 text-white/30 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-teal-300" />
+            </a>
+
+            {/* WhatsApp */}
+            <a
+              href="https://wa.me/254111608331"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex items-center justify-between border-b border-white/15 py-4 transition-colors hover:bg-white/[0.03] lg:px-3"
+            >
+              <div className="flex items-center gap-4">
+                <span className="flex h-10 w-10 items-center justify-center border border-teal-400/30 text-teal-300">
+                  <MessageCircle className="h-4 w-4" />
+                </span>
+
+                <div>
+                  <p className="text-xs uppercase tracking-wider text-white/40">
+                    WhatsApp
+                  </p>
+                  <p className="mt-0.5 text-sm font-semibold">
+                    Chat with our team
+                  </p>
+                </div>
+              </div>
+
+              <ArrowUpRight className="h-4 w-4 text-white/30 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-teal-300" />
+            </a>
+
+            {/* Email */}
+            <a
+              href="mailto:info@lapsafamilyhospital.com"
+              className="group flex items-center justify-between py-4 transition-colors hover:bg-white/[0.03] lg:px-3"
+            >
+              <div className="flex items-center gap-4">
+                <span className="flex h-10 w-10 items-center justify-center border border-teal-400/30 text-teal-300">
+                  <Mail className="h-4 w-4" />
+                </span>
+
+                <div>
+                  <p className="text-xs uppercase tracking-wider text-white/40">
+                    Email
+                  </p>
+                  <p className="mt-0.5 text-sm font-semibold">
+                    info@lapsafamilyhospital.com
+                  </p>
+                </div>
+              </div>
+
+              <ArrowUpRight className="h-4 w-4 text-white/30 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-teal-300" />
+            </a>
+          </motion.div>
+        </div>
       </div>
     </section>
   );

@@ -21,17 +21,15 @@ export default function Home() {
       <Navbar />
       <HeroSection />
       <AnimatedCounters />
-      <PatientJourney />
-      <About />
-      <TrustLogos />
       <Services />
-      <EmergencyCall />
-      <Clinics />
-      <Counters />
-      <WhyUs />
       <InsuranceCoverage />
+      <Counters />
+      <PatientJourney />
+      <WhyUs />
+      <EmergencyCall />
+      <TrustLogos />
+      <Clinics />
       <Testimonials />
-      <ContactUs />
       <WhatsAppButton />
       <Footer />
     </ div>

@@ -1,6 +1,6 @@
 "use client";
 
-import { ShieldCheck } from "lucide-react";
+import { ShieldCheck, ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
@@ -14,56 +14,138 @@ const insuranceProviders = [
 
 export default function InsuranceCoverage() {
   return (
-    <section className="relative bg-[#0a2540] text-white px-6 pt-20 pb-10 p overflow-hidden">
-      {/* Background Overlay with Patterns */}
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-900/60 via-[#0a2540]/90 to-blue-800/70 z-0"></div>
-      <div className="absolute inset-0 bg-[url('/images/pattern.png')] opacity-10 bg-cover bg-center z-0"></div>
-      <div className="relative max-w-7xl mx-auto px6 text-center">
-        {/* Icon + Heading */}
-        <div className="flex justify-center mb-4">
-          <ShieldCheck className="w-12 h-12 text-yellow-400" />
-        </div>
-        <h2 className="text-2xl md:text-3xl font-serif font-bold text-white mb-3">
-          Insurance Coverage
-        </h2>
-        <div className="w-24 h-1 bg-yellow-400 mx-auto rounded-full mb-6"></div>
+    <section className="relative overflow-hidden border-y border-slate-200 bg-[#F7FAFC]">
+      {/* Subtle background geometry */}
+      <div className="pointer-events-none absolute -right-24 -top-24 h-64 w-64 rounded-full border border-teal-500/10" />
+      <div className="pointer-events-none absolute -right-12 -top-12 h-40 w-40 rounded-full border border-blue-500/10" />
 
-        <p className="text-blue-100 text-base max-w-2xl mx-auto mb-12">
-          💳 We accept{" "}
-          <span className="font-semibold text-yellow-400">SHA</span> and all major
-          insurance providers for easy and affordable access to care.
-        </p>
+      <div className="relative mx-auto max-w-7xl px-6 py-12 sm:px-8 lg:px-12 lg:py-14">
 
-        {/* Auto-scrolling carousel */}
-        <div className="relative w-full overflow-hidden">
+        {/* Intro */}
+        <div className="grid items-center gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">
+
+          {/* Heading */}
           <motion.div
-            className="flex gap-12"
-            animate={{ x: ["0%", "-100%"] }}
-            transition={{
-              repeat: Infinity,
-              duration: 25,
-              ease: "linear",
-            }}
+            initial={{ opacity: 0, x: -25 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
           >
-            {[...insuranceProviders, ...insuranceProviders].map(
-              (provider, index) => (
-                <div
-                  key={index}
-                  className="flex justify-center items-center bg-white rounded px- py- shadow-md min-w-[180px]"
-                >
-                  <Image
-                    src={provider.logo}
-                    alt={provider.name}
-                    width={120}
-                    height={60}
-                    className="object-contain w-20 h-full"
-                  />
-                </div>
-              )
-            )}
+            <div className="mb-4 flex items-center gap-3">
+              <span className="h-px w-8 bg-teal-500" />
+
+              <span className="text-xs font-semibold uppercase tracking-[0.2em] text-teal-600">
+                Insurance & Coverage
+              </span>
+            </div>
+
+            <h2 className="max-w-md text-3xl font-bold tracking-tight text-[#082B52] sm:text-4xl">
+              Care that works with your{" "}
+              <span className="text-teal-600">coverage.</span>
+            </h2>
+          </motion.div>
+
+          {/* Explanation */}
+          <motion.div
+            initial={{ opacity: 0, x: 25 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="flex items-start gap-4 lg:justify-end"
+          >
+            <div className="flex h-10 w-10 shrink-0 items-center justify-center bg-[#E8F8F5] text-teal-600">
+              <ShieldCheck className="h-5 w-5" />
+            </div>
+
+            <div className="max-w-lg">
+              <p className="text-sm leading-7 text-slate-600 sm:text-base">
+                We work with SHA and a range of insurance providers to help
+                make quality healthcare more accessible and convenient for
+                our patients.
+              </p>
+
+              <a
+                href="/contact"
+                className="group mt-3 inline-flex items-center gap-1.5 text-sm font-semibold text-[#0F5BBD]"
+              >
+                Ask about your coverage
+
+                <ArrowUpRight className="h-4 w-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+              </a>
+            </div>
           </motion.div>
         </div>
+
+        {/* Provider rail */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="mt-10 border-t border-slate-200 pt-6"
+        >
+          <div className="mb-5 flex items-center justify-between">
+            <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-400">
+              Selected healthcare partners
+            </span>
+
+            <span className="hidden text-xs text-slate-400 sm:block">
+              Coverage may vary by service
+            </span>
+          </div>
+
+          {/* Scrolling logos */}
+          <div className="relative overflow-hidden">
+            {/* Fade edges */}
+            <div className="pointer-events-none absolute left-0 top-0 z-10 h-full w-12 bg-gradient-to-r from-[#F7FAFC] to-transparent" />
+            <div className="pointer-events-none absolute right-0 top-0 z-10 h-full w-12 bg-gradient-to-l from-[#F7FAFC] to-transparent" />
+
+            <motion.div
+              className="flex w-max gap-4"
+              animate={{ x: ["0%", "-50%"] }}
+              transition={{
+                repeat: Infinity,
+                duration: 24,
+                ease: "linear",
+              }}
+            >
+              {[...insuranceProviders, ...insuranceProviders].map(
+                (provider, index) => (
+                  <div
+                    key={`${provider.name}-${index}`}
+                    className="flex h-20 w-36 shrink-0 items-center justify-center border border-slate-200 bg-white px-5 transition-colors duration-300 hover:border-teal-400"
+                  >
+                    <Image
+                      src={provider.logo}
+                      alt={`${provider.name} insurance provider`}
+                      width={120}
+                      height={60}
+                      className="h-12 w-auto max-w-[105px] object-contain"
+                    />
+                  </div>
+                )
+              )}
+            </motion.div>
+          </div>
+        </motion.div>
+
+        {/* Bottom reassurance */}
+        <div className="mt-7 flex flex-col gap-2 border-t border-slate-200 pt-5 sm:flex-row sm:items-center sm:justify-between">
+          <p className="text-xs text-slate-500">
+            Have questions about your insurance or coverage?
+          </p>
+
+          <a
+            href="/contact"
+            className="text-xs font-semibold text-[#0F5BBD] transition-colors hover:text-teal-600"
+          >
+            Speak with our team →
+          </a>
+        </div>
       </div>
+
+      {/* Teal accent */}
+      <div className="h-1 w-full bg-teal-500" />
     </section>
   );
 }

@@ -3,7 +3,12 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
-import { X } from "lucide-react";
+import {
+  ArrowUpRight,
+  X,
+  Clock3,
+  ShieldCheck,
+} from "lucide-react";
 
 const services = [
   {
@@ -56,16 +61,29 @@ const services = [
   },
 ];
 
-// Modal Component
-function Modal({ service, onClose }) {
-  // close on Esc key
+// =========================================================
+// SERVICE MODAL
+// =========================================================
+function ServiceModal({ service, onClose }) {
   useEffect(() => {
-    const handleEsc = (e) => {
-      if (e.key === "Escape") onClose();
+    if (!service) return;
+
+    const handleEsc = (event) => {
+      if (event.key === "Escape") {
+        onClose();
+      }
     };
-    window.addEventListener("keydown", handleEsc);
-    return () => window.removeEventListener("keydown", handleEsc);
-  }, [onClose]);
+
+    document.addEventListener("keydown", handleEsc);
+
+    // Prevent background scrolling
+    document.body.style.overflow = "hidden";
+
+    return () => {
+      document.removeEventListener("keydown", handleEsc);
+      document.body.style.overflow = "";
+    };
+  }, [service, onClose]);
 
   return (
     <AnimatePresence>
@@ -74,49 +92,67 @@ function Modal({ service, onClose }) {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-4"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-[#082B52]/70 p-4 backdrop-blur-sm"
           onClick={onClose}
         >
           <motion.div
-            initial={{ scale: 0.85, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            exit={{ scale: 0.85, opacity: 0 }}
+            initial={{ opacity: 0, y: 25, scale: 0.97 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: 25, scale: 0.97 }}
             transition={{ duration: 0.3 }}
-            className="relative bg-white rounded-2xl shadow-2xl max-w-xl w-full overflow-hidden"
-            onClick={(e) => e.stopPropagation()}
+            onClick={(event) => event.stopPropagation()}
+            className="relative w-full max-w-2xl overflow-hidden rounded-2xl bg-white shadow-2xl"
           >
-            {/* Close Button */}
+            {/* Close */}
             <button
               onClick={onClose}
-              className="absolute top-3 right-3 bg-white/80 p-2 rounded-full shadow hover:bg-red-500 hover:text-white transition"
+              aria-label="Close service details"
+              className="absolute right-4 top-4 z-20 flex h-10 w-10 items-center justify-center rounded-full bg-white/90 text-slate-700 shadow-md transition hover:bg-teal-500 hover:text-white"
             >
-              <X className="w-5 h-5" />
+              <X className="h-5 w-5" />
             </button>
 
             {/* Image */}
-            <div className="relative w-full h-64">
+            <div className="relative h-56 sm:h-72">
               <Image
                 src={service.image}
                 alt={service.title}
                 fill
                 className="object-cover"
               />
+
+              <div className="absolute inset-0 bg-gradient-to-t from-[#082B52]/70 via-transparent to-transparent" />
+
+              <div className="absolute bottom-6 left-6 right-6">
+                <p className="mb-2 text-[10px] font-bold uppercase tracking-[0.2em] text-teal-300">
+                  Lapsa Family Hospital
+                </p>
+
+                <h3 className="text-2xl font-extrabold tracking-tight text-white sm:text-3xl">
+                  {service.title}
+                </h3>
+              </div>
             </div>
 
-            {/* Content */}
-            <div className="p-6">
-              <h3 className="text-xl font-serif font-bold text-blue-900 mb-3">
-                {service.title}
-              </h3>
-              <p className="text-gray-600 mb-4 leading-relaxed">
+            {/* Details */}
+            <div className="p-6 sm:p-8">
+              <p className="text-sm leading-7 text-slate-600 sm:text-base">
                 {service.details}
               </p>
-              <button
-                onClick={onClose}
-                className="mt-2 font-serif text-sm font-bold w-full py-2 bg-blue-900 text-white rounded-lg hover:bg-red-600 transition"
-              >
-                Close
-              </button>
+
+              <div className="mt-7 flex flex-col gap-3 border-t border-slate-100 pt-6 sm:flex-row sm:items-center sm:justify-between">
+                <div className="flex items-center gap-2 text-xs font-semibold text-slate-500">
+                  <ShieldCheck className="h-4 w-4 text-teal-500" />
+                  Professional patient-focused care
+                </div>
+
+                <button
+                  onClick={onClose}
+                  className="inline-flex items-center justify-center rounded-lg bg-blue-700 px-5 py-2.5 text-sm font-bold text-white transition hover:bg-blue-800"
+                >
+                  Close
+                </button>
+              </div>
             </div>
           </motion.div>
         </motion.div>
@@ -125,101 +161,230 @@ function Modal({ service, onClose }) {
   );
 }
 
+// =========================================================
+// SERVICES
+// =========================================================
 export default function Services() {
   const [selectedService, setSelectedService] = useState(null);
 
   return (
     <section
       id="services"
-      className="relative px-6 py-20 bg-gray-50 dient-to-b from-blue-50 via-white to-blue-50 text-gray-800"
+      className="relative overflow-hidden bg-slate-50 py-16 md:py-20"
     >
-      <div className="max-w-7xl mx-auto lg:px8 text-center">
-        {/* Tagline */}
-        <motion.span
-          initial={{ opacity: 0, y: -20 }}
+      {/* =====================================================
+          BACKGROUND
+          ===================================================== */}
+      <div className="pointer-events-none absolute right-0 top-0 h-[500px] w-[500px] rounded-full bg-teal-100/40 blur-3xl" />
+
+      <div className="pointer-events-none absolute -left-40 bottom-0 h-[400px] w-[400px] rounded-full bg-blue-100/40 blur-3xl" />
+
+      {/* =====================================================
+          CONTENT
+          ===================================================== */}
+      <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-10">
+
+        {/* =================================================
+            HEADER
+            ================================================= */}
+        <div className="grid gap-6 border-b border-slate-200 pb-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
+
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <div className="mb-3 flex items-center gap-3">
+              <span className="h-px w-8 bg-teal-500" />
+
+              <span className="text-xs font-bold uppercase tracking-[0.2em] text-teal-600">
+                Medical Services
+              </span>
+            </div>
+
+            <h2 className="max-w-xl text-3xl font-extrabold leading-[1.1] tracking-tight text-slate-900 md:text-4xl lg:text-5xl">
+              Care for every{" "}
+              <span className="text-blue-700">stage of life.</span>
+            </h2>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="max-w-xl lg:ml-auto"
+          >
+            <p className="text-sm leading-7 text-slate-500 sm:text-base">
+              From everyday consultations to specialized treatment, our
+              services are designed to make quality healthcare accessible,
+              personal and dependable.
+            </p>
+
+            <div className="mt-4 flex items-center gap-5 text-xs font-semibold text-slate-500">
+              <span className="flex items-center gap-2">
+                <Clock3 className="h-4 w-4 text-teal-500" />
+                Emergency care available 24/7
+              </span>
+            </div>
+          </motion.div>
+        </div>
+
+        {/* =================================================
+            FEATURED SERVICE
+            ================================================= */}
+        <motion.div
+          initial={{ opacity: 0, y: 25 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="text-sm font-semibold text-blue-800 tracking-wider uppercase mb-3 inline-block"
+          transition={{ duration: 0.7 }}
+          className="mt-10"
         >
-          Caring for Every Family
-        </motion.span>
+          <div className="group grid overflow-hidden rounded-2xl bg-[#082B52] lg:grid-cols-[1.15fr_0.85fr]">
 
-        {/* Heading */}
-        <motion.h2
-          initial={{ opacity: 0, y: -30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-2xl md:text-4xl font-serif font-bold text-gray-800 mb-4"
-        >
-          Our Services
-        </motion.h2>
-        <div className="w-24 h-1 bg-blue-800 mx-auto rounded-full mb-6"></div>
+            {/* Image */}
+            <div className="relative min-h-[280px] overflow-hidden sm:min-h-[350px]">
+              <Image
+                src={services[0].image}
+                alt={services[0].title}
+                fill
+                className="object-cover transition duration-700 group-hover:scale-105"
+              />
 
+              <div className="absolute inset-0 bg-gradient-to-r from-[#082B52]/20 to-transparent" />
 
-        {/* Subtext */}
-        <motion.p
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="text-gray-600 text-base md:text-lg mb-10 max-w-2xl mx-auto"
-        >
-          At{" "}
-          <span className="font-semibold text-black">
-            Lapsa Family Hospital
-          </span>
-          , we provide a wide range of healthcare services tailored to meet the
-          needs of every family member with excellence and compassion.
-        </motion.p>
+              <div className="absolute left-5 top-5 flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-3 py-1.5 text-[10px] font-bold uppercase tracking-wider text-white backdrop-blur-md sm:left-7 sm:top-7">
+                Featured service
+              </div>
+            </div>
 
-        {/* Services Grid */}
-        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          {services.map((service, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 40 }}
+            {/* Content */}
+            <div className="flex flex-col justify-center p-7 sm:p-10 lg:p-12">
+              <p className="mb-3 text-xs font-bold uppercase tracking-[0.18em] text-teal-300">
+                Start with your health
+              </p>
+
+              <h3 className="text-2xl font-extrabold tracking-tight text-white sm:text-3xl">
+                {services[0].title}
+              </h3>
+
+              <p className="mt-4 max-w-md text-sm leading-7 text-blue-100/70">
+                {services[0].description}
+              </p>
+
+              <button
+                onClick={() => setSelectedService(services[0])}
+                className="mt-7 inline-flex w-fit items-center gap-2 border-b border-teal-300 pb-1 text-sm font-bold text-white transition hover:text-teal-300"
+              >
+                Explore service
+                <ArrowUpRight className="h-4 w-4" />
+              </button>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* =================================================
+            OTHER SERVICES
+            ================================================= */}
+        <div className="mt-8 grid gap-0 border-y border-slate-200 sm:grid-cols-2 lg:grid-cols-5">
+
+          {services.slice(1).map((service, index) => (
+            <motion.button
+              key={service.title}
+              type="button"
+              onClick={() => setSelectedService(service)}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="group flex flex-col border border-gray-200 bg-white rounded shadow-md hover:shadow-2xl transition-all duration-500 overflow-hidden hover:-translate-y-2"
+              transition={{
+                duration: 0.5,
+                delay: index * 0.08,
+              }}
+              className="
+                group
+                relative
+                overflow-hidden
+                border-b
+                border-slate-200
+                bg-white
+                p-5
+                text-left
+                transition-all
+                duration-300
+                hover:bg-teal-50/40
+                sm:p-6
+                lg:border-b-0
+                lg:border-r
+                lg:last:border-r-0
+              "
             >
-              {/* Service Image */}
-              <div className="relative w-full h-48 overflow-hidden">
+
+              {/* Number */}
+              <span className="text-[10px] font-bold tracking-[0.15em] text-slate-300 transition-colors group-hover:text-teal-500">
+                0{index + 2}
+              </span>
+
+              {/* Image */}
+              <div className="relative mt-4 h-32 overflow-hidden rounded-xl">
                 <Image
                   src={service.image}
                   alt={service.title}
                   fill
-                  className="object-cover transform group-hover:scale-110 transition duration-700"
+                  className="object-cover transition duration-500 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+
+                <div className="absolute inset-0 bg-[#082B52]/10 transition group-hover:bg-[#082B52]/0" />
               </div>
 
-              {/* Content */}
-              <div className="flex-1 p-6 flex flex-col">
-                <h3 className="md:text-lg fontserif font-bold text-gray-800 text-left mb-3">
+              {/* Title */}
+              <div className="mt-4 flex items-start justify-between gap-3">
+                <h3 className="text-sm font-bold leading-5 text-slate-900">
                   {service.title}
                 </h3>
-                <p className="text-gray-600 text-sm leading-relaxed text-left flex-1">
-                  {service.description}
-                </p>
 
-                {/* Button */}
-                <button
-                  onClick={() => setSelectedService(service)}
-                  className="mt-6 fontserif text-sm font-semibold w-full py-2 bg-blue-900 text-white rounded hover:bg-red-600 transition"
-                >
-                  Learn More
-                </button>
+                <ArrowUpRight className="h-4 w-4 shrink-0 text-slate-300 transition-all duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-teal-500" />
               </div>
-            </motion.div>
+
+              <p className="mt-2 line-clamp-2 text-xs leading-5 text-slate-500">
+                {service.description}
+              </p>
+
+              <span className="mt-4 inline-block text-[11px] font-bold text-blue-700">
+                View service
+              </span>
+            </motion.button>
           ))}
         </div>
+
+        {/* =================================================
+            BOTTOM CTA
+            ================================================= */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between"
+        >
+          <p className="text-sm text-slate-500">
+            Not sure which service you need?
+          </p>
+
+          <a
+            href="#appointment"
+            className="inline-flex w-fit items-center gap-2 text-sm font-bold text-blue-700 transition hover:text-teal-600"
+          >
+            Talk to our team
+            <ArrowUpRight className="h-4 w-4" />
+          </a>
+        </motion.div>
       </div>
 
-      {/* Modal */}
-      <Modal
+      {/* =====================================================
+          MODAL
+          ===================================================== */}
+      <ServiceModal
         service={selectedService}
         onClose={() => setSelectedService(null)}
       />

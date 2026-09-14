@@ -1,45 +1,115 @@
 "use client";
 
-import { PhoneCall } from "lucide-react";
+import { motion } from "framer-motion";
+import { PhoneCall, ArrowUpRight, ShieldAlert } from "lucide-react";
 
 export default function EmergencyCall() {
   return (
-    <section
-      className="relative bg-black py-16 bg-[url('/images/ambulance7.webp')] bg-cover bg-center"
-    >
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-black/80"></div>
+    <section className="relative overflow-hidden bg-[#082B52] text-white">
+      <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
+        <div className="grid min-h-[360px] items-stretch lg:grid-cols-[1.05fr_0.95fr]">
 
-      <div className="relative max-w-5xl mx-auto px-6 lg:px-8 flex flex-col items-center text-center">
-        {/* Icon 
-        <div className="mb-6 flex items-center justify-center w-20 h-20 rounded-full bg-blue-100">
-          <PhoneCall className="w-10 h-10 text-blue-900" />
+          {/* LEFT — Emergency information */}
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="flex flex-col justify-center py-12 pr-0 lg:py-14 lg:pr-16"
+          >
+            {/* Emergency label */}
+            <div className="mb-5 flex items-center gap-3">
+              <span className="flex h-8 w-8 items-center justify-center border border-teal-400/40 text-teal-300">
+                <ShieldAlert className="h-4 w-4" />
+              </span>
+
+              <span className="text-xs font-semibold uppercase tracking-[0.2em] text-teal-300">
+                Emergency Support · 24/7
+              </span>
+            </div>
+
+            {/* Heading */}
+            <h2 className="max-w-xl text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">
+              When every second{" "}
+              <span className="text-teal-300">matters.</span>
+            </h2>
+
+            <p className="mt-5 max-w-xl text-sm leading-7 text-white/65 sm:text-base">
+              If you are experiencing a medical emergency, contact our
+              emergency team immediately. We are ready to respond day or night.
+            </p>
+
+            {/* Emergency number */}
+            <div className="mt-7 flex flex-col gap-4 sm:flex-row sm:items-center">
+              <a
+                href="tel:+254111608331"
+                className="group inline-flex w-fit items-center gap-4 bg-teal-500 px-5 py-3.5 text-[#06263F] transition-colors hover:bg-teal-400"
+              >
+                <span className="flex h-9 w-9 items-center justify-center bg-white/20">
+                  <PhoneCall className="h-4 w-4" />
+                </span>
+
+                <span>
+                  <span className="block text-[10px] font-bold uppercase tracking-[0.15em] opacity-70">
+                    Emergency Hotline
+                  </span>
+
+                  <span className="mt-0.5 block text-lg font-bold tracking-wide">
+                    0111 608 331
+                  </span>
+                </span>
+
+                <ArrowUpRight className="ml-2 h-4 w-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+              </a>
+
+              <span className="text-xs text-white/40">
+                Tap to call immediately
+              </span>
+            </div>
+          </motion.div>
+
+          {/* RIGHT — Ambulance image */}
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+            className="relative min-h-[280px] overflow-hidden lg:min-h-0"
+          >
+            <img
+              src="/images/ambulance7.webp"
+              alt="Emergency ambulance service"
+              className="absolute inset-0 h-full w-full object-cover"
+            />
+
+            {/* Image fade */}
+            <div className="absolute inset-0 bg-[#082B52]/15" />
+
+            {/* Left fade into section */}
+            <div className="absolute inset-y-0 left-0 hidden w-32 bg-gradient-to-r from-[#082B52] to-transparent lg:block" />
+
+            {/* Bottom information */}
+            <div className="absolute bottom-5 left-5 right-5 flex items-end justify-between sm:left-7 sm:right-7">
+              <div className="border-l-2 border-teal-400 pl-3">
+                <p className="text-xs font-semibold uppercase tracking-wider text-white">
+                  Emergency Response
+                </p>
+                <p className="mt-1 text-xs text-white/60">
+                  Ready when you need us
+                </p>
+              </div>
+
+              <div className="flex h-9 w-9 items-center justify-center bg-[#082B52]/80 text-teal-300 backdrop-blur-sm">
+                <PhoneCall className="h-4 w-4" />
+              </div>
+            </div>
+          </motion.div>
+
         </div>
-          */}
-        {/* Title */}
-        <h2 className="text-2xl md:text-3xl font-serif font-bold text-white mb-4">
-          24/7 Emergency Hotline
-        </h2>
-        <div className="w-24 h-1 bg-yellow-400 mx-auto rounded-full mb-6"></div>
-
-        <p className="text-gray-200 text-base md:text-lg mb10 max-w-2xl mx-auto">
-          In case of any medical emergency, call us immediately. Our emergency
-          team is ready to assist you any time, day or night.
-        </p>
-        <p className="text-yellow-400 text-base md:text-lg mb-10 max-w-2xl mx-auto">
-          Tap the button below to make a call
-        </p>
-
-          {/* className="inline-block bg-green-500 text-white -900 font-serif font-semibold px-8 py-2 rounded-full shadow-lg hover:bg-blue-100 transition" */}
-        {/* Call Button  */}
-        <a
-          href="tel:+254111608331"
-        >
-          <div className="mb-6 flex items-center justify-center w-14 h-14 rounded-full bg-green-500">
-          <PhoneCall className="w-7 h-7 text-white" />
-        </div>
-        </a>
       </div>
+
+      {/* Bottom accent */}
+      <div className="h-1 w-full bg-teal-500" />
     </section>
   );
 }

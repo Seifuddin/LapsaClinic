@@ -1,11 +1,16 @@
 "use client";
 
+import { useState } from "react";
 import { motion } from "framer-motion";
-import { Star } from "lucide-react";
+import {
+  Star,
+  ArrowLeft,
+  ArrowRight,
+  Quote,
+} from "lucide-react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Autoplay } from "swiper/modules";
+import { Autoplay } from "swiper/modules";
 import "swiper/css";
-import "swiper/css/pagination";
 
 const testimonials = [
   {
@@ -43,85 +48,191 @@ const testimonials = [
 ];
 
 export default function Testimonials() {
+  const [swiper, setSwiper] = useState(null);
+  const [activeIndex, setActiveIndex] = useState(0);
+
   return (
-    <section className="py-16 px-6 bg-gray-50">
-      <div className="max-w-7xl mx-auto px6 lg:px8">
-        
-        {/* Section Title */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-12"
-        >
-          {/* Tagline */}
-                <motion.span
-                  initial={{ opacity: 0, y: -20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5 }}
-                  className="text-sm text-center font-semibold text-blue-800 tracking-wider uppercase mb-3 inline-block"
-                >
-                  Client Testimonials
-                </motion.span>
-          <h2 className="text-2xl md:text-3xl font-serif font-bold text-gray-800 mb-4">
-            What Our <span className="text-gray-900">Patients Say</span>
-          </h2>
-        <div className="w-24 h-1 bg-blue-800 mx-auto rounded-full mb-6"></div>
+    <section className="relative overflow-hidden bg-[#F7FAFC] py-16 sm:py-20 lg:py-24">
+      {/* Background geometry */}
+      <div className="pointer-events-none absolute -right-24 top-0 h-72 w-72 rounded-full border border-teal-500/10" />
+      <div className="pointer-events-none absolute -right-10 top-14 h-48 w-48 rounded-full border border-blue-500/10" />
 
-          <p className="text-gray-600 text-base md:text-lg mb-10 max-w-2xl mx-auto">
-            We value the trust our patients place in us. Here are some of their
-            stories and experiences.
-          </p>
-        </motion.div>
+      <div className="relative mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
 
-        {/* Swiper Slider */}
-        <Swiper
-          modules={[Pagination, Autoplay]}
-          spaceBetween={30}
-          slidesPerView={1}
-          pagination={{ clickable: true }}
-          autoplay={{ delay: 5000, disableOnInteraction: false, pauseOnMouseEnter: true }}
-          breakpoints={{
-            768: { slidesPerView: 2 },
-            1024: { slidesPerView: 3 },
-          }}
-        >
-          {testimonials.map((testimonial, index) => (
-            <SwiperSlide key={index}>
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-                className="bg-white border border-gray-200 rounded shadow-md p-6 hover:shadow-xl hover:scale-[1.02] transition transform flex flex-col items-center text-center relative before:absolute before:inset-0 before:rounded-xl before:border-2 before:border-transparent hover:before:border-blue-200 before:transition"
-              >
-                <img
-                  src={testimonial.image}
-                  alt={testimonial.name}
-                  className="w-20 h-20 rounded-full object-cover border-2 border-gray-300 shadow-md mt-3 mb-4"
-                />
-                <h3 className="text-base md:text-lg fontserif font-bold text-blue-900">
-                  {testimonial.name}
-                </h3>
-                <p className="text-sm text-gray-500 mb-2">{testimonial.role}</p>
+        {/* Header */}
+        <div className="mb-10 flex flex-col justify-between gap-5 border-b border-slate-200 pb-7 sm:flex-row sm:items-end">
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <div className="mb-4 flex items-center gap-3">
+              <span className="h-px w-8 bg-teal-500" />
 
-                {/* Rating */}
-                <div className="flex justify-center mb-4">
-                  {Array.from({ length: testimonial.rating }).map((_, i) => (
-                    <Star
-                      key={i}
-                      className="w-5 h-5 text-yellow-400 fill-yellow-400"
-                    />
-                  ))}
+              <span className="text-xs font-semibold uppercase tracking-[0.2em] text-teal-600">
+                Patient Stories
+              </span>
+            </div>
+
+            <h2 className="text-3xl font-bold tracking-tight text-[#082B52] sm:text-4xl">
+              Care that people{" "}
+              <span className="text-teal-600">remember.</span>
+            </h2>
+          </motion.div>
+
+          <motion.p
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="max-w-md text-sm leading-6 text-slate-500"
+          >
+            Every patient has a different story. These are a few experiences
+            shared by people who have trusted our team with their care.
+          </motion.p>
+        </div>
+
+        {/* Testimonial slider */}
+        <div className="relative">
+          <Swiper
+            modules={[Autoplay]}
+            slidesPerView={1}
+            spaceBetween={30}
+            loop={true}
+            autoplay={{
+              delay: 5500,
+              disableOnInteraction: false,
+              pauseOnMouseEnter: true,
+            }}
+            onSwiper={setSwiper}
+            onSlideChange={(instance) =>
+              setActiveIndex(instance.realIndex)
+            }
+          >
+            {testimonials.map((testimonial, index) => (
+              <SwiperSlide key={testimonial.name}>
+                <div className="grid items-center gap-10 lg:grid-cols-[0.7fr_1.3fr] lg:gap-16">
+
+                  {/* Patient image */}
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0.96 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6 }}
+                    className="relative mx-auto w-full max-w-sm"
+                  >
+                    <div className="relative aspect-[4/3] overflow-hidden bg-slate-200">
+                      <img
+                        src={testimonial.image}
+                        alt={testimonial.name}
+                        className="h-full w-full object-cover"
+                      />
+
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#082B52]/30 to-transparent" />
+                    </div>
+
+                    {/* Quote marker */}
+                    <div className="absolute -bottom-5 right-5 flex h-14 w-14 items-center justify-center bg-teal-500 text-[#06263F] shadow-lg">
+                      <Quote className="h-6 w-6" />
+                    </div>
+                  </motion.div>
+
+                  {/* Testimonial content */}
+                  <motion.div
+                    initial={{ opacity: 0, x: 25 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6, delay: 0.15 }}
+                    className="relative"
+                  >
+                    {/* Rating */}
+                    <div className="mb-5 flex items-center gap-1">
+                      {Array.from({ length: testimonial.rating }).map(
+                        (_, starIndex) => (
+                          <Star
+                            key={starIndex}
+                            className="h-4 w-4 fill-current text-teal-500"
+                          />
+                        )
+                      )}
+
+                      <span className="ml-2 text-xs font-medium text-slate-400">
+                        {testimonial.rating}.0 / 5
+                      </span>
+                    </div>
+
+                    {/* Quote */}
+                    <blockquote className="max-w-3xl text-2xl font-medium leading-[1.45] tracking-tight text-[#082B52] sm:text-3xl lg:text-4xl">
+                      “{testimonial.feedback}”
+                    </blockquote>
+
+                    {/* Patient */}
+                    <div className="mt-7 flex items-center gap-4">
+                      <div className="h-px w-8 bg-teal-500" />
+
+                      <div>
+                        <p className="text-sm font-bold text-[#082B52]">
+                          {testimonial.name}
+                        </p>
+
+                        <p className="mt-0.5 text-xs text-slate-500">
+                          {testimonial.role}
+                        </p>
+                      </div>
+                    </div>
+                  </motion.div>
                 </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
 
-                <p className="text-gray-700 italic leading-relaxed text-sm md:text-base">
-                  "{testimonial.feedback}"
-                </p>
-              </motion.div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
+          {/* Navigation */}
+          <div className="mt-10 flex items-center justify-between border-t border-slate-200 pt-5">
+
+            {/* Progress */}
+            <div className="flex items-center gap-3">
+              <span className="text-xs font-semibold text-[#082B52]">
+                {String(activeIndex + 1).padStart(2, "0")}
+              </span>
+
+              <div className="h-px w-20 bg-slate-200">
+                <motion.div
+                  className="h-px bg-teal-500"
+                  animate={{
+                    width: `${((activeIndex + 1) / testimonials.length) * 100}%`,
+                  }}
+                  transition={{ duration: 0.3 }}
+                />
+              </div>
+
+              <span className="text-xs text-slate-400">
+                {String(testimonials.length).padStart(2, "0")}
+              </span>
+            </div>
+
+            {/* Arrows */}
+            <div className="flex gap-2">
+              <button
+                type="button"
+                aria-label="Previous testimonial"
+                onClick={() => swiper?.slidePrev()}
+                className="flex h-10 w-10 items-center justify-center border border-slate-300 text-[#082B52] transition hover:border-teal-500 hover:bg-[#E8F8F5] hover:text-teal-600"
+              >
+                <ArrowLeft className="h-4 w-4" />
+              </button>
+
+              <button
+                type="button"
+                aria-label="Next testimonial"
+                onClick={() => swiper?.slideNext()}
+                className="flex h-10 w-10 items-center justify-center border border-slate-300 text-[#082B52] transition hover:border-teal-500 hover:bg-[#E8F8F5] hover:text-teal-600"
+              >
+                <ArrowRight className="h-4 w-4" />
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );

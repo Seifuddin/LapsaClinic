@@ -107,7 +107,7 @@ export default function HeroSection() {
             <img
               src="/images/aidoctor.jpg"
               alt="Doctor providing healthcare services at Lapsa Family Hospital"
-              className="h-[320px] w-full object-cover object-center sm:h-[380px] lg:h-[430px]"
+              className="h-[400px] w-full object-cover object-center sm:h-[430px] lg:h-[480px]"
             />
 
             {/* Subtle image overlay */}

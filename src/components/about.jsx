@@ -2,99 +2,223 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { ShieldCheck, Microscope, HeartPulse } from "lucide-react";
+import {
+  ShieldCheck,
+  Microscope,
+  HeartPulse,
+  ArrowUpRight,
+} from "lucide-react";
+
+const values = [
+  {
+    icon: ShieldCheck,
+    title: "Trust",
+    text: "Honest communication and dependable care.",
+  },
+  {
+    icon: Microscope,
+    title: "Innovation",
+    text: "Modern technology supporting better outcomes.",
+  },
+  {
+    icon: HeartPulse,
+    title: "Compassion",
+    text: "Respectful care for every patient.",
+  },
+];
 
 export default function About() {
   return (
-    <section id="about" className="relative bg-gray-50 px-6 py-20">
-      <div className="container max-w-7xl mx-auto px6 flex flex-col lg:flex-row items-center gap-12">
-        
-        {/* Left: Image */}
-        <motion.div
-          initial={{ opacity: 0, x: -50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="flex-1"
-        >
-          <Image
-            src="/images/muslimadoctorr2.jpg"
-            alt="Lapsa Family Hospital"
-            width={550}
-            height={450}
-            className="rounded shadow-lg object-cover border border-blue-100"
-          />
-        </motion.div>
+    <section
+      id="about"
+      className="relative overflow-hidden bg-white py-16 md:py-20"
+    >
+      {/* =====================================================
+          SUBTLE BACKGROUND
+          ===================================================== */}
+      <div className="pointer-events-none absolute -right-40 top-20 h-96 w-96 rounded-full bg-teal-50/70 blur-3xl" />
 
-        {/* Right: Text Content */}
-        <motion.div
-          initial={{ opacity: 0, x: 50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="flex-1"
-        >
-          {/* Section Title */}
-          <p className="text-sm uppercase tracking-widest text-blue-700 mb-2 font-semibold text-center md:text-left">
-            About Us
-          </p>
+      <div className="pointer-events-none absolute -left-40 bottom-0 h-80 w-80 rounded-full bg-blue-50/70 blur-3xl" />
 
-          <h2 className="text-2xl md:text-3xl font-serif font-extrabold text-gray-800 mb-4 text-center md:text-left">
-            Who We Are
-          </h2>
+      {/* =====================================================
+          MAIN CONTENT
+          ===================================================== */}
+      <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-10">
 
-          <div className="w-24 h-1 bg-blue-700 mx-auto md:mx-0 rounded-full mb-6"></div>
+        <div className="grid items-center gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:gap-20">
 
-          {/* Intro Paragraph */}
-          <p className="text-gray-700 text-base md:text-lg mb-6 textcenter text-left leading-relaxed">
-            At <span className="font-semibold text-gray-900">Lapsa Family Hospital</span>, 
-            we are committed to providing compassionate, high-quality medical services 
-            designed to meet the needs of every patient. Our mission is to ensure accessible 
-            and reliable healthcare for all, in an environment of trust and care.
-          </p>
+          {/* =================================================
+              IMAGE COMPOSITION
+              ================================================= */}
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+            className="relative"
+          >
+            {/* Image */}
+            <div className="relative overflow-hidden rounded-2xl">
+              <Image
+                src="/images/muslimadoctorr2.jpg"
+                alt="Doctor providing compassionate care at Lapsa Family Hospital"
+                width={700}
+                height={600}
+                className="h-[420px] w-full object-cover sm:h-[500px]"
+              />
 
-          {/* Extra info 
-          <p className="text-gray-700 text-base md:text-lg mb-10 textcenter text-left leading-relaxed">
-            From routine check-ups to specialized treatments, we combine advanced 
-            technology, skilled professionals, and personalized care to promote 
-            healthy living and lifelong wellness.
-          </p>
-*/}
-          {/* Core Values Section */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-6">
+              {/* Soft image overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-[#082B52]/30 via-transparent to-transparent" />
+
+              {/* Teal accent */}
+              <div className="absolute bottom-0 left-0 h-1 w-28 bg-teal-400" />
+            </div>
+
+            {/* Floating care statement */}
             <motion.div
-              whileHover={{ scale: 1.05 }}
-              className="flex flex-col items-center text-center p-4 rounded border border-blue-100 bg-white hover:bg-blue-50 transition shadow-sm"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="
+                absolute
+                -bottom-6
+                left-5
+                max-w-[270px]
+                rounded-xl
+                border
+                border-white/70
+                bg-white/95
+                p-5
+                shadow-xl
+                shadow-slate-900/10
+                backdrop-blur
+                sm:left-8
+              "
             >
-              <ShieldCheck className="text-yellow-500 w-10 h-10 mb-3 bg-gradient-to-r from-blue-700 to-blue-900 p-2 rounded -full shadow-md" />
-              <h4 className="font-semibold text-gray-800 mb-1">Trust</h4>
-              <p className="text-gray-600 text-sm">Building confidence through honesty and dependable care.</p>
+              <div className="mb-3 flex items-center gap-2">
+                <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-teal-50">
+                  <HeartPulse className="h-4 w-4 text-teal-600" />
+                </div>
+
+                <span className="text-[10px] font-bold uppercase tracking-[0.16em] text-teal-600">
+                  Our Philosophy
+                </span>
+              </div>
+
+              <p className="text-sm font-semibold leading-6 text-slate-800">
+                Healthcare built around people, not just conditions.
+              </p>
             </motion.div>
 
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              className="flex flex-col items-center text-center p-4 rounded border border-blue-100 bg-white hover:bg-blue-50 transition shadow-sm"
-            >
-              <Microscope className="text-yellow-500 w-10 h-10 mb-3 bg-gradient-to-r from-blue-700 to-blue-900 p-2 rounded -full shadow-md" />
-              <h4 className="font-semibold text-gray-800 mb-1">Innovation</h4>
-              <p className="text-gray-600 text-sm">Using advanced technology and research to improve outcomes.</p>
-            </motion.div>
+            {/* Decorative number */}
+            <div className="absolute -right-4 -top-5 hidden h-20 w-20 items-center justify-center rounded-full border border-blue-100 bg-white text-xs font-bold text-blue-700 shadow-sm sm:flex">
+              CARE
+            </div>
+          </motion.div>
 
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              className="flex flex-col items-center text-center p-4 rounded border border-blue-100 bg-white hover:bg-blue-50 transition shadow-sm"
-            >
-              <HeartPulse className="text-yellow-500 w-10 h-10 mb-3 bg-gradient-to-r from-blue-700 to-blue-900 p-2 rounded -full shadow-md" />
-              <h4 className="font-semibold text-gray-800 mb-1">Compassion</h4>
-              <p className="text-gray-600 text-sm">Caring for every patient with empathy, kindness, and respect.</p>
-            </motion.div>
-          </div>
+          {/* =================================================
+              CONTENT
+              ================================================= */}
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7, delay: 0.1 }}
+            className="pt-4 lg:pt-0"
+          >
+            {/* Eyebrow */}
+            <div className="mb-4 flex items-center gap-3">
+              <span className="h-px w-8 bg-teal-500" />
 
-          {/* Call to Action */}
-          <p className="text-blue-700 font-semibold text-center md:text-left mt-10 italic">
-            “Your health, our priority — together, we build a healthier tomorrow.”
-          </p>
-        </motion.div>
+              <p className="text-xs font-bold uppercase tracking-[0.2em] text-teal-600">
+                About Lapsa Family Hospital
+              </p>
+            </div>
+
+            {/* Heading */}
+            <h2 className="max-w-2xl text-3xl font-extrabold leading-[1.1] tracking-tight text-slate-900 sm:text-4xl lg:text-5xl">
+              Healthcare that puts{" "}
+              <span className="text-blue-700">people first.</span>
+            </h2>
+
+            {/* Description */}
+            <p className="mt-6 max-w-xl text-sm leading-7 text-slate-500 sm:text-base">
+              At{" "}
+              <span className="font-semibold text-slate-800">
+                Lapsa Family Hospital
+              </span>
+              , we are committed to providing compassionate, high-quality
+              medical services designed around the needs of every patient.
+              Our approach combines professional expertise, modern healthcare
+              practices and genuine human care.
+            </p>
+
+            {/* Small divider */}
+            <div className="my-8 h-px w-full max-w-xl bg-slate-100" />
+
+            {/* =================================================
+                VALUES
+                ================================================= */}
+            <div className="space-y-5">
+              {values.map((value, index) => {
+                const Icon = value.icon;
+
+                return (
+                  <motion.div
+                    key={value.title}
+                    initial={{ opacity: 0, x: 15 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{
+                      duration: 0.5,
+                      delay: 0.15 + index * 0.1,
+                    }}
+                    className="group flex items-start gap-4"
+                  >
+                    {/* Icon */}
+                    <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-blue-50 transition-all duration-300 group-hover:bg-teal-50">
+                      <Icon className="h-5 w-5 text-blue-700 transition-colors duration-300 group-hover:text-teal-600" />
+                    </div>
+
+                    {/* Text */}
+                    <div className="flex-1 border-b border-slate-100 pb-5">
+                      <div className="flex items-center justify-between gap-4">
+                        <h3 className="text-sm font-bold text-slate-900 sm:text-base">
+                          {value.title}
+                        </h3>
+
+                        <ArrowUpRight className="h-4 w-4 text-slate-300 transition-all duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-teal-500" />
+                      </div>
+
+                      <p className="mt-1 text-xs leading-5 text-slate-500 sm:text-sm">
+                        {value.text}
+                      </p>
+                    </div>
+                  </motion.div>
+                );
+              })}
+            </div>
+
+            {/* =================================================
+                CLOSING STATEMENT
+                ================================================= */}
+            <motion.div
+              initial={{ opacity: 0, y: 15 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.5 }}
+              className="mt-8 flex items-center gap-4"
+            >
+              <div className="h-10 w-1 rounded-full bg-teal-500" />
+
+              <p className="max-w-lg text-sm font-medium leading-6 text-slate-600">
+                Your health is our priority — together, we build a healthier
+                tomorrow.
+              </p>
+            </motion.div>
+          </motion.div>
+        </div>
       </div>
     </section>
   );

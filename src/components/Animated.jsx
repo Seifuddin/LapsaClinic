@@ -2,92 +2,226 @@
 
 import { motion, useInView, useMotionValue, animate } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
-import { Users, Stethoscope, HeartPulse, Ambulance } from "lucide-react";
+import {
+  Users,
+  Stethoscope,
+  HeartPulse,
+  Ambulance,
+  ArrowUpRight,
+} from "lucide-react";
 
-// Counter hook
+// =========================================================
+// Animated Counter
+// =========================================================
 const AnimatedCounter = ({ from = 0, to }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
+
   const count = useMotionValue(from);
   const [value, setValue] = useState(from);
 
   useEffect(() => {
-    if (isInView) {
-      const controls = animate(count, to, { duration: 2, ease: "easeOut" });
-      const unsubscribe = count.on("change", (latest) => setValue(Math.floor(latest)));
-      return () => {
-        controls.stop();
-        unsubscribe();
-      };
-    }
+    if (!isInView) return;
+
+    const controls = animate(count, to, {
+      duration: 2,
+      ease: "easeOut",
+    });
+
+    const unsubscribe = count.on("change", (latest) => {
+      setValue(Math.floor(latest));
+    });
+
+    return () => {
+      controls.stop();
+      unsubscribe();
+    };
   }, [isInView, to, count]);
 
   return (
-    <span ref={ref} className="text-lg md:text-2xl fontserif font-bold text-yellow-400">
+    <span
+      ref={ref}
+      className="text-2xl font-extrabold tracking-tight text-white sm:text-3xl"
+    >
       {value.toLocaleString()}+
     </span>
   );
 };
 
+// =========================================================
+// Statistics
+// =========================================================
 const stats = [
-  { icon: Users, label: "Happy Patients", value: 12000, color: "text-yellow-500 00" },
-  { icon: Stethoscope, label: "Expert Doctors", value: 85, color: "text-yellow-500 0" },
-  { icon: HeartPulse, label: "Successful Surgeries", value: 4500, color: "text-yellow-500 " },
-  { icon: Ambulance, label: "Ambulances", value: 15, color: "text-yellow-400 500" },
+  {
+    icon: Users,
+    label: "Patients Served",
+    value: 12000,
+  },
+  {
+    icon: Stethoscope,
+    label: "Expert Doctors",
+    value: 85,
+  },
+  {
+    icon: HeartPulse,
+    label: "Successful Surgeries",
+    value: 4500,
+  },
+  {
+    icon: Ambulance,
+    label: "Ambulances",
+    value: 15,
+  },
 ];
 
+// =========================================================
+// Component
+// =========================================================
 export default function AnimatedCounters() {
   return (
-    <section className="relative bg-[#0a2540] text-white px-6 pt-20 pb-10 overflow-hidden">
-      {/* Background Overlay with Patterns */}
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-900/60 via-[#0a2540]/90 to-blue-800/70 z-0"></div>
-      <div className="absolute inset-0 bg-[url('/images/pattern.png')] opacity-10 bg-cover bg-center z-0"></div>
+    <section className="relative overflow-hidden bg-[#082B52] py-12 sm:py-14">
 
-      <div className="relative max-w-7xl mx-auto px4 sm:px6 lg:px12 text-center z-10">
-        {/* Heading */}
-        <motion.h2
-          initial={{ opacity: 0, y: -20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-2xl md:text-3xl font-serif font-extrabold text-white mb-6"
-        >
-          Our Achievements in Numbers
-        </motion.h2>
-        <div className="w-24 h-1 bg-yellow-400 mx-auto rounded-full mb-6"></div>
+      {/* =====================================================
+          BACKGROUND DESIGN
+          ===================================================== */}
 
+      {/* Soft light bloom */}
+      <div className="pointer-events-none absolute -left-32 top-1/2 h-72 w-72 -translate-y-1/2 rounded-full bg-teal-400/10 blur-3xl" />
 
-        <p className="text-blue-200 text-sm md:text-base max-w-2xl mx-auto mb-10">
-          At <span className="font-semibold text-white">Lapsa Family Hospital</span>, we take pride in our dedication to care and excellence.
-        </p>
+      <div className="pointer-events-none absolute -right-32 top-0 h-80 w-80 rounded-full bg-blue-400/10 blur-3xl" />
 
-        {/* Stats Grid */}
-        <div className="grid gap-4 xs:gap-6 sm:grid-cols-2 lg:grid-cols-4">
+      {/* Large decorative circle */}
+      <div className="pointer-events-none absolute -right-20 -top-32 h-96 w-96 rounded-full border border-white/[0.06]" />
+
+      <div className="pointer-events-none absolute -right-4 -top-16 h-72 w-72 rounded-full border border-teal-300/[0.05]" />
+
+      {/* Subtle medical cross pattern */}
+      <div className="pointer-events-none absolute inset-0 opacity-[0.035]">
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: `
+              linear-gradient(rgba(255,255,255,1) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(255,255,255,1) 1px, transparent 1px)
+            `,
+            backgroundSize: "42px 42px",
+          }}
+        />
+      </div>
+
+      {/* Teal accent line */}
+      <div className="absolute left-0 top-0 h-[3px] w-full bg-teal-500" />
+
+      {/* =====================================================
+          CONTENT
+          ===================================================== */}
+      <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-10">
+
+        {/* Header */}
+        <div className="mb-8 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <div className="mb-2 flex items-center gap-2">
+              <span className="h-px w-7 bg-teal-400" />
+
+              <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-teal-300">
+                Our Impact
+              </span>
+            </div>
+
+            <h2 className="text-2xl font-extrabold tracking-tight text-white sm:text-3xl">
+              Care you can measure.
+            </h2>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="flex max-w-md items-center gap-3"
+          >
+            <p className="text-xs leading-6 text-blue-100/70 sm:text-sm">
+              Trusted by thousands of patients, with a commitment to
+              professional and compassionate healthcare.
+            </p>
+
+            <ArrowUpRight className="hidden h-5 w-5 shrink-0 text-teal-300 sm:block" />
+          </motion.div>
+        </div>
+
+        {/* =====================================================
+            STATS
+            ===================================================== */}
+        <div className="grid grid-cols-2 border-y border-white/10 lg:grid-cols-4">
+
           {stats.map((stat, index) => {
             const Icon = stat.icon;
+
             return (
               <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
+                key={stat.label}
+                initial={{ opacity: 0, y: 15 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                whileHover={{ scale: 1.05 }}
-                className="bg-white/5 backdrop-blur-md border border-white/20 p-4 xs:p-5 sm:p-6 rounded flex flex-col items-center"
+                transition={{
+                  duration: 0.5,
+                  delay: index * 0.1,
+                }}
+                className={`
+                  group
+                  relative
+                  flex
+                  items-center
+                  gap-4
+                  px-4
+                  py-5
+                  transition-all
+                  duration-300
+                  sm:px-6
+                  sm:py-6
+                  lg:px-7
+                  ${
+                    index < 2
+                      ? "border-b border-white/10 lg:border-b-0"
+                      : ""
+                  }
+                  ${
+                    index % 2 === 0
+                      ? "border-r border-white/10 lg:border-r-0"
+                      : ""
+                  }
+                  ${
+                    index !== 0
+                      ? "lg:border-l lg:border-white/10"
+                      : ""
+                  }
+                `}
               >
+
                 {/* Icon */}
-                <div className="w-10 h-10 flex items-center justify-center bg-gradient-to-r from-blue-700 to-blue-900 p-2 rounded -full shadow-md border border-white/10">
-                  <Icon className={`${stat.color} w-6 h-6`} />
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white/[0.07] ring-1 ring-white/10 transition-all duration-300 group-hover:bg-teal-400/10 group-hover:ring-teal-300/20">
+                  <Icon className="h-5 w-5 text-teal-300 transition-transform duration-300 group-hover:scale-110" />
                 </div>
 
-                {/* Counter */}
-                <AnimatedCounter to={stat.value} />
+                {/* Number + Label */}
+                <div className="min-w-0">
+                  <AnimatedCounter to={stat.value} />
 
-                {/* Label */}
-                <p className="text-white/90 mt-1 font-medium text-xs xs:text-sm md:text-base">{stat.label}</p>
+                  <p className="mt-0.5 truncate text-xs font-medium text-blue-100/60 sm:text-sm">
+                    {stat.label}
+                  </p>
+                </div>
+
               </motion.div>
             );
           })}
+
         </div>
       </div>
     </section>

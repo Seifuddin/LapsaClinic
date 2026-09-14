@@ -1,101 +1,226 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { CalendarCheck, Stethoscope, Pill, HeartHandshake } from "lucide-react";
+import {
+  CalendarCheck,
+  Stethoscope,
+  Pill,
+  HeartHandshake,
+  ArrowRight,
+} from "lucide-react";
 
 const steps = [
   {
-    title: "Book Appointment",
+    number: "01",
+    title: "Book Your Visit",
     description:
-      "Schedule your visit easily online or by phone at a convenient time.",
+      "Choose a convenient time and schedule your appointment with our team.",
     icon: CalendarCheck,
   },
   {
-    title: "Get Consultation",
+    number: "02",
+    title: "Meet Your Doctor",
     description:
-      "Meet our expert doctors for personalized advice and accurate diagnosis.",
+      "Receive a professional consultation focused on understanding your needs.",
     icon: Stethoscope,
   },
   {
-    title: "Receive Treatment",
+    number: "03",
+    title: "Begin Treatment",
     description:
-      "Access advanced medical care and treatments tailored to your needs.",
+      "Get personalized treatment and medical care designed around you.",
     icon: Pill,
   },
   {
-    title: "Ongoing Care",
+    number: "04",
+    title: "Stay Well",
     description:
-      "Benefit from continuous support and follow-ups for lasting wellness.",
+      "Continue receiving support, follow-ups and guidance for lasting wellness.",
     icon: HeartHandshake,
   },
 ];
 
 export default function PatientJourney() {
   return (
-    <section className="py-20 bg-gray-50 relative overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6 lg:px-1 text-center">
-        {/* Semi Title */}
-        <p className="text-sm uppercase tracking-wide font-semibold text-blue-800 mb-2">
-          Step-by-Step Care
-        </p>
+    <section className="relative overflow-hidden bg-white py-16 md:py-20">
 
-        {/* Main Title */}
-        <h2 className="text-2xl md:text-3xl font-serif font-bold text-gray-800 mb-4">
-          Your Journey to Better Health
-        </h2>
-        <div className="w-24 h-1 bg-blue-800 mx-auto rounded-full mb-6"></div>
+      {/* =========================================================
+          BACKGROUND IMAGE
+          ========================================================= */}
+      <div
+        className="
+          pointer-events-none
+          absolute
+          inset-y-0
+          right-0
+          hidden
+          w-[65%]
+          bg-[url('/images/patient-journey-bg.png')]
+          bg-contain
+          bg-right
+          bg-no-repeat
+          opacity-[0.07]
+          lg:block
+        "
+      />
 
+      {/* Soft white fade over the background image */}
+      <div
+        className="
+          pointer-events-none
+          absolute
+          inset-0
+          bg-gradient-to-r
+          from-white
+          via-white/95
+          to-white/70
+        "
+      />
 
-        {/* Intro Text */}
-        <p className="text-gray-700 text-base md:text-lg mb-10 max-w-2xl mx-auto">
-          We guide you through every stage of your health journey — from the
-          first appointment to long-term wellness.
-        </p>
+      {/* =========================================================
+          CONTENT
+          ========================================================= */}
+      <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-10">
 
-        {/* Steps */}
-        <div className="relative">
-          <div className="grid grid-cols-1 lg:grid-cols-4 gap-10 relative">
+        {/* Header */}
+        <div className="grid gap-6 border-b border-slate-100 pb-10 lg:grid-cols-2 lg:items-end">
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <p className="mb-3 text-xs font-bold uppercase tracking-[0.18em] text-teal-600">
+              Your Care Journey
+            </p>
+
+            <h2 className="max-w-lg text-3xl font-extrabold leading-[1.15] tracking-tight text-slate-900 md:text-4xl lg:text-5xl">
+              Healthcare that moves{" "}
+              <span className="text-blue-700">with you.</span>
+            </h2>
+          </motion.div>
+
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="max-w-xl text-sm leading-7 text-slate-500 lg:ml-auto lg:text-base"
+          >
+            From the moment you reach out to us, our team is committed to
+            making your healthcare experience simple, personal and
+            comfortable.
+          </motion.p>
+        </div>
+
+        {/* =========================================================
+            JOURNEY
+            ========================================================= */}
+        <div className="mt-12">
+
+          {/* Desktop journey line */}
+          <div className="relative hidden lg:block">
+
+            {/* Connecting line */}
+            <div className="absolute left-0 right-0 top-[30px] h-px bg-slate-200" />
+
+            <div className="grid grid-cols-4 gap-8">
+              {steps.map((step, index) => {
+                const Icon = step.icon;
+
+                return (
+                  <motion.div
+                    key={step.number}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{
+                      duration: 0.5,
+                      delay: index * 0.12,
+                    }}
+                    className="group relative"
+                  >
+
+                    {/* Number */}
+                    <div className="relative z-10 flex h-[60px] w-[60px] items-center justify-center rounded-full border border-slate-200 bg-white text-sm font-extrabold text-blue-700 transition-all duration-300 group-hover:border-teal-500 group-hover:bg-teal-50 group-hover:text-teal-700">
+                      {step.number}
+                    </div>
+
+                    {/* Content */}
+                    <div className="mt-8">
+
+                      <div className="mb-5 flex h-11 w-11 items-center justify-center rounded-xl bg-blue-50 transition-all duration-300 group-hover:bg-teal-50">
+                        <Icon className="h-5 w-5 text-blue-700 transition-colors duration-300 group-hover:text-teal-600" />
+                      </div>
+
+                      <h3 className="text-lg font-bold tracking-tight text-slate-900">
+                        {step.title}
+                      </h3>
+
+                      <p className="mt-2 max-w-[250px] text-sm leading-6 text-slate-500">
+                        {step.description}
+                      </p>
+                    </div>
+                  </motion.div>
+                );
+              })}
+            </div>
+          </div>
+
+          {/* =========================================================
+              MOBILE / TABLET
+              ========================================================= */}
+          <div className="grid gap-10 md:grid-cols-2 lg:hidden">
+
             {steps.map((step, index) => {
               const Icon = step.icon;
+
               return (
                 <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 40 }}
+                  key={step.number}
+                  initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: index * 0.2 }}
-                  className="relative bg-white p-6 rounded shadow-md hover:shadow-xl transition-all border border-gray-200"
+                  transition={{
+                    duration: 0.5,
+                    delay: index * 0.1,
+                  }}
+                  className="group flex gap-5"
                 >
-                  {/* Mobile vertical connector (except last card) */}
-                  {index !== steps.length - 1 && (
-                    <div className="lg:hidden absolute bottom-[-40px] left-1/2 transform -translate-x-1/2 w-[2px] h-[40px] bg-gradient-to-b from-blue-700 to-blue-900"></div>
-                  )}
 
-                  {/* Desktop horizontal connector (except last card) */}
-                  {index !== steps.length - 1 && (
-                    <div className="hidden lg:block absolute top-12 right-[-32px] w-[64px] h-[2px] bg-gradient-to-r from-blue-700 to-blue-900"></div>
-                  )}
+                  {/* Number */}
+                  <div className="relative shrink-0">
 
-                  {/* Icon */}
-                  <div className="flex justify-center mb-6">
-                    <div className="bg-gradient-to-r from-blue-700 to-blue-900 p-2 rounded -full shadow-md">
-                      <Icon className="w-6 h-6 text-yellow-500" />
+                    <div className="flex h-14 w-14 items-center justify-center rounded-full border border-slate-200 bg-white text-sm font-extrabold text-blue-700 shadow-sm transition-all group-hover:border-teal-400 group-hover:text-teal-600">
+                      {step.number}
                     </div>
+
+                    {/* Vertical connector */}
+                    {index !== steps.length - 1 && (
+                      <div className="absolute left-1/2 top-14 h-10 w-px -translate-x-1/2 bg-slate-200" />
+                    )}
                   </div>
 
-                  {/* Title */}
-                  <h3 className="md:text-lg fontserif font-bold text-gray-800 mb-2">
-                    {index + 1}. {step.title}
-                  </h3>
+                  {/* Content */}
+                  <div>
 
-                  {/* Description */}
-                  <p className="text-gray-700 text-sm">{step.description}</p>
+                    <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-blue-50">
+                      <Icon className="h-5 w-5 text-blue-700" />
+                    </div>
+
+                    <h3 className="text-base font-bold text-slate-900">
+                      {step.title}
+                    </h3>
+
+                    <p className="mt-2 text-sm leading-6 text-slate-500">
+                      {step.description}
+                    </p>
+                  </div>
                 </motion.div>
               );
             })}
           </div>
         </div>
-      </div>
-    </section>
-  );
-}
+
+        {/* CTA STRIP */} <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.3 }} className="mt-14 flex flex-col items-center justify-between gap-5 rounded-2xl bg-slate-900 px-6 py-6 sm:flex-row sm:px-8" > <div> <p className="text-sm font-bold text-white"> Ready to take the next step? </p> <p className="mt-1 text-xs text-slate-400"> Book your appointment and let our team take care of the rest. </p> </div> <a href="#appointment" className="inline-flex shrink-0 items-center gap-2 rounded-lg bg-teal-500 px-5 py-3 text-sm font-bold text-white transition-all duration-300 hover:bg-teal-600" > Book Appointment <ArrowRight className="h-4 w-4" /> </a> </motion.div> </div> </section> ); }

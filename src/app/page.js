@@ -20,10 +20,10 @@ export default function Home() {
     <div className="overflow-x-hidden">
       <Navbar />
       <HeroSection />
-      <PatientJourney />
-      <TrustLogos />
-      <About />
       <AnimatedCounters />
+      <PatientJourney />
+      <About />
+      <TrustLogos />
       <Services />
       <EmergencyCall />
       <Clinics />

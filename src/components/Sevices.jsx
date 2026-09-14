@@ -92,7 +92,7 @@ function ServiceModal({ service, onClose }) {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          className="fixed inset-0 z-50 flex items-center justify-center bg-[#082B52]/70 p-4 backdrop-blur-sm"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-white p-4 backdrop-blur-sm"
           onClick={onClose}
         >
           <motion.div
@@ -170,17 +170,16 @@ export default function Services() {
   return (
     <section
       id="services"
-      className="relative overflow-hidden bg-slate-50 py-16 md:py-20"
+      className="relative overflow-hidden bg-white py-16 md:py-20"
     >
       {/* =====================================================
           BACKGROUND
           ===================================================== */}
-      <div className="pointer-events-none absolute right-0 top-0 h-[500px] w-[500px] rounded-full bg-teal-100/40 blur-3xl" />
+      <div className="hidden pointer-events-none absolute right-0 top-0 h-[500px] w-[500px] rounded-full bg-teal-100/40 blur-3xl" />
 
-      <div className="pointer-events-none absolute -left-40 bottom-0 h-[400px] w-[400px] rounded-full bg-blue-100/40 blur-3xl" />
+      <div className="hidden pointer-events-none absolute -left-40 bottom-0 h-[400px] w-[400px] rounded-full bg-blue-100/40 blur-3xl" />
 
       {/* =====================================================
-          CONTENT
           ===================================================== */}
       <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-10">
 

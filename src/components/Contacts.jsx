@@ -1,12 +1,23 @@
 "use client";
+
 import { motion, AnimatePresence } from "framer-motion";
-
-
 import { useState } from "react";
-import { Phone, Mail, MapPin, Send, MessageSquare } from "lucide-react";
+import {
+  Phone,
+  Mail,
+  MapPin,
+  Send,
+  MessageSquare,
+  ArrowUpRight,
+} from "lucide-react";
 
 export default function ContactUs() {
-  const [formData, setFormData] = useState({ name: "", email: "", message: "" });
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
   const [status, setStatus] = useState(null); // success | error | null
 
   const handleChange = (e) => {
@@ -28,157 +39,298 @@ export default function ContactUs() {
   };
 
   return (
-    <section id="contact" className="py-20 px-6 bg-gray-50 dient-to-r from-white to-blue-50">
-      <div className="max-w-7xl mx-auto textcenter">
-        {/* Heading + Intro */}
-        <div className="text-center mb-14">
-          {/* Tagline */}
-                <motion.span
-                  initial={{ opacity: 0, y: -20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5 }}
-                  className="text-sm font-semibold text-blue-800 tracking-wider uppercase mb-3 inline-block"
-                >
-                  Contact Us
-                </motion.span>
-          <h2 className="text-2xl md:text-3xl font-serif font-bold text-gray-800 mb-4">
-            Get in Touch With Us
-          </h2>
-        <div className="w-24 h-1 bg-blue-800 mx-auto rounded-full mb-6"></div>
+    <section
+      id="contact"
+      className="relative overflow-hidden bg-slate-50 px-6 py-20"
+    >
+      {/* Subtle Background */}
+      <div className="absolute inset-0">
+        <div className="absolute -left-40 top-20 h-80 w-80 rounded-full bg-blue-100/40 blur-3xl" />
+        <div className="absolute -right-40 bottom-0 h-96 w-96 rounded-full bg-teal-100/40 blur-3xl" />
+      </div>
 
-          <p className="text-b ase font-medium text-gray-600 mb-2">
-            We’re here to help and answer any questions you might have.
-          </p>
-          
-        </div>
+      <div className="relative mx-auto max-w-7xl">
 
-        <div className="grid md:grid-cols-2 gap-10">
-          {/* Left Side - Contact Info & Map */}
-         
-          <div>
-            <div className="space-y-6">
-               <p className="text-left text-gray-600 max-w-2xl mx-auto">
-            Whether you want to book an appointment, ask about our services, or
-            simply say hello, feel free to reach out—we’d love to hear from you.
-          </p>
-              <div className="flex items-center space-x-3">
-                <Phone className="text-yellow-400 -600 bg-gradient-to-r from-blue-700 to-blue-900 p-1 shadow-lg rounded" />
-                <a
-                  href="tel:+254111608331"
-                  className="text-md font-medium text-blue-950 text-base hover:text-blue-700 transition"
-                >
-                  +254 111 608 331
-                </a>
-              </div>
-              <div className="flex items-center space-x-3">
-                <Mail className="text-yellow-400 600 bg-gradient-to-r from-blue-700 to-blue-900 p-1 shadow-lg rounded" />
-                <a
-                  href="mailto:info@hospital.com"
-                  className="text-md font-medium text-blue-950 text-base hover:text-blue-700 transition"
-                >
-                  lapsatechnologies@gmail.com
-                </a>
-              </div>
-              <div className="flex items-center space-x-3">
-                <MapPin className="text-yellow-400 00 bg-gradient-to-r from-blue-700 to-blue-900 p-1 shadow-lg rounded" />
-                <span className="text-md font-medium text-blue-950 text-base">
-                  Nairobi, Kenya
-                </span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <MessageSquare className="text-yellow-400 -500 bg-gradient-to-r from-blue-700 to-blue-900 p-1 shadow-lg rounded" />
-                <a
-                  href="https://wa.me/254111608331"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="px-4 py-2 rounded-lg bg-green-600 text-white font-medium hover:bg-green-700 transition transform hover:scale-105"
-                >
-                  Chat on WhatsApp
-                </a>
-              </div>
+        {/* Heading */}
+        <div className="mb-14 grid gap-6 lg:grid-cols-[1fr_1fr] lg:items-end">
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+          >
+            <div className="mb-4 flex items-center gap-3">
+              <span className="h-px w-8 bg-teal-500" />
+
+              <span className="text-xs font-bold uppercase tracking-[0.2em] text-teal-600">
+                Contact Us
+              </span>
             </div>
 
-            {/* Google Map */}
-            <div className="mt-8">
+            <h2 className="max-w-xl text-3xl font-black leading-tight tracking-tight text-blue-950 md:text-4xl">
+              Let’s make your next healthcare visit easier.
+            </h2>
+          </motion.div>
+
+          <p className="max-w-xl text-sm leading-7 text-slate-600 lg:justify-self-end lg:text-right">
+            We’re here to help and answer any questions you might have.
+            Whether you want to book an appointment, ask about our services,
+            or simply say hello, feel free to reach out.
+          </p>
+        </div>
+
+        {/* Main Contact Area */}
+        <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
+
+          {/* LEFT SIDE */}
+          <motion.div
+            initial={{ opacity: 0, x: -25 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+          >
+            {/* Contact Details */}
+            <div className="border-t border-slate-200">
+
+              {/* Phone */}
+              <a
+                href="tel:+254111608331"
+                className="group flex items-center justify-between border-b border-slate-200 py-5 transition"
+              >
+                <div className="flex items-center gap-4">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-blue-100 text-blue-700 transition group-hover:bg-blue-950 group-hover:text-white">
+                    <Phone size={18} />
+                  </div>
+
+                  <div>
+                    <p className="text-[10px] font-bold uppercase tracking-widest text-slate-400">
+                      Call Us
+                    </p>
+
+                    <p className="mt-1 text-sm font-semibold text-blue-950">
+                      +254 111 608 331
+                    </p>
+                  </div>
+                </div>
+
+                <ArrowUpRight
+                  size={18}
+                  className="text-slate-300 transition group-hover:text-teal-500"
+                />
+              </a>
+
+              {/* Email */}
+              <a
+                href="mailto:info@hospital.com"
+                className="group flex items-center justify-between border-b border-slate-200 py-5 transition"
+              >
+                <div className="flex items-center gap-4">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-teal-100 text-teal-700 transition group-hover:bg-teal-600 group-hover:text-white">
+                    <Mail size={18} />
+                  </div>
+
+                  <div>
+                    <p className="text-[10px] font-bold uppercase tracking-widest text-slate-400">
+                      Email
+                    </p>
+
+                    <p className="mt-1 break-all text-sm font-semibold text-blue-950">
+                      lapsatechnologies@gmail.com
+                    </p>
+                  </div>
+                </div>
+
+                <ArrowUpRight
+                  size={18}
+                  className="text-slate-300 transition group-hover:text-teal-500"
+                />
+              </a>
+
+              {/* Location */}
+              <div className="flex items-center justify-between border-b border-slate-200 py-5">
+                <div className="flex items-center gap-4">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-blue-100 text-blue-700">
+                    <MapPin size={18} />
+                  </div>
+
+                  <div>
+                    <p className="text-[10px] font-bold uppercase tracking-widest text-slate-400">
+                      Location
+                    </p>
+
+                    <p className="mt-1 text-sm font-semibold text-blue-950">
+                      Nairobi, Kenya
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* WhatsApp */}
+              <a
+                href="https://wa.me/254111608331"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex items-center justify-between border-b border-slate-200 py-5 transition"
+              >
+                <div className="flex items-center gap-4">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-teal-100 text-teal-700 transition group-hover:bg-teal-600 group-hover:text-white">
+                    <MessageSquare size={18} />
+                  </div>
+
+                  <div>
+                    <p className="text-[10px] font-bold uppercase tracking-widest text-slate-400">
+                      WhatsApp
+                    </p>
+
+                    <p className="mt-1 text-sm font-semibold text-blue-950">
+                      Chat with our team
+                    </p>
+                  </div>
+                </div>
+
+                <ArrowUpRight
+                  size={18}
+                  className="text-slate-300 transition group-hover:text-teal-500"
+                />
+              </a>
+            </div>
+
+            {/* Map */}
+            <div className="mt-8 overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1994.394849225982!2d36.821946!3d-1.292066!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f10f9db8f2a17%3A0x401a3f3c5e0a5a0!2sNairobi!5e0!3m2!1sen!2ske!4v1234567890"
                 width="100%"
-                height="300"
+                height="260"
                 style={{ border: 0 }}
                 allowFullScreen=""
                 loading="lazy"
                 title="Hospital Location"
               ></iframe>
             </div>
-          </div>
+          </motion.div>
 
-          {/* Right Side - Contact Form */}
-          <div>
+          {/* RIGHT SIDE — FORM */}
+          <motion.div
+            initial={{ opacity: 0, x: 25 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+            className="relative"
+          >
             <form
               onSubmit={handleSubmit}
-              className="bg-white p-6 rounded border border-gray-200 shadow-lg space-y-5"
+              className="relative overflow-hidden rounded-2xl bg-blue-950 p-6 shadow-xl sm:p-8"
             >
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">
-                  Full Name
-                </label>
-                <input
-                  type="text"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  placeholder="Enter your full name"
-                  className="text-gray-600 w-full p-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500"
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">
-                  Email Address
-                </label>
-                <input
-                  type="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  placeholder="Enter your email"
-                  className="text-gray-600 w-full p-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500"
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">
-                  Your Message
-                </label>
-                <textarea
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  placeholder="Write your message"
-                  rows="4"
-                  className="text-gray-600 w-full p-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500"
-                ></textarea>
-              </div>
-              <button
-                type="submit"
-                className="w-full flex items-center justify-center space-x-2 bg-gradient-to-r from-blue-700 to-blue-900 text-white px-4 py-3 rounded font-medium hover:bg-blue-700 transition transform hover:scale-105"
-              >
-                <Send size={18} />
-                <span>Send Message</span>
-              </button>
+              {/* Form Background Detail */}
+              <div className="absolute -right-24 -top-24 h-64 w-64 rounded-full bg-blue-800/40 blur-3xl" />
 
-              {/* Feedback Messages */}
-              {status === "error" && (
-                <p className="text-red-600 text-sm mt-2">
-                  Please fill in all fields before submitting.
-                </p>
-              )}
-              {status === "success" && (
-                <p className="text-green-600 text-sm mt-2">
-                  ✅ Your message has been sent successfully!
-                </p>
-              )}
+              <div className="relative">
+                <div className="mb-8">
+                  <div className="mb-3 flex items-center gap-2">
+                    <span className="h-1.5 w-1.5 rounded-full bg-teal-400" />
+
+                    <span className="text-xs font-bold uppercase tracking-[0.18em] text-teal-300">
+                      Send a Message
+                    </span>
+                  </div>
+
+                  <h3 className="text-2xl font-bold text-white">
+                    How can we help?
+                  </h3>
+
+                  <p className="mt-2 max-w-md text-sm leading-6 text-blue-100/60">
+                    Send us a message and our team will get back to you.
+                  </p>
+                </div>
+
+                {/* Name */}
+                <div className="mb-5">
+                  <label className="mb-2 block text-xs font-semibold text-blue-100/80">
+                    Full Name
+                  </label>
+
+                  <input
+                    type="text"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    placeholder="Enter your full name"
+                    className="w-full rounded-xl border border-white/10 bg-white/[0.06] px-4 py-3 text-sm text-white placeholder:text-blue-100/30 outline-none transition focus:border-teal-400/60 focus:bg-white/[0.09]"
+                  />
+                </div>
+
+                {/* Email */}
+                <div className="mb-5">
+                  <label className="mb-2 block text-xs font-semibold text-blue-100/80">
+                    Email Address
+                  </label>
+
+                  <input
+                    type="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    placeholder="Enter your email"
+                    className="w-full rounded-xl border border-white/10 bg-white/[0.06] px-4 py-3 text-sm text-white placeholder:text-blue-100/30 outline-none transition focus:border-teal-400/60 focus:bg-white/[0.09]"
+                  />
+                </div>
+
+                {/* Message */}
+                <div className="mb-6">
+                  <label className="mb-2 block text-xs font-semibold text-blue-100/80">
+                    Your Message
+                  </label>
+
+                  <textarea
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
+                    placeholder="Write your message"
+                    rows="5"
+                    className="w-full resize-none rounded-xl border border-white/10 bg-white/[0.06] px-4 py-3 text-sm text-white placeholder:text-blue-100/30 outline-none transition focus:border-teal-400/60 focus:bg-white/[0.09]"
+                  ></textarea>
+                </div>
+
+                {/* Submit */}
+                <button
+                  type="submit"
+                  className="group flex w-full items-center justify-center gap-2 rounded-xl bg-teal-500 px-4 py-3.5 text-sm font-bold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-teal-400 hover:shadow-lg hover:shadow-teal-900/20"
+                >
+                  <Send
+                    size={17}
+                    className="transition-transform duration-300 group-hover:translate-x-1"
+                  />
+
+                  <span>Send Message</span>
+                </button>
+
+                {/* Feedback */}
+                <AnimatePresence mode="wait">
+                  {status === "error" && (
+                    <motion.p
+                      initial={{ opacity: 0, y: 5 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -5 }}
+                      className="mt-4 text-center text-xs font-medium text-red-300"
+                    >
+                      Please fill in all fields before submitting.
+                    </motion.p>
+                  )}
+
+                  {status === "success" && (
+                    <motion.p
+                      initial={{ opacity: 0, y: 5 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -5 }}
+                      className="mt-4 text-center text-xs font-medium text-teal-300"
+                    >
+                      ✓ Your message has been sent successfully!
+                    </motion.p>
+                  )}
+                </AnimatePresence>
+              </div>
             </form>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

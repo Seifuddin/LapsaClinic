@@ -20,11 +20,6 @@ const reasons = [
     title: "24/7 Emergency Care",
     desc: "Rapid-response emergency services when every second matters.",
   },
-  {
-    number: "04",
-    title: "Patient-Centered Care",
-    desc: "Your comfort, privacy, dignity and well-being remain at the heart of what we do.",
-  },
 ];
 
 export default function WhyUs() {

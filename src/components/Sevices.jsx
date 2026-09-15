@@ -240,7 +240,7 @@ export default function Services() {
           transition={{ duration: 0.7 }}
           className="mt-10"
         >
-          <div className="group grid overflow-hidden rounded-2xl bg-[#082B52] lg:grid-cols-[1.15fr_0.85fr]">
+          <div className="group grid overflow-hidden rounded -2xl bg-[#082B52] lg:grid-cols-[1.15fr_0.85fr]">
 
             {/* Image */}
             <div className="relative min-h-[280px] overflow-hidden sm:min-h-[350px]">
@@ -307,12 +307,12 @@ export default function Services() {
                 border-b
                 border-slate-200
                 bg-white
-                p-5
+                p-3
                 text-left
                 transition-all
                 duration-300
                 hover:bg-teal-50/40
-                sm:p-6
+                sm:p-2
                 lg:border-b-0
                 lg:border-r
                 lg:last:border-r-0
@@ -325,7 +325,7 @@ export default function Services() {
               </span>
 
               {/* Image */}
-              <div className="relative mt-4 h-32 overflow-hidden rounded-xl">
+              <div className="relative mt-2 h-40 overflow-hidden rounded">
                 <Image
                   src={service.image}
                   alt={service.title}
@@ -338,14 +338,14 @@ export default function Services() {
 
               {/* Title */}
               <div className="mt-4 flex items-start justify-between gap-3">
-                <h3 className="text-sm font-bold leading-5 text-slate-900">
+                <h3 className="text-base font-bold leading-5 text-slate-900">
                   {service.title}
                 </h3>
 
                 <ArrowUpRight className="h-4 w-4 shrink-0 text-slate-300 transition-all duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-teal-500" />
               </div>
 
-              <p className="mt-2 line-clamp-2 text-xs leading-5 text-slate-500">
+              <p className="mt-2 line-clamp-2 text-sm leading-5 text-slate-500">
                 {service.description}
               </p>
 

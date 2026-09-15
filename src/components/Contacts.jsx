@@ -49,10 +49,22 @@ export default function ContactUs() {
         <div className="absolute -right-40 bottom-0 h-96 w-96 rounded-full bg-teal-100/40 blur-3xl" />
       </div>
 
-      <div className="relative mx-auto max-w-7xl">
+      <div className="relative mx-auto max-w-7xl lg:grid-cols-2 lg:gap-14 lg:px-12">
 
-        {/* Heading */}
-        <div className="mb-14 grid gap-6 lg:grid-cols-[1fr_1fr] lg:items-end">
+       
+
+        {/* Main Contact Area */}
+        <div className="relative md:grid-cols-2 mx-auto grid max-w-7xl items-center gap-10">
+
+          {/* LEFT SIDE */}
+          <motion.div
+            initial={{ opacity: 0, x: -25 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+          >
+             {/* Heading */}
+        <div className="mb-14 grid gap-3 lg:grid-cols-[1fr_1fr]lg:items-end">
           <motion.div
             initial={{ opacity: 0, y: -20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -67,39 +79,28 @@ export default function ContactUs() {
               </span>
             </div>
 
-            <h2 className="max-w-xl text-3xl font-black leading-tight tracking-tight text-blue-950 md:text-4xl">
+            <h2 className="text-2xl font-black leading-tight tracking-tight text-blue-950 md:text-4xl">
               Let’s make your next healthcare visit easier.
             </h2>
           </motion.div>
 
-          <p className="max-w-xl text-sm leading-7 text-slate-600 lg:justify-self-end lg:text-right">
+          <p className="text-sm leading-7 text-slate-600 lgjustify-self-end">
             We’re here to help and answer any questions you might have.
             Whether you want to book an appointment, ask about our services,
             or simply say hello, feel free to reach out.
           </p>
         </div>
-
-        {/* Main Contact Area */}
-        <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
-
-          {/* LEFT SIDE */}
-          <motion.div
-            initial={{ opacity: 0, x: -25 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
-          >
             {/* Contact Details */}
             <div className="border-t border-slate-200">
 
               {/* Phone */}
               <a
                 href="tel:+254111608331"
-                className="group flex items-center justify-between border-b border-slate-200 py-5 transition"
+                className="group flex items-center rounded-xl justify-between border-b border-slate-200 py-3 transition"
               >
                 <div className="flex items-center gap-4">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-blue-100 text-blue-700 transition group-hover:bg-blue-950 group-hover:text-white">
-                    <Phone size={18} />
+                  <div className="flex h-8 w-8 items-center justify-center rounded-full bg-blue-100 text-blue-700 transition group-hover:bg-blue-950 group-hover:text-white">
+                    <Phone size={14} />
                   </div>
 
                   <div>
@@ -122,11 +123,11 @@ export default function ContactUs() {
               {/* Email */}
               <a
                 href="mailto:info@hospital.com"
-                className="group flex items-center justify-between border-b border-slate-200 py-5 transition"
+                className="group flex items-center rounded-xl justify-between border-b border-slate-200 py-3 transition"
               >
                 <div className="flex items-center gap-4">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-teal-100 text-teal-700 transition group-hover:bg-teal-600 group-hover:text-white">
-                    <Mail size={18} />
+                  <div className="flex h-8 w-8 items-center justify-center rounded-full bg-teal-100 text-teal-700 transition group-hover:bg-teal-600 group-hover:text-white">
+                    <Mail size={14} />
                   </div>
 
                   <div>
@@ -147,10 +148,10 @@ export default function ContactUs() {
               </a>
 
               {/* Location */}
-              <div className="flex items-center justify-between border-b border-slate-200 py-5">
+              <div className="flex items-center justify-between rounded-xl border-b border-slate-200 py-3">
                 <div className="flex items-center gap-4">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-blue-100 text-blue-700">
-                    <MapPin size={18} />
+                  <div className="flex h-8 w-8 items-center justify-center rounded-full bg-blue-100 text-blue-700">
+                    <MapPin size={14} />
                   </div>
 
                   <div>
@@ -170,11 +171,11 @@ export default function ContactUs() {
                 href="https://wa.me/254111608331"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex items-center justify-between border-b border-slate-200 py-5 transition"
+                className="group flex items-center rounded-xl justify-between border-b border-slate-200 py-3 transition"
               >
-                <div className="flex items-center gap-4">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-teal-100 text-teal-700 transition group-hover:bg-teal-600 group-hover:text-white">
-                    <MessageSquare size={18} />
+                <div className="flex items-center gap-2">
+                  <div className="flex h-8 w-8 items-center justify-center rounded-full bg-teal-100 text-teal-700 transition group-hover:bg-teal-600 group-hover:text-white">
+                    <MessageSquare size={14} />
                   </div>
 
                   <div>
@@ -196,7 +197,7 @@ export default function ContactUs() {
             </div>
 
             {/* Map */}
-            <div className="mt-8 overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
+            <div className="hidden mt-8overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1994.394849225982!2d36.821946!3d-1.292066!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f10f9db8f2a17%3A0x401a3f3c5e0a5a0!2sNairobi!5e0!3m2!1sen!2ske!4v1234567890"
                 width="100%"

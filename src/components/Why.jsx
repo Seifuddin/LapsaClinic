@@ -48,7 +48,7 @@ export default function WhyUs() {
                   alt="Lapsa Family Hospital medical team"
                   width={700}
                   height={560}
-                  className="h-[360px] w-full object-cover sm:h-[430px] lg:h-[500px]"
+                  className="h-[360px] w-full rounded-md object-cover sm:h-[430px] lg:h-[500px]"
                 />
 
                 {/* Subtle image overlay */}
@@ -59,8 +59,8 @@ export default function WhyUs() {
               <div className="absolute -bottom-3 left-6 h-1 w-24 bg-teal-500" />
 
               {/* Floating trust marker */}
-              <div className="absolute bottom-6 left-6 flex items-center gap-3 bg-white px-4 py-3 shadow-xl sm:left-8">
-                <div className="flex h-9 w-9 items-center justify-center bg-[#E8F8F5] text-teal-600">
+              <div className="absolute bottom-6 left-6 flex items-center gap-3 bg-white px-4 py-3 shadow-xl sm:left-8 rounded-md">
+                <div className="rounded-md flex h-9 w-9 items-center justify-center bg-[#E8F8F5] text-teal-600">
                   <ShieldCheck className="h-5 w-5" />
                 </div>
 
@@ -129,7 +129,7 @@ export default function WhyUs() {
                     duration: 0.5,
                     delay: 0.15 + index * 0.08,
                   }}
-                  className="group flex gap-4 border-b border-slate-200 py-5 sm:gap-6"
+                  className="group flex gap-4 border-b border-slate-200 rounded-xl py-3 sm:gap-6"
                 >
                   {/* Number */}
                   <span className="w-8 shrink-0 pt-1 text-xs font-semibold tracking-wider text-teal-600">

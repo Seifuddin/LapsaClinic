@@ -5,9 +5,9 @@ import { PhoneCall, ArrowUpRight, ShieldAlert } from "lucide-react";
 
 export default function EmergencyCall() {
   return (
-    <section className="relative overflow-hidden bg-[#082B52] text-white">
+    <section className="relative overflow-hidden bg-[#082B52] text-white ">
       <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
-        <div className="grid min-h-[360px] items-stretch lg:grid-cols-[1.05fr_0.95fr]">
+        <div className="grid min-h-[360px] items-stretch lg:grid-cols-[1.05fr_0.95fr] py-12">
 
           {/* LEFT — Emergency information */}
           <motion.div
@@ -79,7 +79,7 @@ export default function EmergencyCall() {
             <img
               src="/images/ambulance7.webp"
               alt="Emergency ambulance service"
-              className="absolute inset-0 h-full w-full object-cover"
+              className="absolute inset-0 h-full w-full object-cover rounded-md"
             />
 
             {/* Image fade */}

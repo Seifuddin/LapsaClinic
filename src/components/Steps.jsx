@@ -95,7 +95,7 @@ export default function PatientJourney() {
               Your Care Journey
             </p>
 
-            <h2 className="max-w-lg text-3xl font-extrabold leading-[1.15] tracking-tight text-slate-900 md:text-4xl lg:text-5xl">
+            <h2 className="max-w-lg text-2xl font-extrabold leading-[1.15] tracking-tight text-slate-900 md:text-3xl lg:text-4xl">
               Healthcare that moves{" "}
               <span className="text-blue-700">with you.</span>
             </h2>
@@ -106,7 +106,7 @@ export default function PatientJourney() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="max-w-xl text-sm leading-7 text-slate-500 lg:ml-auto lg:text-base"
+            className="max-w-xl text-base leading-7 text-slate-500 lg:ml-auto lg:text-base"
           >
             From the moment you reach out to us, our team is committed to
             making your healthcare experience simple, personal and
@@ -117,7 +117,7 @@ export default function PatientJourney() {
         {/* =========================================================
             JOURNEY
             ========================================================= */}
-        <div className="mt-12">
+        <div className="mt-5">
 
           {/* Desktop journey line */}
           <div className="relative hidden lg:block">
@@ -171,7 +171,7 @@ export default function PatientJourney() {
           {/* =========================================================
               MOBILE / TABLET
               ========================================================= */}
-          <div className="grid gap-10 md:grid-cols-2 lg:hidden">
+          <div className="grid gap-4 md:grid-cols-2 lg:hidden">
 
             {steps.map((step, index) => {
               const Icon = step.icon;
@@ -186,34 +186,34 @@ export default function PatientJourney() {
                     duration: 0.5,
                     delay: index * 0.1,
                   }}
-                  className="group flex gap-5"
+                  className="group flex gap-5 border-b border-slate-200 rounded-xl py-1"
                 >
 
                   {/* Number */}
                   <div className="relative shrink-0">
 
-                    <div className="flex h-14 w-14 items-center justify-center rounded-full border border-slate-200 bg-white text-sm font-extrabold text-blue-700 shadow-sm transition-all group-hover:border-teal-400 group-hover:text-teal-600">
+                    <div className="flex h-9 w-9 items-center justify-center rounded-full border border-slate-200 bg-white text-xs font-extrabold text-blue-700 shadow-sm transition-all group-hover:border-teal-400 group-hover:text-teal-600">
                       {step.number}
                     </div>
 
                     {/* Vertical connector */}
                     {index !== steps.length - 1 && (
-                      <div className="absolute left-1/2 top-14 h-10 w-px -translate-x-1/2 bg-slate-200" />
+                      <div className="absolute left-1/2 top-14 h-7 w-px -translate-x-1/2 bg-slate-200" />
                     )}
                   </div>
 
                   {/* Content */}
                   <div>
 
-                    <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-blue-50">
-                      <Icon className="h-5 w-5 text-blue-700" />
+                    <div className="mb-2 flex h-7 w-7 items-center justify-center rounded bg-blue-50 border border-blue-500/10">
+                      <Icon className="h-3 w-3 text-blue-700" />
                     </div>
 
                     <h3 className="text-base font-bold text-slate-900">
                       {step.title}
                     </h3>
 
-                    <p className="mt-2 text-sm leading-6 text-slate-500">
+                    <p className="mt-1 text-sm leading-6 text-slate-500">
                       {step.description}
                     </p>
                   </div>

@@ -52,7 +52,7 @@ export default function Testimonials() {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <section className="relative overflow-hidden bg-[#F7FAFC] py-16 sm:py-20 lg:py-24">
+    <section className="relative overflow-hidden bg-[#F7FAFC] py-16 sm:py-20lg:py-24">
       {/* Background geometry */}
       <div className="pointer-events-none absolute -right-24 top-0 h-72 w-72 rounded-full border border-teal-500/10" />
       <div className="pointer-events-none absolute -right-10 top-14 h-48 w-48 rounded-full border border-blue-500/10" />
@@ -126,7 +126,7 @@ export default function Testimonials() {
                       <img
                         src={testimonial.image}
                         alt={testimonial.name}
-                        className="h-full w-full object-cover"
+                        className="h-full w-full rounded-md object-cover"
                       />
 
                       <div className="absolute inset-0 bg-gradient-to-t from-[#082B52]/30 to-transparent" />
@@ -163,7 +163,7 @@ export default function Testimonials() {
                     </div>
 
                     {/* Quote */}
-                    <blockquote className="max-w-3xl text-2xl font-medium leading-[1.45] tracking-tight text-[#082B52] sm:text-3xl lg:text-4xl">
+                    <blockquote className="max-w-3xl text-xl font-medium leading-[1.45] tracking-tight text-[#082B52] sm:text-3xl lg:text-4xl">
                       “{testimonial.feedback}”
                     </blockquote>
 

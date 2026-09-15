@@ -25,10 +25,11 @@ export default function Home() {
       <WhyUs />
       <TrustLogos />
       <Counters />
-      <Clinics />
-      <EmergencyCall />
-      <InsuranceCoverage />
+      <PatientJourney />
       <Testimonials />
+      <EmergencyCall />
+      <ContactUs />
+      <InsuranceCoverage />
       <WhatsAppButton />
       <Footer />
     </ div>

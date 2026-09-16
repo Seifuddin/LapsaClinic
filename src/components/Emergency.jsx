@@ -29,9 +29,9 @@ export default function EmergencyCall() {
             </div>
 
             {/* Heading */}
-            <h2 className="max-w-xl text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">
+            <h2 className="max-w-xl text-2xl text-white font-bold tracking-tight md:text-4xl lg:text-5xl">
               When every second{" "}
-              <span className="text-teal-300">matters.</span>
+              <span className="text-white">matters.</span>
             </h2>
 
             <p className="mt-5 max-w-xl text-sm leading-7 text-white/65 sm:text-base">
@@ -43,9 +43,9 @@ export default function EmergencyCall() {
             <div className="mt-7 flex flex-col gap-4 sm:flex-row sm:items-center">
               <a
                 href="tel:+254111608331"
-                className="group inline-flex w-fit items-center gap-4 bg-teal-500 px-5 py-3.5 text-[#06263F] transition-colors hover:bg-teal-400"
+                className="group inline-flex w-fit items-center gap-4 bg-teal-500 px-5 py-3.5 text-[#06263F] rounded-md transition-colors hover:bg-teal-400"
               >
-                <span className="flex h-9 w-9 items-center justify-center bg-white/20">
+                <span className="flex h-9 w-9 items-center justify-center bg-white/20 rounded">
                   <PhoneCall className="h-4 w-4" />
                 </span>
 
@@ -99,7 +99,7 @@ export default function EmergencyCall() {
                 </p>
               </div>
 
-              <div className="flex h-9 w-9 items-center justify-center bg-[#082B52]/80 text-teal-300 backdrop-blur-sm">
+              <div className="flex h-9 w-9 items-center rounded justify-center bg-[#082B52]/80 text-teal-300 backdrop-blur-sm">
                 <PhoneCall className="h-4 w-4" />
               </div>
             </div>

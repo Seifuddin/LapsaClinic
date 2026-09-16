@@ -84,7 +84,7 @@ export default function WhyUs() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              className="mb-5 flex items-center gap-3"
+              className="mb-5 flex items-center gap-2"
             >
               <span className="h-px w-9 bg-teal-500" />
 
@@ -99,10 +99,10 @@ export default function WhyUs() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="max-w-xl text-3xl font-bold tracking-tight text-[#082B52] sm:text-4xl lg:text-5xl"
+              className="max-w-xl text-2xl font-bold tracking-tight text-blue-950 sm:text-3xl lg:text-4xl"
             >
               Healthcare built around{" "}
-              <span className="text-teal-600">you.</span>
+              <span className="text-blue-950">you.</span>
             </motion.h2>
 
             <motion.p
@@ -110,7 +110,7 @@ export default function WhyUs() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="mt-5 max-w-xl text-sm leading-7 text-slate-600 sm:text-base"
+              className="mt-5 max-w-xl text-base leading-7 text-blue-900 sm:text-base"
             >
               We combine experienced professionals, modern medical technology
               and compassionate care to create a healthcare experience you can
@@ -137,13 +137,13 @@ export default function WhyUs() {
                   </span>
 
                   {/* Check */}
-                  <div className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#E8F8F5] text-teal-600 transition-transform duration-300 group-hover:scale-110">
+                  <div className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded bg-[#E8F8F5] text-teal-600 transition-transform duration-300 group-hover:scale-110">
                     <Check className="h-4 w-4" strokeWidth={2.5} />
                   </div>
 
                   {/* Text */}
                   <div className="min-w-0 flex-1">
-                    <h3 className="text-base font-semibold text-[#082B52] sm:text-lg">
+                    <h3 className="text-base font-semibold text-blue-950 sm:text-lg">
                       {item.title}
                     </h3>
 

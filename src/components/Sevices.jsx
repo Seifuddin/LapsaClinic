@@ -202,9 +202,9 @@ export default function Services() {
               </span>
             </div>
 
-            <h2 className="max-w-xl text-3xl font-extrabold leading-[1.1] tracking-tight text-slate-900 md:text-4xl lg:text-5xl">
+            <h2 className="max-w-xl text-2xl font-extrabold leading-[1.1] tracking-tight text-blue-950 md:text-3xl lg:text-4xl">
               Care for every{" "}
-              <span className="text-blue-700">stage of life.</span>
+              <span className="text-blue-950">stage of life.</span>
             </h2>
           </motion.div>
 
@@ -215,7 +215,7 @@ export default function Services() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="max-w-xl lg:ml-auto"
           >
-            <p className="text-sm leading-7 text-slate-500 sm:text-base">
+            <p className="leading-7 text-blue-900 text-base">
               From everyday consultations to specialized treatment, our
               services are designed to make quality healthcare accessible,
               personal and dependable.
@@ -259,22 +259,22 @@ export default function Services() {
             </div>
 
             {/* Content */}
-            <div className="flex flex-col justify-center p-7 sm:p-10 lg:p-12">
-              <p className="mb-3 text-xs font-bold uppercase tracking-[0.18em] text-teal-300">
+            <div className="flex flex-col justify-center p-4 sm:p-7 lg:p-9">
+              <p className="mb-2 text-xs font-semibold uppercase tracking-[0.18em] text-teal-300">
                 Start with your health
               </p>
 
-              <h3 className="text-2xl font-extrabold tracking-tight text-white sm:text-3xl">
+              <h3 className="text-xl font-extrabold tracking-tight text-white md:text-2xl">
                 {services[0].title}
               </h3>
 
-              <p className="mt-4 max-w-md text-sm leading-7 text-blue-100/70">
+              <p className="mt-2 max-w-md text-sm leading-7 text-blue-100/70">
                 {services[0].description}
               </p>
 
               <button
                 onClick={() => setSelectedService(services[0])}
-                className="mt-7 inline-flex w-fit items-center gap-2 border-b border-teal-300 pb-1 text-sm font-bold text-white transition hover:text-teal-300"
+                className="mt-4 inline-flex w-fit items-center gap-2 border-b border-teal-300 pb-1 text-xs font-semibold text-white transition hover:text-teal-300"
               >
                 Explore service
                 <ArrowUpRight className="h-4 w-4" />
@@ -338,7 +338,7 @@ export default function Services() {
 
               {/* Title */}
               <div className="mt-4 flex items-start justify-between gap-3">
-                <h3 className="text-base font-bold leading-5 text-slate-900">
+                <h3 className="text-base font-bold leading-5 text-blue-950">
                   {service.title}
                 </h3>
 

@@ -14,7 +14,7 @@ const insuranceProviders = [
 
 export default function InsuranceCoverage() {
   return (
-    <section className="relative overflow-hidden border-y border-slate-200 bg-[#F7FAFC]">
+    <section className="relative overflow-hidden border-y border-slate-200 bg-blue-50">
       {/* Subtle background geometry */}
       <div className="pointer-events-none absolute -right-24 -top-24 h-64 w-64 rounded-full border border-teal-500/10" />
       <div className="pointer-events-none absolute -right-12 -top-12 h-40 w-40 rounded-full border border-blue-500/10" />
@@ -39,9 +39,9 @@ export default function InsuranceCoverage() {
               </span>
             </div>
 
-            <h2 className="max-w-md text-3xl font-bold tracking-tight text-[#082B52] sm:text-4xl">
+            <h2 className="max-w-md text-2xl font-bold tracking-tight text-blue-950 md:text-4xl">
               Care that works with your{" "}
-              <span className="text-teal-600">coverage.</span>
+              <span className="text-blue-950">coverage.</span>
             </h2>
           </motion.div>
 
@@ -58,7 +58,7 @@ export default function InsuranceCoverage() {
             </div>
 
             <div className="max-w-lg">
-              <p className="text-sm leading-7 text-slate-600 sm:text-base">
+              <p className="text-base leading-7 text-blue-900 sm:text-base">
                 We work with SHA and a range of insurance providers to help
                 make quality healthcare more accessible and convenient for
                 our patients.
@@ -113,7 +113,7 @@ export default function InsuranceCoverage() {
                 (provider, index) => (
                   <div
                     key={`${provider.name}-${index}`}
-                    className="flex h-20 w-36 shrink-0 items-center justify-center border border-slate-200 bg-white px-5 transition-colors duration-300 hover:border-teal-400"
+                    className="flex h-20 w-36 shrink-0 items-center justify-center border border-slate-300 bg-white px-5 transition-colors duration-300 hover:border-teal-400"
                   >
                     <Image
                       src={provider.logo}

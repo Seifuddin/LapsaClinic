@@ -52,7 +52,7 @@ export default function Testimonials() {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <section className="relative overflow-hidden bg-[#F7FAFC] py-16 sm:py-20lg:py-24">
+    <section className="relative overflow-hidden bg-blue-50 py-16 sm:py-20lg:py-24">
       {/* Background geometry */}
       <div className="pointer-events-none absolute -right-24 top-0 h-72 w-72 rounded-full border border-teal-500/10" />
       <div className="pointer-events-none absolute -right-10 top-14 h-48 w-48 rounded-full border border-blue-500/10" />
@@ -75,9 +75,9 @@ export default function Testimonials() {
               </span>
             </div>
 
-            <h2 className="text-3xl font-bold tracking-tight text-[#082B52] sm:text-4xl">
+            <h2 className="text-2xl md:text-4xl font-bold tracking-tight text-blue-950">
               Care that people{" "}
-              <span className="text-teal-600">remember.</span>
+              <span className="text-blue-950">remember.</span>
             </h2>
           </motion.div>
 
@@ -86,7 +86,7 @@ export default function Testimonials() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="max-w-md text-sm leading-6 text-slate-500"
+            className="max-w-md text-base leading-6 text-blue-900"
           >
             Every patient has a different story. These are a few experiences
             shared by people who have trusted our team with their care.
@@ -163,7 +163,7 @@ export default function Testimonials() {
                     </div>
 
                     {/* Quote */}
-                    <blockquote className="max-w-3xl text-xl font-medium leading-[1.45] tracking-tight text-[#082B52] sm:text-3xl lg:text-4xl">
+                    <blockquote className="max-w-3xl text-lg italic font-medium leading-[1.45] tracking-tight text-blue-950 sm:text-xl lg:text-2xl">
                       “{testimonial.feedback}”
                     </blockquote>
 

@@ -41,7 +41,7 @@ const partners = [
 
 export default function TrustLogos() {
   return (
-    <section className="relative overflow-hidden border-y border-slate-100 bg-white">
+    <section className="relative overflow-hidden border-y border-slate-100 bg-blue-50">
 
       {/* =====================================================
           SUBTLE BACKGROUND
@@ -64,7 +64,7 @@ export default function TrustLogos() {
               ================================================= */}
           <div className="relative">
 
-            <div className="flex items-start gap-4">
+            <div className="flex items-start gap-2">
 
               {/* Vertical accent */}
               <div className="mt-1 h-14 w-1 shrink-0 rounded-full bg-teal-500" />
@@ -74,11 +74,11 @@ export default function TrustLogos() {
                   Our Network
                 </p>
 
-                <h2 className="max-w-sm text-2xl font-extrabold leading-tight tracking-tight text-slate-900 sm:text-3xl">
+                <h2 className="max-w-sm text-2xl font-extrabold leading-tight tracking-tight text-blue-950 sm:text-3xl">
                   Connected to trusted healthcare partners.
                 </h2>
 
-                <p className="mt-3 max-w-md text-xs leading-6 text-slate-500 sm:text-sm">
+                <p className="mt-3 max-w-md text-base leading-6 text-blue-900">
                   Working alongside established healthcare, insurance and
                   humanitarian organizations to support accessible care.
                 </p>
@@ -105,7 +105,7 @@ export default function TrustLogos() {
                 Organizations & Partners
               </span>
 
-              <div className="h-px flex-1 ml-4 bg-slate-100" />
+              <div className="h-px flex-1 ml-4 bg-slate-200" />
             </div>
 
             {/* Logo rail */}
@@ -141,7 +141,7 @@ export default function TrustLogos() {
               >
                 {partners.map((partner) => (
                   <SwiperSlide key={partner.id}>
-                    <div className="group flex h-24 items-center justify-center border border-slate-100 bg-white px-5 transition-all duration-300 hover:border-teal-100 hover:bg-teal-50/30">
+                    <div className="group flex h-24 items-center justify-center border border-slate-200 bg-white px-5 transition-all duration-300 hover:border-teal-100 hover:bg-teal-50/30">
 
                       <img
                         src={partner.logo}

@@ -84,7 +84,7 @@ export default function ContactUs() {
             </h2>
           </motion.div>
 
-          <p className="text-sm leading-7 text-slate-600 lgjustify-self-end">
+          <p className="text-base leading-7 text-blue-900 lgjustify-self-end">
             We’re here to help and answer any questions you might have.
             Whether you want to book an appointment, ask about our services,
             or simply say hello, feel free to reach out.
@@ -99,7 +99,7 @@ export default function ContactUs() {
                 className="group flex items-center rounded-xl justify-between border-b border-slate-200 py-3 transition"
               >
                 <div className="flex items-center gap-4">
-                  <div className="flex h-8 w-8 items-center justify-center rounded-full bg-blue-100 text-blue-700 transition group-hover:bg-blue-950 group-hover:text-white">
+                  <div className="flex h-8 w-8 items-center justify-center rounded bg-blue-100 text-blue-700 transition group-hover:bg-blue-950 group-hover:text-white">
                     <Phone size={14} />
                   </div>
 
@@ -126,7 +126,7 @@ export default function ContactUs() {
                 className="group flex items-center rounded-xl justify-between border-b border-slate-200 py-3 transition"
               >
                 <div className="flex items-center gap-4">
-                  <div className="flex h-8 w-8 items-center justify-center rounded-full bg-teal-100 text-teal-700 transition group-hover:bg-teal-600 group-hover:text-white">
+                  <div className="flex h-8 w-8 items-center justify-center rounded bg-teal-100 text-teal-700 transition group-hover:bg-teal-600 group-hover:text-white">
                     <Mail size={14} />
                   </div>
 
@@ -150,7 +150,7 @@ export default function ContactUs() {
               {/* Location */}
               <div className="flex items-center justify-between rounded-xl border-b border-slate-200 py-3">
                 <div className="flex items-center gap-4">
-                  <div className="flex h-8 w-8 items-center justify-center rounded-full bg-blue-100 text-blue-700">
+                  <div className="flex h-8 w-8 items-center justify-center rounded bg-blue-100 text-blue-700">
                     <MapPin size={14} />
                   </div>
 
@@ -174,7 +174,7 @@ export default function ContactUs() {
                 className="group flex items-center rounded-xl justify-between border-b border-slate-200 py-3 transition"
               >
                 <div className="flex items-center gap-2">
-                  <div className="flex h-8 w-8 items-center justify-center rounded-full bg-teal-100 text-teal-700 transition group-hover:bg-teal-600 group-hover:text-white">
+                  <div className="flex h-8 w-8 items-center justify-center rounded bg-teal-100 text-teal-700 transition group-hover:bg-teal-600 group-hover:text-white">
                     <MessageSquare size={14} />
                   </div>
 
@@ -295,7 +295,7 @@ export default function ContactUs() {
                 {/* Submit */}
                 <button
                   type="submit"
-                  className="group flex w-full items-center justify-center gap-2 rounded-xl bg-teal-500 px-4 py-3.5 text-sm font-bold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-teal-400 hover:shadow-lg hover:shadow-teal-900/20"
+                  className="group flex w-full items-center justify-center gap-2 rounded bg-teal-500 px-4 py-2.5 text-sm font-bold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-teal-400 hover:shadow-lg hover:shadow-teal-900/20"
                 >
                   <Send
                     size={17}

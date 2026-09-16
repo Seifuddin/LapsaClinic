@@ -95,9 +95,9 @@ export default function PatientJourney() {
               Your Care Journey
             </p>
 
-            <h2 className="max-w-lg text-2xl font-extrabold leading-[1.15] tracking-tight text-slate-900 md:text-3xl lg:text-4xl">
+            <h2 className="max-w-lg text-2xl font-extrabold leading-[1.15] tracking-tight text-blue-950 md:text-3xl lg:text-4xl">
               Healthcare that moves{" "}
-              <span className="text-blue-700">with you.</span>
+              <span className="text-blue-950">with you.</span>
             </h2>
           </motion.div>
 
@@ -106,7 +106,7 @@ export default function PatientJourney() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="max-w-xl text-base leading-7 text-slate-500 lg:ml-auto lg:text-base"
+            className="max-w-xl text-base leading-7 text-blue-900 lg:ml-auto lg:text-base"
           >
             From the moment you reach out to us, our team is committed to
             making your healthcare experience simple, personal and
@@ -154,7 +154,7 @@ export default function PatientJourney() {
                         <Icon className="h-5 w-5 text-blue-700 transition-colors duration-300 group-hover:text-teal-600" />
                       </div>
 
-                      <h3 className="text-lg font-bold tracking-tight text-slate-900">
+                      <h3 className="text-lg font-bold tracking-tight text-blue-950">
                         {step.title}
                       </h3>
 

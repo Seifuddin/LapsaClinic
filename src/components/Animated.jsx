@@ -41,7 +41,7 @@ const AnimatedCounter = ({ from = 0, to }) => {
   return (
     <span
       ref={ref}
-      className="text-xl font-extrabold tracking-tight text-white md:text-2xl"
+      className="text-lg font-extrabold tracking-tight text-white md:text-xl"
     >
       {value.toLocaleString()}+
     </span>

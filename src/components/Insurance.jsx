@@ -39,7 +39,7 @@ export default function InsuranceCoverage() {
               </span>
             </div>
 
-            <h2 className="max-w-md text-2xl font-bold tracking-tight text-blue-900 md:text-4xl">
+            <h2 className="max-w-md text-3xl font-bold tracking-tight text-blue-900 md:text-4xl">
               Care that works with your{" "}
               <span className="text-blue-900">coverage.</span>
             </h2>
@@ -53,7 +53,7 @@ export default function InsuranceCoverage() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="flex items-start gap-4 lg:justify-end"
           >
-            <div className="flex h-10 w-10 shrink-0 items-center justify-center bg-[#E8F8F5] text-teal-600">
+            <div className="flex h-10 w-10 shrink-0 items-center justify-center border border-slate-300 rounded-md bg-blue-100 text-teal-600">
               <ShieldCheck className="h-5 w-5" />
             </div>
 

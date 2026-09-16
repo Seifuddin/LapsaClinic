@@ -186,7 +186,7 @@ export default function Services() {
         {/* =================================================
             HEADER
             ================================================= */}
-        <div className="grid gap-6 border-b border-slate-200 pb-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
+        <div className="grid gap-3 border-b border-slate-200 pb-7 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
 
           <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -240,7 +240,7 @@ export default function Services() {
           transition={{ duration: 0.7 }}
           className="mt-10"
         >
-          <div className="group grid overflow-hidden roundedbg-[#082B52] lg:grid-cols-[1.15fr_0.85fr]">
+          <div className="group grid overflow-hidden rounded bg-[#082B52] lg:grid-cols-[1.15fr_0.85fr]">
 
             {/* Image */}
             <div className="relative min-h-[280px] overflow-hidden sm:min-h-[350px]">
@@ -286,7 +286,7 @@ export default function Services() {
         {/* =================================================
             OTHER SERVICES
             ================================================= */}
-        <div className="mt-8 grid gap-0 border-y border-slate-200 sm:grid-cols-2 lg:grid-cols-5">
+        <div className="mt-8 grid gap-0 border-y border-slate-200 rounded-b-md sm:grid-cols-2 lg:grid-cols-5">
 
           {services.slice(1).map((service, index) => (
             <motion.button
@@ -337,7 +337,7 @@ export default function Services() {
               </div>
 
               {/* Title */}
-              <div className="mt-4 flex items-start justify-between gap-3">
+              <div className="pl-1 mt-4 flex items-start justify-between gap-3">
                 <h3 className="text-base font-extrabold leading-5 text-blue-900">
                   {service.title}
                 </h3>
@@ -345,11 +345,11 @@ export default function Services() {
                 <ArrowUpRight className="h-4 w-4 shrink-0 text-slate-300 transition-all duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-teal-500" />
               </div>
 
-              <p className="mt-2 line-clamp-2 text-sm leading-5 text-slate-500">
+              <p className="pl-1 mt-2 line-clamp-2 text-sm leading-5 text-slate-500">
                 {service.description}
               </p>
 
-              <span className="mt-4 inline-block text-[11px] font-bold text-blue-700">
+              <span className="pl-1 mt-4 inline-block text-[11px] font-bold text-blue-700">
                 View service
               </span>
             </motion.button>

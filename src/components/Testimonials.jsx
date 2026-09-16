@@ -122,7 +122,7 @@ export default function Testimonials() {
                     transition={{ duration: 0.6 }}
                     className="relative mx-auto w-full max-w-sm"
                   >
-                    <div className="relative aspect-[4/3] overflow-hidden bg-slate-200">
+                    <div className="relative aspect-[4/3] overflow-hidden bg-slate-200 rounded-md">
                       <img
                         src={testimonial.image}
                         alt={testimonial.name}

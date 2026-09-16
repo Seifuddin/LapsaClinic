@@ -42,7 +42,7 @@ export default function WhyUs() {
           >
             <div className="relative mx-auto max-w-lg">
               {/* Image */}
-              <div className="relative overflow-hidden">
+              <div className="relative overflow-hidden rounded-md">
                 <Image
                   src="/images/whychooseus.webp"
                   alt="Lapsa Family Hospital medical team"
@@ -60,7 +60,7 @@ export default function WhyUs() {
 
               {/* Floating trust marker */}
               <div className="absolute bottom-6 left-6 flex items-center gap-3 bg-white px-4 py-3 shadow-xl sm:left-8 rounded-md">
-                <div className="rounded-md flex h-9 w-9 items-center justify-center bg-[#E8F8F5] text-teal-600">
+                <div className="border border-slate-200 rounded-md bg-[#E8F8F5] text-teal-600 flex h-9 w-9 items-center justify-center">
                   <ShieldCheck className="h-5 w-5" />
                 </div>
 
@@ -84,7 +84,7 @@ export default function WhyUs() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              className="mb-5 flex items-center gap-2"
+              className="mb-2 flex items-center gap-2"
             >
               <span className="h-px w-9 bg-teal-500" />
 
@@ -110,7 +110,7 @@ export default function WhyUs() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="mt-5 max-w-xl text-base leading-7 text-blue-900 sm:text-base"
+              className="mt-3 max-w-xl text-base leading-7 text-blue-900 sm:text-base"
             >
               We combine experienced professionals, modern medical technology
               and compassionate care to create a healthcare experience you can
@@ -118,7 +118,7 @@ export default function WhyUs() {
             </motion.p>
 
             {/* Reasons */}
-            <div className="mt-8 border-t border-slate-200">
+            <div className="mt-5 border-t border-slate-200">
               {reasons.map((item, index) => (
                 <motion.div
                   key={item.number}
@@ -129,7 +129,7 @@ export default function WhyUs() {
                     duration: 0.5,
                     delay: 0.15 + index * 0.08,
                   }}
-                  className="group flex gap-4 border-b border-slate-200 rounded-xl py-3 sm:gap-6"
+                  className="group flex gap-2 border-b border-slate-200 rounded-md py-3 sm:gap-3"
                 >
                   {/* Number */}
                   <span className="w-8 shrink-0 pt-1 text-xs font-semibold tracking-wider text-teal-600">
@@ -137,7 +137,7 @@ export default function WhyUs() {
                   </span>
 
                   {/* Check */}
-                  <div className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded bg-[#E8F8F5] text-teal-600 transition-transform duration-300 group-hover:scale-110">
+                  <div className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center border border-slate-200 rounded bg-[#E8F8F5] text-teal-600 transition-transform duration-300 group-hover:scale-110">
                     <Check className="h-4 w-4" strokeWidth={2.5} />
                   </div>
 

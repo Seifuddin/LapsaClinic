@@ -79,7 +79,7 @@ export default function ContactUs() {
               </span>
             </div>
 
-            <h2 className="text-2xl font-black leading-tight tracking-tight text-blue-900 md:text-4xl">
+            <h2 className="text-3xl font-black leading-tight tracking-tight text-blue-900 md:text-4xl">
               Let’s make your next healthcare visit easier.
             </h2>
           </motion.div>
@@ -96,10 +96,10 @@ export default function ContactUs() {
               {/* Phone */}
               <a
                 href="tel:+254111608331"
-                className="group flex items-center rounded-xl justify-between border-b border-slate-200 py-3 transition"
+                className="group flex items-center rounded justify-between border-b border-slate-200 py-3 transition"
               >
                 <div className="flex items-center gap-4">
-                  <div className="flex h-8 w-8 items-center justify-center rounded bg-blue-100 text-blue-700 transition group-hover:bg-blue-950 group-hover:text-white">
+                  <div className="flex h-8 w-8 items-center justify-center border border-slate-200 rounded-md bg-[#E8F8F5] text-teal-600 transition group-hover:bg-blue-950 group-hover:text-white">
                     <Phone size={14} />
                   </div>
 
@@ -123,10 +123,10 @@ export default function ContactUs() {
               {/* Email */}
               <a
                 href="mailto:info@hospital.com"
-                className="group flex items-center rounded-xl justify-between border-b border-slate-200 py-3 transition"
+                className="group flex items-center rounded justify-between border-b border-slate-200 py-3 transition"
               >
                 <div className="flex items-center gap-4">
-                  <div className="flex h-8 w-8 items-center justify-center rounded bg-teal-100 text-teal-700 transition group-hover:bg-teal-600 group-hover:text-white">
+                  <div className="flex h-8 w-8 items-center justify-center border border-slate-200 rounded-md bg-[#E8F8F5] text-teal-600 transition group-hover:bg-teal-600 group-hover:text-white">
                     <Mail size={14} />
                   </div>
 
@@ -148,9 +148,9 @@ export default function ContactUs() {
               </a>
 
               {/* Location */}
-              <div className="flex items-center justify-between rounded-xl border-b border-slate-200 py-3">
+              <div className="flex items-center justify-between rounded border-b border-slate-200 py-3">
                 <div className="flex items-center gap-4">
-                  <div className="flex h-8 w-8 items-center justify-center rounded bg-blue-100 text-blue-700">
+                  <div className="flex h-8 w-8 items-center justify-center border border-slate-200 rounded-md bg-[#E8F8F5] text-teal-600">
                     <MapPin size={14} />
                   </div>
 
@@ -171,10 +171,10 @@ export default function ContactUs() {
                 href="https://wa.me/254111608331"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex items-center rounded-xl justify-between border-b border-slate-200 py-3 transition"
+                className="group flex items-center rounded justify-between border-b border-slate-200 py-3 transition"
               >
                 <div className="flex items-center gap-2">
-                  <div className="flex h-8 w-8 items-center justify-center rounded bg-teal-100 text-teal-700 transition group-hover:bg-teal-600 group-hover:text-white">
+                  <div className="flex h-8 w-8 items-center justify-center border border-slate-200 rounded-md bg-[#E8F8F5] text-teal-600 transition group-hover:bg-teal-600 group-hover:text-white">
                     <MessageSquare size={14} />
                   </div>
 
@@ -197,7 +197,7 @@ export default function ContactUs() {
             </div>
 
             {/* Map */}
-            <div className="hidden mt-8overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
+            <div className="hidden mt-8overflow-hidden rounded border border-slate-200 bg-white shadow-sm">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1994.394849225982!2d36.821946!3d-1.292066!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f10f9db8f2a17%3A0x401a3f3c5e0a5a0!2sNairobi!5e0!3m2!1sen!2ske!4v1234567890"
                 width="100%"
@@ -220,7 +220,7 @@ export default function ContactUs() {
           >
             <form
               onSubmit={handleSubmit}
-              className="relative overflow-hidden rounded-2xl bg-blue-950 p-6 shadow-xl sm:p-8"
+              className="relative overflow-hidden rounded-xl bg-blue-950 p-6 shadow-xl sm:p-8"
             >
               {/* Form Background Detail */}
               <div className="absolute -right-24 -top-24 h-64 w-64 rounded-full bg-blue-800/40 blur-3xl" />

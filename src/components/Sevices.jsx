@@ -202,9 +202,9 @@ export default function Services() {
               </span>
             </div>
 
-            <h2 className="max-w-xl text-2xl font-extrabold leading-[1.1] tracking-tight text-blue-950 md:text-3xl lg:text-4xl">
+            <h2 className="max-w-xl text-3xl font-extrabold leading-[1.1] tracking-tight text-blue-900 md:text-4xl lg:text-4xl">
               Care for every{" "}
-              <span className="text-blue-950">stage of life.</span>
+              <span className="text-blue-900">stage of life.</span>
             </h2>
           </motion.div>
 
@@ -240,7 +240,7 @@ export default function Services() {
           transition={{ duration: 0.7 }}
           className="mt-10"
         >
-          <div className="group grid overflow-hidden rounded -2xl bg-[#082B52] lg:grid-cols-[1.15fr_0.85fr]">
+          <div className="group grid overflow-hidden roundedbg-[#082B52] lg:grid-cols-[1.15fr_0.85fr]">
 
             {/* Image */}
             <div className="relative min-h-[280px] overflow-hidden sm:min-h-[350px]">
@@ -307,7 +307,7 @@ export default function Services() {
                 border-b
                 border-slate-200
                 bg-white
-                p-3
+                rounded-md
                 text-left
                 transition-all
                 duration-300
@@ -325,7 +325,7 @@ export default function Services() {
               </span>
 
               {/* Image */}
-              <div className="relative mt-2 h-40 overflow-hidden rounded">
+              <div className="relative mt-2 h-40 overflow-hidden rounded-t">
                 <Image
                   src={service.image}
                   alt={service.title}
@@ -338,7 +338,7 @@ export default function Services() {
 
               {/* Title */}
               <div className="mt-4 flex items-start justify-between gap-3">
-                <h3 className="text-base font-bold leading-5 text-blue-950">
+                <h3 className="text-base font-extrabold leading-5 text-blue-900">
                   {service.title}
                 </h3>
 

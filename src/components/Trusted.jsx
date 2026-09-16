@@ -41,7 +41,7 @@ const partners = [
 
 export default function TrustLogos() {
   return (
-    <section className="relative overflow-hidden border-y border-slate-100 bg-blue-50">
+    <section className="relative overflow-hidden border-t border-slate-200 bg-blue-50">
 
       {/* =====================================================
           SUBTLE BACKGROUND
@@ -74,7 +74,7 @@ export default function TrustLogos() {
                   Our Network
                 </p>
 
-                <h2 className="max-w-sm text-2xl font-extrabold leading-tight tracking-tight text-blue-950 sm:text-3xl">
+                <h2 className="max-w-sm text-3xl font-extrabold leading-tight tracking-tight text-blue-900 sm:text-3xl">
                   Connected to trusted healthcare partners.
                 </h2>
 

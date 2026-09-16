@@ -41,7 +41,7 @@ const AnimatedCounter = ({ from = 0, to }) => {
   return (
     <span
       ref={ref}
-      className="text-2xl font-extrabold tracking-tight text-white sm:text-3xl"
+      className="text-xl font-extrabold tracking-tight text-white md:text-2xl"
     >
       {value.toLocaleString()}+
     </span>
@@ -129,12 +129,12 @@ export default function AnimatedCounters() {
             <div className="mb-2 flex items-center gap-2">
               <span className="h-px w-7 bg-teal-400" />
 
-              <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-teal-300">
+              <span className="text-[9px] font-bold uppercase tracking-[0.2em] text-teal-300">
                 Our Impact
               </span>
             </div>
 
-            <h2 className="text-2xl font-extrabold tracking-tight text-white sm:text-3xl">
+            <h2 className="text-3xl font-extrabold tracking-tight text-white md:text-4xl">
               Care you can measure.
             </h2>
           </motion.div>
@@ -205,7 +205,7 @@ export default function AnimatedCounters() {
               >
 
                 {/* Icon */}
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white/[0.07] ring-1 ring-white/10 transition-all duration-300 group-hover:bg-teal-400/10 group-hover:ring-teal-300/20">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded bg-white/[0.07] ring-1 ring-white/10 transition-all duration-300 group-hover:bg-teal-400/10 group-hover:ring-teal-300/20">
                   <Icon className="h-5 w-5 text-teal-300 transition-transform duration-300 group-hover:scale-110" />
                 </div>
 

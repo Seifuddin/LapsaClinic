@@ -99,10 +99,10 @@ export default function WhyUs() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="max-w-xl text-2xl font-bold tracking-tight text-blue-950 sm:text-3xl lg:text-4xl"
+              className="max-w-xl text-3xl font-bold tracking-tight text-blue-900 md:text-4xl lg:text-4xl"
             >
               Healthcare built around{" "}
-              <span className="text-blue-950">you.</span>
+              <span className="text-blue-900">you.</span>
             </motion.h2>
 
             <motion.p
@@ -143,7 +143,7 @@ export default function WhyUs() {
 
                   {/* Text */}
                   <div className="min-w-0 flex-1">
-                    <h3 className="text-base font-semibold text-blue-950 sm:text-lg">
+                    <h3 className="text-base font-semibold text-blue-900 sm:text-lg">
                       {item.title}
                     </h3>
 

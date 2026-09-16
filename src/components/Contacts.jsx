@@ -79,7 +79,7 @@ export default function ContactUs() {
               </span>
             </div>
 
-            <h2 className="text-2xl font-black leading-tight tracking-tight text-blue-950 md:text-4xl">
+            <h2 className="text-2xl font-black leading-tight tracking-tight text-blue-900 md:text-4xl">
               Let’s make your next healthcare visit easier.
             </h2>
           </motion.div>
@@ -108,7 +108,7 @@ export default function ContactUs() {
                       Call Us
                     </p>
 
-                    <p className="mt-1 text-sm font-semibold text-blue-950">
+                    <p className="mt-1 text-sm font-semibold text-blue-900">
                       +254 111 608 331
                     </p>
                   </div>
@@ -135,7 +135,7 @@ export default function ContactUs() {
                       Email
                     </p>
 
-                    <p className="mt-1 break-all text-sm font-semibold text-blue-950">
+                    <p className="mt-1 break-all text-sm font-semibold text-blue-900">
                       lapsatechnologies@gmail.com
                     </p>
                   </div>
@@ -159,7 +159,7 @@ export default function ContactUs() {
                       Location
                     </p>
 
-                    <p className="mt-1 text-sm font-semibold text-blue-950">
+                    <p className="mt-1 text-sm font-semibold text-blue-900">
                       Nairobi, Kenya
                     </p>
                   </div>
@@ -183,7 +183,7 @@ export default function ContactUs() {
                       WhatsApp
                     </p>
 
-                    <p className="mt-1 text-sm font-semibold text-blue-950">
+                    <p className="mt-1 text-sm font-semibold text-blue-900">
                       Chat with our team
                     </p>
                   </div>

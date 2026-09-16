@@ -95,9 +95,9 @@ export default function PatientJourney() {
               Your Care Journey
             </p>
 
-            <h2 className="max-w-lg text-2xl font-extrabold leading-[1.15] tracking-tight text-blue-950 md:text-3xl lg:text-4xl">
+            <h2 className="max-w-lg text-3xl font-extrabold leading-[1.15] tracking-tight text-blue-900 md:text-3xl lg:text-4xl">
               Healthcare that moves{" "}
-              <span className="text-blue-950">with you.</span>
+              <span className="text-blue-900">with you.</span>
             </h2>
           </motion.div>
 
@@ -154,7 +154,7 @@ export default function PatientJourney() {
                         <Icon className="h-5 w-5 text-blue-700 transition-colors duration-300 group-hover:text-teal-600" />
                       </div>
 
-                      <h3 className="text-lg font-bold tracking-tight text-blue-950">
+                      <h3 className="text-lg font-bold tracking-tight text-blue-900">
                         {step.title}
                       </h3>
 
@@ -223,4 +223,4 @@ export default function PatientJourney() {
           </div>
         </div>
 
-        {/* CTA STRIP */} <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.3 }} className="mt-14 flex flex-col items-center justify-between gap-5 rounded-2xl bg-slate-900 px-6 py-6 sm:flex-row sm:px-8" > <div> <p className="text-sm font-bold text-white"> Ready to take the next step? </p> <p className="mt-1 text-xs text-slate-400"> Book your appointment and let our team take care of the rest. </p> </div> <a href="#appointment" className="inline-flex shrink-0 items-center gap-2 rounded-lg bg-teal-500 px-5 py-3 text-sm font-bold text-white transition-all duration-300 hover:bg-teal-600" > Book Appointment <ArrowRight className="h-4 w-4" /> </a> </motion.div> </div> </section> ); }
+        {/* CTA STRIP */} <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.3 }} className="mt-14 flex flex-col items-center justify-between gap-5 rounded-2xl bg-slate-900 px-6 py-6 sm:flex-row sm:px-8" > <div> <p className="text-xl font-semibold text-white"> Ready to take the next step? </p> <p className="mt-1 text-xs text-slate-400"> Book your appointment and let our team take care of the rest. </p> </div> <a href="#appointment" className="inline-flex shrink-0 items-center gap-2 rounded-lg bg-teal-500 px-5 py-3 text-sm font-bold text-white transition-all duration-300 hover:bg-teal-600" > Book Appointment <ArrowRight className="h-4 w-4" /> </a> </motion.div> </div> </section> ); }

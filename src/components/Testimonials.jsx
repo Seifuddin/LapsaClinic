@@ -52,7 +52,7 @@ export default function Testimonials() {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <section className="relative overflow-hidden bg-blue-50 py-16 sm:py-20lg:py-24">
+    <section className="relative overflow-hidden bg-blue-50 border-t border-slate-200 py-16 sm:py-20lg:py-24">
       {/* Background geometry */}
       <div className="pointer-events-none absolute -right-24 top-0 h-72 w-72 rounded-full border border-teal-500/10" />
       <div className="pointer-events-none absolute -right-10 top-14 h-48 w-48 rounded-full border border-blue-500/10" />
@@ -75,9 +75,9 @@ export default function Testimonials() {
               </span>
             </div>
 
-            <h2 className="text-2xl md:text-4xl font-bold tracking-tight text-blue-950">
+            <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-blue-900">
               Care that people{" "}
-              <span className="text-blue-950">remember.</span>
+              <span className="text-blue-900">remember.</span>
             </h2>
           </motion.div>
 
@@ -163,7 +163,7 @@ export default function Testimonials() {
                     </div>
 
                     {/* Quote */}
-                    <blockquote className="max-w-3xl text-lg italic font-medium leading-[1.45] tracking-tight text-blue-950 sm:text-xl lg:text-2xl">
+                    <blockquote className="max-w-3xl text-lg italic font-medium leading-[1.45] tracking-tight text-blue-900 sm:text-xl lg:text-2xl">
                       “{testimonial.feedback}”
                     </blockquote>
 

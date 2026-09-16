@@ -29,7 +29,7 @@ export default function EmergencyCall() {
             </div>
 
             {/* Heading */}
-            <h2 className="max-w-xl text-2xl text-white font-bold tracking-tight md:text-4xl lg:text-5xl">
+            <h2 className="max-w-xl text-3xl text-white font-bold tracking-tight md:text-4xl lg:text-4xl">
               When every second{" "}
               <span className="text-white">matters.</span>
             </h2>

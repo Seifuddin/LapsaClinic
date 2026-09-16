@@ -46,7 +46,7 @@ export default function HeroSection() {
           </div>
 
           {/* Main heading */}
-          <h1 className="text-2xl md:text-3xl font-black leading-[1.1] tracking-tight text-white sm:textl md:text-5xl">
+          <h1 className="text-3xl md:text-4xl font-black leading-[1.1] tracking-tight text-white md:text-5xl">
             Caring for Your Family’s Health{" "}
             <span className="text-blue-300">
               
@@ -70,7 +70,7 @@ export default function HeroSection() {
           <div className="mt-6 flex flex-col justify-center gap-3 sm:flex-row lg:justify-start">
             <Link
               href="#appointment"
-              className="inline-flex items-center justify-center rounded-full bg-teal-400 px-6 py-1.5 text-xs font-bold text-blue-950 shadow-lg shadow-black/10 transition-all duration-300 hover:-translate-y-0.5 hover:bg-teal-50 hover:shadow-xl"
+              className="inline-flex items-center justify-center rounded-full bg-white px-6 py-1.5 text-xs font-bold text-blue-950 shadow-lg shadow-black/10 transition-all duration-300 hover:-translate-y-0.5 hover:bg-teal-50 hover:shadow-xl"
             >
               Book an Appointment
               <span className="ml-2 text-lg">→</span>
